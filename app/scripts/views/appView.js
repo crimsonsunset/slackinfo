@@ -46,3 +46,34 @@ app.AppView = Backbone.View.extend({
         }
     }
 });
+
+
+
+// renders the full list of todo items calling TodoView for each one.
+app.MainView = Backbone.View.extend({
+    el: '#songapp',
+    SONG_URL: 'testDay.json',
+    initialize: function () {
+        this.fetchSongs()
+        return this;
+    },
+    events: {
+        'keypress #new-todo': 'createTodoOnEnter'
+    },
+    fetchSongs: function () {
+        $.getJSON(this.SONG_URL)
+            .done(function (data) {
+                console.log("got songs!");
+                _.each(data, function(e,i,l){
+                    if (e.text.hasUrl() && e.text.matchesService()) {
+                        app.songList.add(new app.Song(e))
+                    } else {}
+                });
+
+            })
+            .fail(function (data) {
+                console.log("failed loading songs");
+            });
+
+    }
+});

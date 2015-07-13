@@ -32,10 +32,15 @@ $(document).ready(function(){
     app.appView = new app.AppView();
 
 
-    function getVal(inputEl) {
-        console.log($(inputEl))
-    }
-    app.router = new app.Router()
-    Backbone.history.start()
+
+    //start joe stuff
+
+    app.songList = new app.SongList()
+    app.mainView = new app.MainView();
+
+    app.songList.filterBy("Spotify")
+
+    app.router = new app.Router();
+    Backbone.history.start();
 
 });

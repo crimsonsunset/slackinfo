@@ -1,0 +1,2350 @@
+[
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "<http:\/\/hypem.com\/track\/23px8\/Kelis+-+%27Runnin%27+%28Machinedrum+Remix%29>",
+        "ts": "1435673668.000267"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "dat kaytranada remix",
+        "ts": "1435673693.000268"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "pls post new music",
+        "ts": "1435674919.000269"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "my sources are dry today",
+        "ts": "1435674923.000270"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "yo dude spotify has a new music tuesdays playlist",
+        "ts": "1435675034.000271"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and like\u2026.pitchfork, or complex music, subscribe to a shit ton of music blogs!",
+        "ts": "1435675060.000272"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i get a bunch of emails through neatbeet so im good\u2026somewhat overwhelmed haha",
+        "ts": "1435675080.000273"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "<https:\/\/open.spotify.com\/track\/1u1VcXquBfZfu7dc8PVYVc>",
+        "attachments": [
+            {
+                "service_name": "Spotify",
+                "service_url": "https:\/\/www.spotify.com",
+                "title": "Vince Staples - Lemme Know",
+                "title_link": "https:\/\/open.spotify.com\/track\/1u1VcXquBfZfu7dc8PVYVc",
+                "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/17576d8352989483a3067003e929ca400a74d3e6",
+                "thumb_width": 300,
+                "thumb_height": 300,
+                "fallback": "Spotify Audio: Link: Vince Staples - Lemme Know",
+                "audio_html": "<iframe src=\"https:\/\/embed.spotify.com\/?uri=spotify:track:1u1VcXquBfZfu7dc8PVYVc\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                "audio_html_width": 300,
+                "audio_html_height": 380,
+                "from_url": "https:\/\/open.spotify.com\/track\/1u1VcXquBfZfu7dc8PVYVc",
+                "id": 1
+            }
+        ],
+        "ts": "1435675113.000274"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "new vince staples is out mofockas <@U06JAHAV7>",
+        "ts": "1435675124.000276"
+    },
+    {
+        "user": "U06JAHAV7",
+        "inviter": "U06J2UTA6",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06JAHAV7|jimmysprinkles> has joined the channel",
+        "ts": "1435675129.000277"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "wowww slowpoke james over thr",
+        "ts": "1435675199.000278"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "\/giphy slowpoke",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/looney-tunes-speedy-gonzales-slowpoke-rodriguez-ttdjTDCoHJFgQ>",
+                "image_url": "http:\/\/media4.giphy.com\/media\/ttdjTDCoHJFgQ\/giphy.gif",
+                "image_width": 295,
+                "image_height": 180,
+                "image_bytes": 335633,
+                "title": "slowpoke",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/looney-tunes-speedy-gonzales-slowpoke-rodriguez-ttdjTDCoHJFgQ"
+            }
+        ],
+        "ts": "1435675204.000279"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "oh whoa even spotify embeds",
+        "ts": "1435675270.000280"
+    },
+    {
+        "user": "U06J76HFC",
+        "inviter": "U06J9BRL0",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U06J76HFC|sang> has joined the channel",
+        "ts": "1435675284.000281"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "yeah and i can see the song playing realtime on my end lol",
+        "ts": "1435675366.000282"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "if you have the app open",
+        "ts": "1435675373.000283"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "that integration",
+        "ts": "1435675377.000284"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "yeah",
+        "ts": "1435675456.000285"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "spotify always reverts to the native player",
+        "ts": "1435675461.000286"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "slack is the sweet tits",
+        "ts": "1435675719.000287"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "sweet <#C06J9TZQT>",
+        "ts": "1435675725.000288"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "yeah",
+        "ts": "1435676231.000289"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "hangouts seems so woefully inadequate now",
+        "ts": "1435676236.000290"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "**joefully",
+        "ts": "1435676263.000291"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "ayy",
+        "ts": "1435676341.000292"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435676367.000293"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "Apple Music here we go!",
+        "ts": "1435676834.000294"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "<http:\/\/www.altpress.com\/news\/entry\/brand_new_aiming_to_release_either_ep_or_lp_this_winter>",
+        "attachments": [
+            {
+                "service_name": "Alternative Press",
+                "service_url": "http:\/\/www.altpress.com\/news\/entry\/brand_new_aiming_to_release_either_ep_or_lp_this_winter",
+                "text": "Even when we get an answer, we're left with more questions.",
+                "fallback": "Alternative Press: ",
+                "from_url": "http:\/\/www.altpress.com\/news\/entry\/brand_new_aiming_to_release_either_ep_or_lp_this_winter",
+                "id": 1
+            }
+        ],
+        "ts": "1435677591.000295"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U06J2UTA6|burgos> uploaded a file: <https:\/\/goonsinc.slack.com\/files\/burgos\/F071CGE6P\/slack_for_ios_upload.png|Slack for iOS Upload> and commented: In it to win it. Also this album fucking rules",
+        "file": {
+            "id": "F071CGE6P",
+            "created": 1435677720,
+            "timestamp": 1435677720,
+            "name": "Slack for iOS Upload.png",
+            "title": "Slack for iOS Upload",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U06J2UTA6",
+            "editable": false,
+            "size": 261164,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "url": "https:\/\/slack-files.com\/files-pub\/T06HEA4D7-F071CGE6P-ce1efaaf0a\/slack_for_ios_upload.png",
+            "url_download": "https:\/\/slack-files.com\/files-pub\/T06HEA4D7-F071CGE6P-ce1efaaf0a\/download\/slack_for_ios_upload.png",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T06HEA4D7-F071CGE6P\/slack_for_ios_upload.png",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06HEA4D7-F071CGE6P\/download\/slack_for_ios_upload.png",
+            "thumb_64": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_64.png",
+            "thumb_80": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_80.png",
+            "thumb_360": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_360.png",
+            "thumb_360_w": 202,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_480.png",
+            "thumb_480_w": 270,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_160.png",
+            "thumb_720": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_720.png",
+            "thumb_720_w": 405,
+            "thumb_720_h": 720,
+            "thumb_960": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_960.png",
+            "thumb_960_w": 540,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F071CGE6P-9e10b458c8\/slack_for_ios_upload_1024.png",
+            "thumb_1024_w": 576,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "permalink": "https:\/\/goonsinc.slack.com\/files\/burgos\/F071CGE6P\/slack_for_ios_upload.png",
+            "permalink_public": "https:\/\/slack-files.com\/T06HEA4D7-F071CGE6P-ce1efaaf0a",
+            "channels": [
+                "C06JLNH8A"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 1,
+            "initial_comment": {
+                "id": "Fc071CE16W",
+                "created": 1435677728,
+                "timestamp": 1435677728,
+                "user": "U06J2UTA6",
+                "comment": "In it to win it. Also this album fucking rules"
+            }
+        },
+        "user": "U06J2UTA6",
+        "upload": true,
+        "ts": "1435677728.000297"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "<@U06HEA4DP> new brand new? Siick",
+        "ts": "1435677738.000298"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "ah so awesome",
+        "ts": "1435677758.000299"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "one day i will see them live",
+        "ts": "1435677763.000300"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "and LOSE my shit",
+        "ts": "1435677765.000301"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "kinda like how i did last night at rush",
+        "ts": "1435677772.000302"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "<http:\/\/www.altpress.com\/news\/entry\/watch_brand_new_play_a_new_song_sealed_to_me>",
+        "attachments": [
+            {
+                "service_name": "Alternative Press",
+                "service_url": "http:\/\/www.altpress.com\/news\/entry\/watch_brand_new_play_a_new_song_sealed_to_me",
+                "text": "The band handed out lyric sheets to the song at their merch table last night in LA, and then played it as an encore.",
+                "fallback": "Alternative Press: ",
+                "from_url": "http:\/\/www.altpress.com\/news\/entry\/watch_brand_new_play_a_new_song_sealed_to_me",
+                "id": 1
+            }
+        ],
+        "ts": "1435677864.000303"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i have a good feeling abt the new lp",
+        "ts": "1435677878.000305"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "haha",
+        "ts": "1435678018.000306"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "im already listening to music i couldnt listen to on Spotify, alright im sold",
+        "ts": "1435678032.000307"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "haha",
+        "ts": "1435678033.000308"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "here we go",
+        "ts": "1435678530.000309"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "<@U06HEA4DP> download it",
+        "ts": "1435679147.000310"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "oh wait",
+        "ts": "1435679149.000311"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you gotta wait until the fall for Android",
+        "ts": "1435679157.000312"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "it\u2019s coming out with a new version of iTunes today tho, if you can even update your iTunes haha",
+        "ts": "1435679176.000313"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "Oh yeah that's something I want to do. Use iTunes ",
+        "ts": "1435679277.000314"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "well",
+        "ts": "1435679346.000315"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "its not gonna be iTunes anymore",
+        "ts": "1435679352.000316"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "~~",
+        "ts": "1435679355.000317"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "hey iTunes has come a LONG way",
+        "ts": "1435679375.000318"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "remember when itunes was a light media player that was actually useful",
+        "ts": "1435679378.000319"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": ":disappointed:",
+        "ts": "1435679385.000320"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "it's become so bloated that i don't wanna use it",
+        "ts": "1435679391.000321"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "it became a lot better in UI",
+        "ts": "1435679407.000322"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "it used to be super clunky",
+        "ts": "1435679413.000323"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "Spotify wasnt particularly clean either, i hated the desktop app until this year\u2019s redesign",
+        "ts": "1435679474.000324"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i'll check it out",
+        "ts": "1435679482.000325"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "the iOS app is very elegant",
+        "ts": "1435679605.000326"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "im waiting for the new iTunes to drop (aka Apple Music on Mac)",
+        "ts": "1435679622.000327"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "itunes is a joke",
+        "ts": "1435679841.000328"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "its like a fat cow that you cant kill for meat",
+        "ts": "1435679856.000329"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "just takes up space and resources on my farm",
+        "ts": "1435679877.000330"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "[computer]",
+        "ts": "1435679880.000331"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "go die itunes",
+        "ts": "1435679886.000332"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "just",
+        "ts": "1435679887.000333"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "die",
+        "ts": "1435679887.000334"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "painfully",
+        "ts": "1435679889.000335"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "everytime i hit the play button before i loaded up beardedspice",
+        "ts": "1435679904.000336"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "and i see that fucking icon bounce in my dock",
+        "ts": "1435679911.000337"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "my rage level goes from its normal 6",
+        "ts": "1435679919.000338"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "to an instant 11",
+        "ts": "1435679923.000339"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "#joeproblems",
+        "ts": "1435679934.000340"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "I\u2019ve never ever had iTunes bloat my mac, sounds like a personal issue, clean up your dirt haha",
+        "ts": "1435679950.000341"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "bro dont even",
+        "ts": "1435679960.000342"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "just launching it takes like 1gb of ram",
+        "ts": "1435679968.000343"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i dont get it, it\u2019s just a bunch of albums, on a window, that you click play on, doesnt get any harder than that",
+        "ts": "1435679973.000344"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "Pics or it didnt happen!!!!",
+        "ts": "1435679983.000345"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol ill take a video for you one day",
+        "ts": "1435679992.000346"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i just get annoyed that i keep gettin prompts to update itunes on my windows machine",
+        "ts": "1435679997.000347"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "hahahahaha",
+        "ts": "1435680002.000348"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "with ubersicht telling me whats good",
+        "ts": "1435680002.000349"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "like java",
+        "ts": "1435680004.000350"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "windows",
+        "ts": "1435680004.000351"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol @windows",
+        "ts": "1435680011.000352"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "#thestruggle",
+        "ts": "1435680012.000353"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "idk iTunes works fine on a proper mac, ive had my spotify crash and do weird shit",
+        "ts": "1435680025.000354"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "its just software",
+        "ts": "1435680028.000355"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "iTunes was very clunky tho",
+        "ts": "1435680033.000356"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i agree 100%",
+        "ts": "1435680037.000357"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "but its way better",
+        "ts": "1435680042.000358"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "additional things i hate: when tutorials have fucking typos",
+        "ts": "1435680043.000359"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "WAY",
+        "ts": "1435680043.000360"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "like bro",
+        "ts": "1435680045.000361"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "im cpy+pasting ur code",
+        "ts": "1435680050.000362"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "haha",
+        "ts": "1435680053.000363"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i should NOT have to debug it",
+        "ts": "1435680054.000364"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you\u2019re an idiot",
+        "ts": "1435680058.000365"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "me?",
+        "ts": "1435680066.000366"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "no, this guy is an idiot",
+        "ts": "1435680073.000367"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "lol",
+        "ts": "1435680077.000368"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "the point of a tutorial is not debugging stupid typos",
+        "ts": "1435680082.000369"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "an idiot for copyin buggy code",
+        "ts": "1435680089.000370"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "oh",
+        "ts": "1435680094.000371"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "well",
+        "ts": "1435680095.000372"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "eh",
+        "ts": "1435680101.000373"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "```  var conversions = {\n        distance : {\n          meters : 1,\n          cm     : 0.01,\n          feet   : 0.3048,\n          inches : 0.0254,\n          yards  : 0.9144\n        },\n        volume : {\n          liters : 1,\n          gallons: 3.785411784,\n          cups   : 0.236588236\n        }\n      } ```",
+        "ts": "1435680152.000374"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "```  it(\"converts inches to centimeters\", function () {\n    expect(Convert(12, \"in\").to(\"cm\")).toEqual(30.48);\n  });```",
+        "ts": "1435680173.000375"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "really bro",
+        "ts": "1435680179.000376"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "really",
+        "ts": "1435680180.000377"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "u cant match ur strings up",
+        "ts": "1435680185.000378"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "you fucking asswad",
+        "ts": "1435680189.000379"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "(inches in definition, \u2018in\u2019 in the test)",
+        "ts": "1435680210.000380"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "where is the typo",
+        "ts": "1435680221.000381"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "im blind",
+        "ts": "1435680224.000382"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "run your fucking code you fucking cocksucker",
+        "ts": "1435680227.000383"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "ohh",
+        "ts": "1435680251.000384"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "expect(Convert(12, *\u201cin\"*).to(\"cm\")).toEqual(30.48);",
+        "ts": "1435680252.000385"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i cant see it on the snipper",
+        "ts": "1435680267.000386"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "snippet",
+        "ts": "1435680269.000387"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "u see it now tho?",
+        "ts": "1435680274.000388"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "si",
+        "ts": "1435680310.000389"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "comeon thats so insane dont even play devils advocate",
+        "ts": "1435680328.000390"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i wasnt?",
+        "ts": "1435680543.000391"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "haha",
+        "ts": "1435680544.000392"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "the string matching should show up on a text editor",
+        "ts": "1435680565.000393"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "so it goes both ways",
+        "ts": "1435680569.000394"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "both he should have double checked",
+        "ts": "1435680578.000395"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "or you should also have an eye for it, it happens to me all the time lol",
+        "ts": "1435680590.000396"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "now im playing devils advocate",
+        "ts": "1435680601.000397"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": ":stuck_out_tongue:",
+        "ts": "1435680602.000398"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "what is this black magic you guys speak of",
+        "ts": "1435680776.000399"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "<https:\/\/soundcloud.com\/future-disco\/poolside-sounds-volume-iv-mixtape>",
+        "attachments": [
+            {
+                "service_name": "SoundCloud",
+                "service_url": "http:\/\/soundcloud.com",
+                "title": "Poolside Sounds Volume IV - Mixtape by Future Disco",
+                "title_link": "https:\/\/soundcloud.com\/future-disco\/poolside-sounds-volume-iv-mixtape",
+                "author_name": "Future Disco",
+                "author_link": "https:\/\/soundcloud.com\/future-disco",
+                "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000121817340-vrj5rw-t500x500.jpg",
+                "text": "Available: 03\/07\/15\n\nBuy \/\/\niTunes: <http:\/\/hyperurl.co\/PS-IV-iTunes|hyperurl.co\/PS-IV-iTunes>\nAmazon: <http:\/\/hyperurl.co\/PS-IV-Amazon|hyperurl.co\/PS-IV-Amazon>\n\nFuture Disco is back with the ultimate poolside retreat. Poolside Sounds Volume IV soundtracks the transformation from dark basements and warehouses to those hot summer days on the beach or next to the pool.",
+                "fallback": "SoundCloud Audio: Link: Poolside Sounds Volume IV - Mixtape by Future Disco",
+                "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F212655014&show_artwork=true&maxheight=150\"><\/iframe>",
+                "audio_html_width": 100,
+                "audio_html_height": 150,
+                "from_url": "https:\/\/soundcloud.com\/future-disco\/poolside-sounds-volume-iv-mixtape",
+                "thumb_width": 500,
+                "thumb_height": 500,
+                "id": 1
+            }
+        ],
+        "ts": "1435681102.000400"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "gogogogo",
+        "ts": "1435681103.000402"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "aww this isn't the full mix",
+        "ts": "1435681111.000403"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "nvm",
+        "ts": "1435681113.000404"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "hey choe",
+        "ts": "1435681183.000405"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "whyd u reblog old magic tap",
+        "ts": "1435681205.000406"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "and alex, yeah if you were writing it from scratch it would match up",
+        "ts": "1435681224.000407"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "but not cpy past",
+        "ts": "1435681227.000408"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "\"you can create mixed playlists of songs you bought from iTunes or ripped from CDs with streaming music. And you can make them all playable offline, even though they live in the cloud.\u201d &lt;- this is a v important thing for me",
+        "ts": "1435681357.000409"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "it\u2019s a combination of the best part of spotify with the best part of google play music in one pretty package",
+        "ts": "1435681400.000410"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "wait",
+        "ts": "1435681404.000411"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "spotify already does that",
+        "ts": "1435681406.000412"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "nope",
+        "ts": "1435681411.000413"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "not with ripped cds",
+        "ts": "1435681415.000414"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "or music you own locally",
+        "ts": "1435681418.000415"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "not in all devices",
+        "ts": "1435681421.000416"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "hmm",
+        "ts": "1435681441.000417"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i have local files on my playlist",
+        "ts": "1435681445.000418"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you can only listen to whatever music you \u201cown\u201d locally",
+        "ts": "1435681449.000419"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "a",
+        "ts": "1435681453.000420"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "h",
+        "ts": "1435681454.000421"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you cant upload them to be cross device",
+        "ts": "1435681480.000422"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "like google play",
+        "ts": "1435681485.000423"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "gotcha",
+        "ts": "1435681490.000424"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "oh shit",
+        "ts": "1435681525.000425"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "it does the google play thing?",
+        "ts": "1435681529.000426"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "according to some of these reviewers, yes, i havent tried it",
+        "ts": "1435681547.000427"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "thats the killer feature of google play that nothign else has",
+        "ts": "1435681548.000428"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "but usually iTunes Match did that",
+        "ts": "1435681556.000429"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "if they do that i MIGHT actually switch too",
+        "ts": "1435681557.000430"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "it wasnt new",
+        "ts": "1435681559.000431"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "to Google Play",
+        "ts": "1435681563.000432"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "depends on if i can run it w.o itunes lol",
+        "ts": "1435681572.000433"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you could fool iTunes into saying, hey i own this music",
+        "ts": "1435681574.000434"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you have to use itunes, sorry :stuck_out_tongue:",
+        "ts": "1435681589.000435"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i dont wanna do any tomfoolery for something i pay monthy for",
+        "ts": "1435681591.000436"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "they are taking my money",
+        "ts": "1435681601.000437"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "it should just fucking work",
+        "ts": "1435681604.000438"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and it does",
+        "ts": "1435681608.000439"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "lol",
+        "ts": "1435681610.000440"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you\u2019re paying 10 bucks a month",
+        "ts": "1435681619.000441"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "we need something that puts soundcloud into these services",
+        "ts": "1435681623.000442"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "you have all the music available",
+        "ts": "1435681626.000443"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and your local as well",
+        "ts": "1435681632.000444"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "that would be the ultimate",
+        "ts": "1435681633.000445"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "u get the three biggies then: 1)local music 2) online vast majority music 3) pain in the ass cutting edge edm that for some reason doesnt exist anywhere else",
+        "ts": "1435681669.000446"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "fuckin number 3 thinks its so fuckin cool",
+        "ts": "1435681682.000447"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "fuckin scumbag edm",
+        "ts": "1435681687.000448"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "cutting edge edm",
+        "ts": "1435681692.000449"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "JAHAHAHAHAHAJAJAJAJ",
+        "ts": "1435681696.000450"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "here we go",
+        "ts": "1435681698.000451"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "here we go",
+        "ts": "1435681700.000452"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "here we go",
+        "ts": "1435681702.000453"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "u know exactly what i mean alex",
+        "ts": "1435681707.000454"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "dont mince words",
+        "ts": "1435681711.000455"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435681712.000456"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "well indie producers",
+        "ts": "1435681726.000457"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "remix of remix of remix of a remake",
+        "ts": "1435681727.000458"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "or whatever",
+        "ts": "1435681728.000459"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "can upload their shit to apple music",
+        "ts": "1435681735.000460"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "CAN",
+        "ts": "1435681738.000461"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "key word thr",
+        "ts": "1435681741.000462"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and should",
+        "ts": "1435681743.000463"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "WONT",
+        "ts": "1435681745.000464"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "also a key word",
+        "ts": "1435681747.000465"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435681748.000466"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "its better than using soundcloud",
+        "ts": "1435681749.000467"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "soundcloud is easily the biggest drain on my data",
+        "ts": "1435681766.000468"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "yeah okay alex lol",
+        "ts": "1435681812.000469"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "\/giphy gtfo",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/gtfo-panda-jerk-qZqKpbO6yNms8>",
+                "image_url": "http:\/\/media0.giphy.com\/media\/qZqKpbO6yNms8\/giphy.gif",
+                "image_width": 247,
+                "image_height": 178,
+                "image_bytes": 510602,
+                "title": "gtfo",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/gtfo-panda-jerk-qZqKpbO6yNms8"
+            }
+        ],
+        "ts": "1435681818.000470"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i'll try the 3 month trial",
+        "ts": "1435681828.000471"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "soundcloud doesnt have good discovery",
+        "ts": "1435681833.000472"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "would be dope if they had the collaborative playlist feature",
+        "ts": "1435681838.000473"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "if you\u2019re listening to the SAME genre",
+        "ts": "1435681841.000474"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and same shit",
+        "ts": "1435681842.000475"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "every day",
+        "ts": "1435681843.000476"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "thats what following choe is for",
+        "ts": "1435681844.000477"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and it works for you",
+        "ts": "1435681846.000478"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "good",
+        "ts": "1435681848.000479"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "discovery",
+        "ts": "1435681848.000480"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435681851.000481"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "now i have ot reconstruct my playlists from scratch",
+        "ts": "1435681858.000482"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "ugh",
+        "ts": "1435681858.000483"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i hope apple music sucks so that i can just stick with spotify",
+        "ts": "1435681867.000484"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i had to do that anyway haha, my spotify ones were old",
+        "ts": "1435681870.000485"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "or like stale",
+        "ts": "1435681874.000486"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "you guys man",
+        "ts": "1435681880.000487"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "i get bored of playlists often tho",
+        "ts": "1435681885.000488"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "full time music curators",
+        "ts": "1435681885.000489"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "idk how the fuck u do it",
+        "ts": "1435681890.000490"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "joe shut the fuck up",
+        "ts": "1435681893.000491"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "me and 15 other peopl ehave been curating a playlist on spotify for 2.5 years",
+        "ts": "1435681894.000492"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "but im happy you all do",
+        "ts": "1435681896.000493"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435681897.000494"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "1500 songs",
+        "ts": "1435681898.000495"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lololol :troll:",
+        "ts": "1435681931.000496"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": ":heart:",
+        "ts": "1435681937.000497"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "moron :kiss:",
+        "ts": "1435681943.000498"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "yeah i need more msuic discovery sites that don't require me to sift through dozens of bullshit songs",
+        "ts": "1435681968.000499"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "following specific channels on soundcloud and reddit helps",
+        "ts": "1435681979.000500"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "but i get pigeon holed into certain genres",
+        "ts": "1435681986.000501"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "the ratio of finding good tunes on soundcloud is like 1\/100",
+        "ts": "1435681988.000502"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "which can get annoying",
+        "ts": "1435681992.000503"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "disagree entirely",
+        "ts": "1435681993.000504"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "yeah i've had success",
+        "ts": "1435682000.000505"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "some of the people i follow are spot on",
+        "ts": "1435682002.000506"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and if you do, you get stuck listening to the same shit",
+        "ts": "1435682006.000507"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "w songs i like",
+        "ts": "1435682007.000508"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "just gotta follow the right accou nts",
+        "ts": "1435682007.000509"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "exactly",
+        "ts": "1435682012.000510"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "but the genre thing is totally valid",
+        "ts": "1435682022.000511"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "the browse feature sucks monkey dick",
+        "ts": "1435682023.000512"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "truth",
+        "ts": "1435682028.000513"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "oh i have a pretty solid soundcloud feed",
+        "ts": "1435682034.000514"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "hypem isn't too bad, but it's not that great",
+        "ts": "1435682037.000515"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i dislike hypem",
+        "ts": "1435682044.000516"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i always end up listening to wierd shit i hate",
+        "ts": "1435682051.000517"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "deephouseamsterdam and mixmag are not bad",
+        "ts": "1435682052.000518"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "but thats not really discovery, because you\u2019re stuck mostly in like one genre",
+        "ts": "1435682055.000519"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i also hate its interface",
+        "ts": "1435682056.000520"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "but the pigeon holing of genres like i said before",
+        "ts": "1435682058.000521"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i just really dislike it",
+        "ts": "1435682061.000522"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "so its irrelevant really",
+        "ts": "1435682065.000523"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "<@U06JAHAV7>: loves that shit",
+        "ts": "1435682071.000524"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "theres a reason why my soundcloud has nothing but electronic music on it",
+        "ts": "1435682086.000525"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "yeah but im okay w that",
+        "ts": "1435682099.000526"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "yeah same",
+        "ts": "1435682110.000527"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i like all electronic music",
+        "ts": "1435682114.000528"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "well yeah thats fine",
+        "ts": "1435682122.000529"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "but i stick to just electronic music",
+        "ts": "1435682123.000530"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "but thats not a good music app lol",
+        "ts": "1435682127.000531"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i actually find out new rock from facebook following the artists",
+        "ts": "1435682128.000532"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "=X",
+        "ts": "1435682129.000533"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "its a good EDM* app",
+        "ts": "1435682137.000534"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "its just i listen to one genre and all this shit is here",
+        "ts": "1435682137.000535"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "so it's not as big of an issue with me as it woudl be with you",
+        "ts": "1435682138.000536"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i can accept that",
+        "ts": "1435682151.000537"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i just get so sick of just house",
+        "ts": "1435682154.000538"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "as long as its really good at its job",
+        "ts": "1435682156.000539"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "or just future beats",
+        "ts": "1435682159.000540"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "or just porn",
+        "ts": "1435682162.000541"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "lol",
+        "ts": "1435682165.000542"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i can live w an app per genre",
+        "ts": "1435682165.000543"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "nah i take the last one back",
+        "ts": "1435682168.000544"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "what abt porn",
+        "ts": "1435682179.000545"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "\/giphy porn",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/ISp5MbKbfZUac>",
+                "image_url": "http:\/\/media4.giphy.com\/media\/ISp5MbKbfZUac\/giphy.gif",
+                "image_width": 500,
+                "image_height": 500,
+                "image_bytes": 349246,
+                "title": "porn",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/ISp5MbKbfZUac"
+            }
+        ],
+        "ts": "1435682182.000546"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "damnnit",
+        "ts": "1435682185.000547"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "dont",
+        "ts": "1435682208.000548"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "giphy",
+        "ts": "1435682210.000549"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "that",
+        "ts": "1435682211.000550"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "that reminds me to update <#C06J9TZQT>",
+        "ts": "1435682212.000551"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "at work",
+        "ts": "1435682214.000552"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "LOL you psycho",
+        "ts": "1435682220.000553"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "some of us",
+        "ts": "1435682222.000554"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "sit",
+        "ts": "1435682223.000555"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "in",
+        "ts": "1435682224.000556"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "open spaces",
+        "ts": "1435682226.000557"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and not",
+        "ts": "1435682229.000558"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "a fucking",
+        "ts": "1435682230.000559"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "cubicle",
+        "ts": "1435682232.000560"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "ROLL THE BONES ALEX",
+        "ts": "1435682237.000561"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "\/giphy roll the bones",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/crash-hit-accident-7bDDSrDpmvCbS>",
+                "image_url": "http:\/\/media1.giphy.com\/media\/7bDDSrDpmvCbS\/giphy.gif",
+                "image_width": 349,
+                "image_height": 209,
+                "image_bytes": 2092951,
+                "title": "roll the bones",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/crash-hit-accident-7bDDSrDpmvCbS"
+            }
+        ],
+        "ts": "1435682241.000562"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "that was sick",
+        "ts": "1435682248.000563"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "ouch",
+        "ts": "1435682267.000564"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "that's tough to watch",
+        "ts": "1435682269.000565"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "anyway don't stop sending me songs, alex",
+        "ts": "1435682341.000566"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "even if you switch to apple music",
+        "ts": "1435682345.000567"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i expect songs in my inbox",
+        "ts": "1435682348.000568"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "on spotify",
+        "ts": "1435682350.000569"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": ":smile:",
+        "ts": "1435682352.000570"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "what\u2019s a spotofy?",
+        "ts": "1435682362.000571"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "way too much yap in this channel",
+        "ts": "1435682365.000572"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "lol",
+        "ts": "1435682371.000573"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "mute it you dingus <@U06JAHAV7>",
+        "ts": "1435682374.000574"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "#muted",
+        "ts": "1435682374.000575"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol way to join the party bruh",
+        "ts": "1435682377.000576"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "already did but you told me to join",
+        "ts": "1435682382.000577"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "wat a dickkkk",
+        "ts": "1435682384.000578"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "oh",
+        "ts": "1435682387.000579"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "then it's worse than the yap channel",
+        "ts": "1435682387.000580"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "yeah",
+        "ts": "1435682387.000581"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "kid cant handle the red dot",
+        "ts": "1435682393.000582"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "well you need music in your life",
+        "ts": "1435682393.000583"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "\/giphy red dot",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/cat-12DcP0jRHTWymA>",
+                "image_url": "http:\/\/media2.giphy.com\/media\/12DcP0jRHTWymA\/giphy.gif",
+                "image_width": 241,
+                "image_height": 300,
+                "image_bytes": 1026930,
+                "title": "red dot",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/cat-12DcP0jRHTWymA"
+            }
+        ],
+        "ts": "1435682396.000584"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "hahaha",
+        "ts": "1435682402.000585"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "but <@U06HEA4DP> here has to go on a rant everywhere he goes",
+        "ts": "1435682404.000586"
+    },
+    {
+        "type": "message",
+        "user": "U06J76HFC",
+        "text": "is that penny",
+        "ts": "1435682406.000587"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "LOL sang",
+        "ts": "1435682413.000588"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "haha thats amazing",
+        "ts": "1435682415.000589"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "oh yeah",
+        "ts": "1435682428.000590"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "cuz no1 else rants",
+        "ts": "1435682430.000591"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "esp not u alex",
+        "ts": "1435682436.000592"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lol",
+        "ts": "1435682437.000593"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "well no i left for 20min came back to a million messages and my name @'d somewhere in the middle",
+        "ts": "1435682473.000594"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "im just counteranting your stupidity",
+        "ts": "1435682477.000595"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "lolol",
+        "ts": "1435682484.000596"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "everybody rants",
+        "ts": "1435682510.000597"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "and poops",
+        "ts": "1435682512.000598"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "music should literally just be a music link and then discuss that specific song or nothing else",
+        "ts": "1435682520.000599"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "agreed",
+        "ts": "1435682528.000600"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "i'm goin to general channel",
+        "ts": "1435682531.000601"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "the only way it can be something that's used",
+        "ts": "1435682531.000602"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "this is all music related rant tho",
+        "ts": "1435682538.000603"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "alrite",
+        "ts": "1435682539.000604"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "instead of just more yap",
+        "ts": "1435682539.000605"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "ur rite tho",
+        "ts": "1435682540.000606"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "i kinda agree w that too",
+        "ts": "1435682544.000607"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "lets swtich",
+        "ts": "1435682547.000608"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "have a music rant channel",
+        "ts": "1435682549.000609"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "<#C06HEA4GZ>",
+        "ts": "1435682551.000610"
+    },
+    {
+        "type": "message",
+        "user": "U06JAHAV7",
+        "text": "that i wont join lol",
+        "ts": "1435682552.000611"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "or just dont rant",
+        "ts": "1435682591.000612"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "just",
+        "ts": "1435682592.000613"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "post music",
+        "ts": "1435682594.000614"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "and say \u201chey its cool\u201d or in my case \u201cmeh\"",
+        "ts": "1435682603.000615"
+    },
+    {
+        "type": "message",
+        "user": "U06J2UTA6",
+        "text": "then move your ass to <#C06HEA4GZ>",
+        "ts": "1435682610.000616"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "<https:\/\/soundcloud.com\/rufussounds\/you-were-right-1>",
+        "attachments": [
+            {
+                "service_name": "SoundCloud",
+                "service_url": "http:\/\/soundcloud.com",
+                "title": "You Were Right by R\u00dcF\u00dcS \/ R\u00dcF\u00dcS DU SOL",
+                "title_link": "https:\/\/soundcloud.com\/rufussounds\/you-were-right-1",
+                "author_name": "R\u00dcF\u00dcS \/ R\u00dcF\u00dcS DU SOL",
+                "author_link": "https:\/\/soundcloud.com\/rufussounds",
+                "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000121322105-gox847-t500x500.jpg",
+                "text": "'You Were Right' is the first single taken from the sophomore album from R\u00dcF\u00dcS \n\nGet it now: <http:\/\/smarturl.it\/RufusYouWereRight>\n\nR\u00dcF\u00dcS are know as R\u00dcF\u00dcS DU SOL in North America\n\nFacebook: <http:\/\/www.facebook.com\/rufussounds|www.facebook.com\/rufussounds>\nTwitter: <https:\/\/twitter.com\/rufussounds>",
+                "fallback": "SoundCloud Audio: Link: You Were Right by R\u00dcF\u00dcS \/ R\u00dcF\u00dcS DU SOL",
+                "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F211928018&show_artwork=true&maxheight=150\"><\/iframe>",
+                "audio_html_width": 100,
+                "audio_html_height": 150,
+                "from_url": "https:\/\/soundcloud.com\/rufussounds\/you-were-right-1",
+                "thumb_width": 500,
+                "thumb_height": 500,
+                "id": 1
+            }
+        ],
+        "ts": "1435682703.000617"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "<https:\/\/www.youtube.com\/watch?v=CXPADwU05OQ>",
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "service_url": "http:\/\/www.youtube.com\/",
+                "title": "[MV] Lim Kim(\uae40\uc608\ub9bc) (Togeworl(\ud22c\uac1c\uc6d4)) _ Awoo",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=CXPADwU05OQ",
+                "author_name": "1theK (\uc6d0\ub354\ucf00\uc774)",
+                "author_link": "http:\/\/www.youtube.com\/user\/LOENENT",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/CXPADwU05OQ\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: [MV] Lim Kim(\uae40\uc608\ub9bc) (Togeworl(\ud22c\uac1c\uc6d4)) _ Awoo",
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/CXPADwU05OQ?feature=oembed\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "from_url": "https:\/\/www.youtube.com\/watch?v=CXPADwU05OQ",
+                "id": 1
+            }
+        ],
+        "ts": "1435683985.000619"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "yeah new rufus song is dope. he is filthy",
+        "ts": "1435684809.000621"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "that brand new song i posted much earlier is also good",
+        "ts": "1435684830.000622"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "can you relink",
+        "ts": "1435685836.000623"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "is there a way you can see all the links",
+        "ts": "1435685876.000624"
+    },
+    {
+        "type": "message",
+        "user": "U06J9BRL0",
+        "text": "without the chat",
+        "ts": "1435685878.000625"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "to the scripts!",
+        "ts": "1435686255.000626"
+    },
+    {
+        "type": "message",
+        "user": "U06HEA4DP",
+        "text": "to the google!",
+        "ts": "1435686258.000627"
+    }
+]
