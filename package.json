@@ -1,0 +1,12 @@
+{
+  "name": "slackinfo",
+  "dependencies": {
+    "express": "~4.10.2",
+    "request": "latest",
+    "node-jquery-param": "latest",
+    "cors": "latest"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

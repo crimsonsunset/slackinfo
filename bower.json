@@ -1,0 +1,11 @@
+{
+  "name": "slackinfo",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "latest",
+    "underscore": "latest",
+    "jquery": "latest",
+    "backbone": "latest",
+    "backbone.localStorage": "latest"
+  }
+}
