@@ -27,7 +27,8 @@ app.Song = Backbone.Model.extend({
             this.thumbnail = inMsg.attachments[0].thumb_url || ''
 
         } else {
-
+            //todo: services that dont have integration blocks (added hypem here)
+            this.url = inMsg.text.split('<')[1].split('>')[0];
         }
     }
 });
