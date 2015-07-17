@@ -100,14 +100,6 @@
             completed: false
         }
     });
-
-    var todo = new app.Todo({title: 'Learn Backbone.js', completed: false}); // create object with the attributes specified.
-    todo.get('title'); // "Learn Backbone.js"
-    todo.get('completed'); // false
-    todo.get('created_at'); // undefined
-    todo.set('created_at', Date());
-    console.log(todo.get('created_at'))
-
     app.TodoList = Backbone.Collection.extend({
         model: app.Todo,
         localStorage: new Store("backbone-todo"),
@@ -124,25 +116,18 @@
     // instance of the Collection
     app.todoList = new app.TodoList();
 
-    var todoList = new app.TodoList()
-    todoList.create({title: 'Learn Backbone\'s Collection'}); // notice: that `completed` will be set to false by default.
-    var lmodel = new app.Todo({title: 'Learn Models', completed: true});
-    todoList.add(lmodel);
-    todoList.pluck('title');     // ["Learn Backbone's Collection", "Learn Models"]
-    todoList.pluck('completed'); // [false, true]
-    JSON.stringify(todoList);    // "[{
-
-
     // renders individual todo items list (li)
     app.TodoView = Backbone.View.extend({
         tagName: 'li',
         template: _.template($('#item-template').html()),
         render: function () {
+            console.log('rendering ', this)
             this.$el.html(this.template(this.model.toJSON()));
             this.input = this.$('.edit');
             return this; // enable chained calls
         },
         initialize: function () {
+            console.log('initiz ', this)
             this.model.on('change', this.render, this);
             this.model.on('destroy', this.remove, this); // remove: Convenience Backbone'
         },
@@ -182,6 +167,7 @@
     app.AppView = Backbone.View.extend({
         el: '#todoapp',
         initialize: function () {
+            console.log('init app view')
             this.input = this.$('#new-todo');
             // when new elements are added to the collection render then with addOne
             app.todoList.on('add', this.addOne, this);
@@ -243,7 +229,7 @@
         },
         setFilter: function(params) {
             console.log('app.router.params = ' + params); // just for didactical purposes.
-            window.filter = params.trim() || '';
+//            window.filter = params.trim() || '';
             app.todoList.trigger('reset');
         }
     });

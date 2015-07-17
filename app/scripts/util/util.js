@@ -9,18 +9,28 @@ var userObj = {
 
 var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
 
-
 //todo: figure out a better less hard coded way to do this
 function getUser(ind) {
     return userObj[ind]
 }
 
-function hasUrl(s) {
-    //var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
-    //return regexp.test(s) && s.indexOf('facebook.com') > -1;
+// Asynchronously load templates located in separate .html files
+function loadTemplates(views, callback) {
 
-    return new RegExp("([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?").test(s)
+    var deferreds = [];
 
+    $.each(views, function(index, view) {
+        var viewName = view+'View'
+        if (app[viewName]) {
+            deferreds.push($.get(app.templates.path + view + '.html', function(data) {
+                app[viewName].prototype.template = _.template(data);
+            }));
+        } else {
+            console.log(view + " not found");
+        }
+    });
+    console.log('loaded temps inside')
+    return $.when.apply(null, deferreds).done(callback);
 }
 
 String.prototype.hasUrl = function () {
@@ -28,13 +38,10 @@ String.prototype.hasUrl = function () {
 };
 
 String.prototype.matchesService = function () {
-
-    var doesMatch = false;
     var that = this
     var didMatch=false
     _.each(serviceArr, function (e, i, l) {
-        doesMatch = (that.indexOf(e) !== -1) ? true : false
-        if (doesMatch) {
+        if (that.indexOf(e) !== -1) {
             didMatch = true
             return true
         }

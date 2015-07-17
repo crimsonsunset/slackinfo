@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js">
+  <body>
+
+<!-- START: Templates -->
+    <script type="text/html" class="template-header">
+        <header class="slideAway">
+            <span class="icon allPages">back</span>
+            <span class="icon showInfo">show Info</span>
+            <span class="icon help" style="display:none;">show Info</span> 
+            <h3><span class="title"></span><span class="mode-tag"></span></h3>
+            <div class="progress-bar">
+                <span class="progress"></span>
+                <span class="loading"></span>
+            </div>
+            <div class="partner-logo" style="display:none;">SPONSORED BY<br/><div class="logo-wrapper"><img src="" /></div></div>
+        </header>
+    </script>
+
+    <script type="text/html" class="template-preview-box">
+        <div class ="preview-box">
+            <section class="text-container">
+                <h3>PREVIEW MODE</h3>
+                <% if ( !loggedIn  ) { %>
+                    <p>You&apos;re currently viewing this comic in preview mode. Continue reading by becoming a Marvel Unlimited member or, if already a member, sign in below.</p>
+                <% } else { %>
+                    <p>You&apos;re currently viewing this comic in preview mode. Become a Marvel Unlimited member to continue reading now!</p>
+                <% } %>
+            </section>
+                <% if ( !loggedIn  ) { %>
+                    <div class="preview-btn learn-more width-50">BECOME A MEMBER</div>
+                    <div class="preview-btn signin width-50">SIGN IN</div>
+                <% } else { %>
+                    <div class="preview-btn learn-more width-100">GET MARVEL UNLIMITED!</div>
+                <% } %>
+            <div class="clearfix"></div>
+        </div>
+    </script>
+
+    <script type="text/html" class='template-footer'>
+        <footer class="hide slideAway">
+        <nav>
+           <span id="left_arrow" class="icon arrow">left</span>
+           <span id="right_arrow" class="icon arrow">right</span>
+            <ul>
+                <li class="icon btn-panel">
+                    panel
+                </li>
+                <li class="icon btn-zoom">
+                    zoom
+                </li>
+                <li class="icon btn-screen">
+                    screen
+                </li>
+            </ul>
+        </nav>  
+        </footer>
+    </script>
+
+    <script type="text/html" class='template'>
+        <% if ( typeof(thumbnail) != "undefined" ){ %> 
+               <div class="thumbnail"><img src=<% print (thumbnail.path + "/portrait_fantastic.jpg")  %> /></div>
+           <% } %>
+        <div class="content"> 
+            <h1> <%if ( typeof(title) != "undefined"  ) {  print(title) } %></h1>
+            <article>
+               <% if ( typeof(release_date_formatted) != "undefined"  ) { print(rocket.getFields(release_date_formatted, 'Published')); } %>
+               <% if ( typeof(release_date_digital_formatted) != "undefined" ){ 
+                         print(rocket.getFields(release_date_digital_formatted, 'Added to Marvel Unlimited'));
+               } %>
+               <% if ( typeof(rating) != "undefined" ) { print(rocket.getFields(rating, 'Rating')); } %>
+               <% if ( typeof(creators.extended_list) != "undefined" ){ print(rocket.getFields(creators));   } %>
+               <% if ( typeof(imprint) != "undefined" ) { print(rocket.getFields(imprint, 'Imprint')); } %>
+               <% if ( typeof(format) != "undefined" ) { print(rocket.getFields(format, 'Format')); } %>
+               <% if ( typeof(features) != "undefined" ) { print(rocket.getFields(features, 'Features')); }%>
+               <% if ( typeof(description) != "undefined" ){ print(rocket.getFields(description, 'Description', 'desc')); }%>
+            </article>
+        </div>
+    </script>  
+
+    <script type="text/html" class="noBook">
+        <span class='back'>Back</span>
+        <div class="wrapper">
+            <div class="dontStopNow">
+                <h1> Don't stop now</h1>
+                <p>Let the editors Guide you through a new corner of the Marvel Universe.  You'll find recommend reading for universe-shattering events,
+                    plus guides to your favorite characters and artists
+                </p>
+                <a class="btn btn-red" href="http://marvel.com/comics/discover/"><span>GO TO DISCOVER</span></a>                  
+            </div>
+            <div class="mask"></div>
+        </div>   
+    </script>
+
+    
+    <script type="text/html" class="preview-buypage">
+        <span class='back'>Back</span>
+        <% if ( !auth_state.logged_in ){ %> 
+           <div class="login-link">Already a Marvel Unlimited Member? <a href="<% print(external_links.login) %>">Log in</a>.</div>
+        <% } %>
+        <h1>Unlock the full book</h1>
+        <h2>Get instant access to over 15,000 Marvel digital comics</h2>
+        <div class= "cta-tag">Only $9.99 a month!</div>
+        <a class="btn btn-red getitnow"><span>GET IT NOW!</span></a>
+        <div class="legaleese">Cancel any time. Auto-renewal and other terms and conditions apply. Please see <a href="http://marvel.com/unlimited">Marvel.com/unlimited</a> for details and the <a href="http://marvel.com/corporate/marvel_unlimited_terms">Marvel Unlimited Terms of Use</a> and <a href="http://marvel.com/corporate/license_tou">Marvel Digital Comics License Agreement</a> for more details.</div>
+    </script>
+
+<!-- END: Templates -->
+
+</body>
+</html>

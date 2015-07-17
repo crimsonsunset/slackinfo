@@ -42,3 +42,22 @@ app.TodoView = Backbone.View.extend({
         this.model.destroy();
     }
 });
+
+
+
+app.SongView = Backbone.View.extend({
+    tagName: 'li',
+    template: _.template($('#item-template').html()),
+    render: function () {
+        this.$el.html(this.template(this.model.toJSON()));
+        this.input = this.$('.edit');
+        return this; // enable chained calls
+    },
+    initialize: function () {
+        console.log('initializingg')
+        //this.model.on('change', this.render, this);
+        //this.model.on('destroy', this.remove, this); // remove: Convenience Backbone'
+    },
+    events: {
+    }
+});

@@ -20,11 +20,11 @@ app.Song = Backbone.Model.extend({
 
         this.contributor = getUser(inMsg.user)
         if (inMsg.attachments) {
-            this.service = inMsg.attachments[0].service_name || ''
-            this.title = inMsg.attachments[0].title || ''
-            this.description = inMsg.attachments[0].text || ''
-            this.url = inMsg.attachments[0].title_link || ''
-            this.thumbnail = inMsg.attachments[0].thumb_url || ''
+            this.set({service: inMsg.attachments[0].service_name || ''})
+            this.set({title: inMsg.attachments[0].title || ''})
+            this.set({description: inMsg.attachments[0].text || ''})
+            this.set({url: inMsg.attachments[0].title_link || ''})
+            this.set({thumbnail: inMsg.attachments[0].thumb_url || ''})
 
         } else {
             //todo: services that dont have integration blocks (added hypem here)

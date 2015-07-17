@@ -46,7 +46,7 @@
     </section>
 </section>
 
-<section id="songapp">
+<section id="songapp" style="border: 2px solid">
     <header id="header2">>
     </header>
 
@@ -54,14 +54,6 @@
     </section>
 </section>
 
-<script type="text/template" id="item-template">
-    <div class="view">
-        <input class="toggle" type="checkbox" onclick="getVal(this)">
-        <label><%- title %></label>
-        <input class="edit" value="<%- title %>">
-        <button class="destroy">remove</button>
-    </div>
-</script>
 
 <!-- ========= -->
 <!-- Libraries -->
@@ -81,10 +73,28 @@
 <script src="bower_components/backbone.localStorage/backbone.localStorage-min.js" type="text/javascript"></script>
 
 
+<script type="text/template" id="item-template">
+    <div class="view">
+        <input class="toggle" type="checkbox" onclick="getVal(this)">
+        <label><%- title %></label>
+        <input class="edit" value="<%- title %>">
+        <button class="destroy">remove</button>
+    </div>
+</script>
 
 <!-- =============== -->
 <!-- Javascript code -->
 <!-- =============== -->
+
+<script type="text/javascript">
+    var app = {};
+    app.config = {};
+    app.config.appName = 'slackinfo';
+    app.templates = {};
+    app.templates.names = ['Song'];
+    app.templates.path = 'app/templates/';
+    app.config.appVersion = '0.1';
+</script>
 
 
 <script src="app/scripts/main.js" type="text/javascript"></script>

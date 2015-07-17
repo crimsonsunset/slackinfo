@@ -20,8 +20,11 @@ app.AppView = Backbone.View.extend({
         this.input.val(''); // clean input box
     },
     addOne: function (todo) {
-        var view = new app.TodoView({model: todo});
-        $('#todo-list').append(view.render().el);
+        //var view = new app.TodoView({model: todo});
+        //$('#todo-list').append(view.render().el);
+
+        var songView = new app.SongView({model: song});
+        $('#todo-list').append(songView.render().el);
     },
     addAll: function(){
         console.log('asdads')
@@ -49,31 +52,13 @@ app.AppView = Backbone.View.extend({
 
 
 
-// renders the full list of todo items calling TodoView for each one.
 app.MainView = Backbone.View.extend({
     el: '#songapp',
-    SONG_URL: 'testDay.json',
     initialize: function () {
-        this.fetchSongs()
+        console.log('init mainview')
         return this;
     },
     events: {
         'keypress #new-todo': 'createTodoOnEnter'
-    },
-    fetchSongs: function () {
-        $.getJSON(this.SONG_URL)
-            .done(function (data) {
-                console.log("got songs!");
-                _.each(data, function(e,i,l){
-                    if (e.text.hasUrl() && e.text.matchesService()) {
-                        app.songList.add(new app.Song(e))
-                    } else {}
-                });
-
-            })
-            .fail(function (data) {
-                console.log("failed loading songs");
-            });
-
     }
 });
