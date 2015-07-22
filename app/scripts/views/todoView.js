@@ -46,17 +46,31 @@ app.TodoView = Backbone.View.extend({
 
 
 app.SongView = Backbone.View.extend({
-    tagName: 'li',
-    template: _.template($('#item-template').html()),
+    el: '.song',
     render: function () {
-        this.$el.html(this.template(this.model.toJSON()));
-        this.input = this.$('.edit');
+        console.log('redner time for song')
+        return this.template(this.model.attributes); // enable chained calls
+    },
+    initialize: function () {
+    },
+    events: {
+    }
+});
+
+app.SongListView = Backbone.View.extend({
+    el: '.song-list',
+    render: function () {
+
+        var that = this
+        _.each(this.collection.models, function(e,i,l){
+            that.$el.append(new app.SongView({model:e}).render())
+        });
+
         return this; // enable chained calls
     },
     initialize: function () {
-        console.log('initializingg')
-        //this.model.on('change', this.render, this);
-        //this.model.on('destroy', this.remove, this); // remove: Convenience Backbone'
+        console.log('initializingg list')
+        console.log(this)
     },
     events: {
     }

@@ -43,10 +43,10 @@ $(document).ready(function(){
     function init(){
         console.log('init time')
         //var view = new app.SongView({model: app.Song});
-        //$('#todo-list').append(view.render().el);
+        var listView = new app.SongListView({collection: app.songList}).render();
 
-        app.mainView = new app.MainView();
 
+        //app.mainView = new app.MainView();
 
         app.router = new app.Router();
         Backbone.history.start();
