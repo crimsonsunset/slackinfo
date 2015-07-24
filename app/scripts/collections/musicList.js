@@ -14,7 +14,7 @@ app.TodoList = Backbone.Collection.extend({
 app.SongList = Backbone.Collection.extend({
     model: app.Song,
     SONG_URL: 'app/templates/testDay.json',
-    localStorage: new Store("backbone-song"),
+    //localStorage: new Store("backbone-song"),
     initialize: function () {
         //this.fetchSongs();
         return this;
@@ -41,7 +41,7 @@ app.SongList = Backbone.Collection.extend({
                         that.add(new app.Song(e))
                     } else {}
                 });
-                console.log('done fetching songs', that)
+                //console.log('done fetching songs', that)
             })
             .fail(function (data) {
                 console.log("failed loading songs");

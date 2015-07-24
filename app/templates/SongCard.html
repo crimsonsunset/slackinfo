@@ -1,0 +1,21 @@
+<div class="animated zoomIn mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp demo-card-image song-card">
+    <div class=" mdl-card__actions">
+        <h3 class=" mdl-card__title-text"><a href="<%= url %>" target="_blank"><%= title %></a></h3>
+    </div>
+    <div class="mdl-card__media">
+        <img src='
+        <% if (thumbnail) { %>
+            <%= thumbnail %>
+        <% }else{ %>
+            https://placeholdit.imgix.net/~text?txtsize=33&txt=joe%20is%20the%20best&w=500&h=500
+        <% } %>'
+             width="173" height="157" border="0" alt=""
+              class="mdl-cell mdl-cell--6-col card-image" id="fuckyou">
+
+        <h3 class="mdl-card__subtitle-text mdl-cell mdl-cell--6-col"><%= artist %></h3>
+
+        <div class="mdl-card__supporting-text mdl-cell mdl-cell--6-col">
+            <%= service %>
+        </div>
+    </div>
+</div>

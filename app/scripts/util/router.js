@@ -9,7 +9,7 @@ app.Router = Backbone.Router.extend({
             window.filter = params.trim() || '';
             app.todoList.trigger('reset');
         } else {
-            console.log('starting');
+            //console.log('starting router');
 
         }
 

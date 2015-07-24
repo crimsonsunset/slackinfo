@@ -1,4 +1,3 @@
-
 // renders individual todo items list (li)
 app.TodoView = Backbone.View.extend({
     tagName: 'li',
@@ -44,34 +43,54 @@ app.TodoView = Backbone.View.extend({
 });
 
 
-
 app.SongView = Backbone.View.extend({
-    el: '.song',
+    tagName: 'div',
     render: function () {
-        console.log('redner time for song')
-        return this.template(this.model.attributes); // enable chained calls
+        var d = this.template(this.model.toJSON())
+        this.$el.html(d)
+        this.$(".song").css('background-color', randomColor({luminosity: 'light'}));
+        return this;
     },
     initialize: function () {
+        //this.listenTo(this.model, "change", this.songChanged);
+    },
+    showSongCard: function (e) {
+        console.log('showSongCard')
+        app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
+    },
+    songChanged: function (e) {
+        console.log('songchanged')
     },
     events: {
+        'click .song': 'showSongCard'
     }
 });
 
 app.SongListView = Backbone.View.extend({
     el: '.song-list',
     render: function () {
-
-        var that = this
-        _.each(this.collection.models, function(e,i,l){
-            that.$el.append(new app.SongView({model:e}).render())
-        });
-
+        this.collection.each(this.addOne, this);
         return this; // enable chained calls
     },
-    initialize: function () {
-        console.log('initializingg list')
-        console.log(this)
+    addOne: function (song) {
+        var songView = new app.SongView({model: song});
+        this.$el.append(songView.render().el);
     },
-    events: {
+
+    initialize: function () {
+    }
+});
+
+app.SongCardView = Backbone.View.extend({
+    tagName: 'div',
+    render: function () {
+        console.log('rendering card')
+        this.$el.html(this.template(this.model.toJSON()))
+        this.$el.attr('id', 'song-card-' + this.id);
+        this.$(".mdl-card__media").css('background-color', randomColor({luminosity: 'dark'}));
+        return this;
+    },
+    initialize: function () {
+        this.id = this.model.cid
     }
 });

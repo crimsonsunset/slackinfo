@@ -27,7 +27,6 @@ app.AppView = Backbone.View.extend({
         $('#todo-list').append(songView.render().el);
     },
     addAll: function(){
-        console.log('asdads')
         this.$('#todo-list').html(''); // clean the todo list
         // filter todo item list
         switch(window.filter){
@@ -56,6 +55,20 @@ app.MainView = Backbone.View.extend({
     el: '#songapp',
     initialize: function () {
         console.log('init mainview')
+        return this;
+    },
+    render: function () {
+        console.log('render mainview')
+        this.$el.append(this.template())
+        app.listView = new app.SongListView({collection: app.songList}).render()
+        return this;
+    },
+    spawnCard: function (card) {
+        console.log('card')
+        console.log(card)
+        console.log('spawning card in mainview')
+        $('.card-holder').empty()
+        $('.card-holder').append(card.$el)
         return this;
     },
     events: {

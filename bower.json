@@ -7,6 +7,8 @@
     "jquery": "latest",
     "backbone": "latest",
     "backbone.localStorage": "latest",
-    "material-design-lite": "latest"
+    "material-design-lite": "latest",
+    "randomColor": "latest",
+    "animate.css": "latest"
   }
 }

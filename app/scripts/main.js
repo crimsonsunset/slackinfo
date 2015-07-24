@@ -3,7 +3,7 @@ var app = app || {}; // create namespace for our app
 
 $(document).ready(function(){
 
-    console.log('doc ready')
+    //console.log('doc ready')
 
     //var todo = new app.Todo({title: 'Learn Backbone.js', completed: false}); // create object with the attributes specified.
     //todo.get('title'); // "Learn Backbone.js"
@@ -41,12 +41,12 @@ $(document).ready(function(){
         .then( init );
 
     function init(){
-        console.log('init time')
+        //console.log('init time')
         //var view = new app.SongView({model: app.Song});
-        var listView = new app.SongListView({collection: app.songList}).render();
+
+        app.mainView = new app.MainView().render();
 
 
-        //app.mainView = new app.MainView();
 
         app.router = new app.Router();
         Backbone.history.start();
