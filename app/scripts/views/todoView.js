@@ -68,23 +68,41 @@ app.SongView = Backbone.View.extend({
 
 app.SongListView = Backbone.View.extend({
     el: '.song-list',
+    displayArr: [],
     render: function () {
+        this.$el.empty();
+        this.displayArr = [];
         this.collection.each(this.addOne, this);
         return this; // enable chained calls
     },
+    renderList : function(songs){
+        console.log('renderList')
+        this.displayArr = songs;
+        this.$el.empty();
+        var that = this;
+        _.each(this.displayArr, function(song){
+            that.addOne(song)
+        });
+        return this;
+    },
     addOne: function (song) {
         var songView = new app.SongView({model: song});
+        this.displayArr.push(song)
         this.$el.append(songView.render().el);
     },
 
     initialize: function () {
+        console.log('init songlis view')
+        console.log(this.collection)
+        this.listenTo(this.model, 'search', function () {
+            console.log('searchzz')
+        });
     }
 });
 
 app.SongCardView = Backbone.View.extend({
     tagName: 'div',
     render: function () {
-        console.log('rendering card')
         this.$el.html(this.template(this.model.toJSON()))
         this.$el.attr('id', 'song-card-' + this.id);
         this.$(".mdl-card__media").css('background-color', randomColor({luminosity: 'dark'}));

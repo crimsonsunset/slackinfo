@@ -18,6 +18,10 @@
     border: 2px solid;
 }
 
+.search-field{
+    margin: 0 0 0 32px;
+}
+
 .main {
     max-width: 900px;
     margin: 0 auto;
@@ -26,7 +30,7 @@
 
 .song-list {
     border: 2px solid red;
-    height: 250px;
+    height: auto;
     overflow: scroll;
 }
 .song {

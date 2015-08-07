@@ -60,18 +60,44 @@ app.MainView = Backbone.View.extend({
     render: function () {
         console.log('render mainview')
         this.$el.append(this.template())
-        app.listView = new app.SongListView({collection: app.songList}).render()
+        app.songListView = new app.SongListView({collection: app.songList}).render()
         return this;
     },
     spawnCard: function (card) {
-        console.log('card')
-        console.log(card)
-        console.log('spawning card in mainview')
-        $('.card-holder').empty()
-        $('.card-holder').append(card.$el)
+        $('.card-holder').empty().append(card.$el)
         return this;
     },
+    searchChanged: function (e) {
+
+        var inText = $(e.target).val();
+        if (inText.length === 0) {
+            app.songListView.render()
+        }
+        else if (inText.length >2) {
+            app.songListView.renderList(app.songList.search(inText))
+        } else {}
+    },
     events: {
-        'keypress #new-todo': 'createTodoOnEnter'
+        'keyup .search-field': 'searchChanged'
     }
 });
+
+//app.SearchResultsListView = Backbone.View.extend({
+//    el: '#search-results',
+//    initialize: function () {
+//        return this;
+//    },
+//    render: function () {
+//        console.log('render mainview')
+//        this.$el.append(this.template())
+//        app.listView = new app.SongListView({collection: app.songList}).render()
+//        return this;
+//    },
+//    spawnCard: function (card) {
+//        $('.card-holder').empty().append(card.$el)
+//        return this;
+//    },
+//    events: {
+//        'keypress #new-todo': 'createTodoOnEnter'
+//    }
+//});

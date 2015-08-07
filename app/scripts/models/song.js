@@ -67,9 +67,34 @@ app.Song = Backbone.Model.extend({
         }
         //must remove slashes from all artist name since they will break the get call
         this.set({artist:this.get('artist').replace('/','')})
-        this.fetchSongData();
+        //this.fetchSongData();
     },
+    //http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=agalloch&api_key=2c1f6dc5af310f10ddf07f0dd8492741&format=json
     fetchSongData: function() {
+        var artistStr = encodeURIComponent(this.get('artist'))
+        var that = this
+        return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.FMT_STR)
+            .done(function (data) {
+                //todo: figure out a better way to injest this than just taking the first one as the right one
+                if (data.artists.length !== 0) {
+                    var id = data.artists[0].id
+                    return $.getJSON(that.MUSIC_API_STR+id+that.TAG_STR+that.FMT_STR)
+                        .done(function (data) {
+                            //todo: add more data here from http://musicbrainz.org/doc/Development/JSON_Web_Service#Artist
+                            //if its called for
+                            that.set({tags:_.pluck(data.tags, 'name')})
+                        })
+                } else {
+                    return
+                }
+
+
+            })
+            .fail(function (data) {
+                console.log("failed fetching song data");
+            });
+    },
+    fetchSongDataz: function() {
         var artistStr = encodeURIComponent(this.get('artist'))
         var that = this
         return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.FMT_STR)
