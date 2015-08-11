@@ -68,34 +68,35 @@ app.SongView = Backbone.View.extend({
 
 app.SongListView = Backbone.View.extend({
     el: '.song-list',
-    displayArr: [],
     render: function () {
         this.$el.empty();
-        this.displayArr = [];
         this.collection.each(this.addOne, this);
         return this; // enable chained calls
     },
     renderList : function(songs){
-        console.log('renderList')
-        this.displayArr = songs;
+        console.log('renderList');
         this.$el.empty();
         var that = this;
-        _.each(this.displayArr, function(song){
+        console.log(app.controlsModel.get('currSongList'))
+        _.each(songs, function(song){
             that.addOne(song)
         });
         return this;
     },
     addOne: function (song) {
         var songView = new app.SongView({model: song});
-        this.displayArr.push(song)
         this.$el.append(songView.render().el);
     },
 
     initialize: function () {
         console.log('init songlis view')
-        console.log(this.collection)
-        this.listenTo(this.model, 'search', function () {
-            console.log('searchzz')
+        app.controlsModel.set({'currSongList': this.collection});
+
+        //watch the currSongList for changes, which will happen when search or filter occurs
+        var that = this
+        this.listenTo(app.controlsModel, 'change:currSongList', function (data) {
+            console.log('oh shit a change!');
+            that.renderList(data.get('currSongList'))
         });
     }
 });

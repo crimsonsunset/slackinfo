@@ -69,35 +69,20 @@ app.MainView = Backbone.View.extend({
     },
     searchChanged: function (e) {
 
+        var currSongList = app.controlsModel.get('currSongList')
         var inText = $(e.target).val();
-        if (inText.length === 0) {
-            app.songListView.render()
+        if (inText.length <= 2) {
+            app.controlsModel.set({'currSongList': app.songList.models});
         }
         else if (inText.length >2) {
-            app.songListView.renderList(app.songList.search(inText))
+            var testArr = app.songList.search(inText)
+            if (!_.isEqual(testArr,currSongList)) {
+                //setting the controls model will trigger a view update cuz view is listening for change
+                app.controlsModel.set({'currSongList': testArr});
+            }
         } else {}
     },
     events: {
         'keyup .search-field': 'searchChanged'
     }
 });
-
-//app.SearchResultsListView = Backbone.View.extend({
-//    el: '#search-results',
-//    initialize: function () {
-//        return this;
-//    },
-//    render: function () {
-//        console.log('render mainview')
-//        this.$el.append(this.template())
-//        app.listView = new app.SongListView({collection: app.songList}).render()
-//        return this;
-//    },
-//    spawnCard: function (card) {
-//        $('.card-holder').empty().append(card.$el)
-//        return this;
-//    },
-//    events: {
-//        'keypress #new-todo': 'createTodoOnEnter'
-//    }
-//});

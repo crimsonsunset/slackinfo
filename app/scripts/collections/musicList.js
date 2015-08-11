@@ -13,14 +13,11 @@ app.TodoList = Backbone.Collection.extend({
 
 app.SongList = Backbone.Collection.extend({
     model: app.Song,
-    url: '/api/songlist',
+    url: '/api/songs',
     SONG_URL: 'app/templates/testDay.json',
     //localStorage: new Store("backbone-song"),
+    comparator : 'title',
     initialize: function () {
-
-        this.on("search", function (msg) {
-            alert("Triggered " + msg);
-        });
         return this;
     },
     completed: function () {
