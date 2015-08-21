@@ -9,6 +9,8 @@
     "backbone.localStorage": "latest",
     "material-design-lite": "latest",
     "randomColor": "latest",
-    "animate.css": "latest"
+    "animate.css": "latest",
+    "fuse.js": "latest",
+    "lunr.js": "latest"
   }
 }

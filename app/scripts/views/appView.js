@@ -53,12 +53,13 @@ app.AppView = Backbone.View.extend({
 
 app.MainView = Backbone.View.extend({
     el: '#songapp',
+    songMatcher :  _.matcher({title: true}),
     initialize: function () {
-        console.log('init mainview')
+        //console.log('init mainview')
         return this;
     },
     render: function () {
-        console.log('render mainview')
+        //console.log('render mainview')
         this.$el.append(this.template())
         app.songListView = new app.SongListView({collection: app.songList}).render()
         return this;
@@ -75,7 +76,13 @@ app.MainView = Backbone.View.extend({
             app.controlsModel.set({'currSongList': app.songList.models});
         }
         else if (inText.length >2) {
-            var testArr = app.songList.search(inText)
+            //var testArr = app.songList.basicSearch(inText)
+            var testArr = app.songList.fuzzySearch(inText)
+            //todo: a bit of a hack, CID prevents isEqual from working as expected.
+            //making them all NA to pass test when necessary.
+            _.each(testArr, function (e, i, l) {
+                e.cid = 'NA'
+            });
             if (!_.isEqual(testArr,currSongList)) {
                 //setting the controls model will trigger a view update cuz view is listening for change
                 app.controlsModel.set({'currSongList': testArr});

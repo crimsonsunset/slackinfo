@@ -20,25 +20,25 @@ app.SongList = Backbone.Collection.extend({
     initialize: function () {
         return this;
     },
-    completed: function () {
-        return this.filter(function (todo) {
-            return todo.get('completed');
-        });
-    },
-    remaining: function () {
-        return this.without.apply(this, this.completed());
-    },
     filterBy: function (filterName) {
         return this.filter(function (song) {
             return song.get('service') === filterName
         });
     },
-    search: function (inStr) {
+    basicSearch: function (inStr) {
         console.log('searching for: '+ inStr)
         var pattern = new RegExp(inStr, "gi");
+        console.log(this)
         return this.filter(function (song) {
             return pattern.test(song.get("title"));
         });
+    },
+    fuzzySearch: function (inStr) {
+        var retArr=[]
+        _.each(app.searchService.search(inStr), function (e, i, l) {
+            retArr.push(new app.Song(e))
+        });
+        return retArr
     },
     fetchSongs: function () {
         var that = this;

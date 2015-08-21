@@ -55,11 +55,11 @@ app.SongView = Backbone.View.extend({
         //this.listenTo(this.model, "change", this.songChanged);
     },
     showSongCard: function (e) {
-        console.log('showSongCard')
+        //console.log('showSongCard')
         app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
     },
     songChanged: function (e) {
-        console.log('songchanged')
+        //console.log('songchanged')
     },
     events: {
         'click .song': 'showSongCard'
@@ -74,10 +74,10 @@ app.SongListView = Backbone.View.extend({
         return this; // enable chained calls
     },
     renderList : function(songs){
-        console.log('renderList');
+        //console.log('renderList');
         this.$el.empty();
         var that = this;
-        console.log(app.controlsModel.get('currSongList'))
+        //console.log(app.controlsModel.get('currSongList'))
         _.each(songs, function(song){
             that.addOne(song)
         });
@@ -89,13 +89,12 @@ app.SongListView = Backbone.View.extend({
     },
 
     initialize: function () {
-        console.log('init songlis view')
         app.controlsModel.set({'currSongList': this.collection});
 
         //watch the currSongList for changes, which will happen when search or filter occurs
         var that = this
         this.listenTo(app.controlsModel, 'change:currSongList', function (data) {
-            console.log('oh shit a change!');
+            //console.log('change in controlModel detected, grabbing currSongList');
             that.renderList(data.get('currSongList'))
         });
     }
