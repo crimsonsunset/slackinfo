@@ -112,3 +112,16 @@ app.SongCardView = Backbone.View.extend({
         this.id = this.model.cid
     }
 });
+
+app.FilterButtonView = Backbone.View.extend({
+    tagName: 'div',
+    render: function () {
+        console.log('rendering filter button' + this.id)
+        this.$el.html(this.template(this.model.toJSON()))
+        this.$el.attr('id',this.id);
+        return this;
+    },
+    initialize: function () {
+        this.id = this.model.cid
+    }
+});

@@ -3,6 +3,7 @@ app.ControlsModel = Backbone.Model.extend({
         showHeader: false
     },
     currSongList : [],
+    filterList : ['Top Tags', 'Genre','Contributors', 'Service'],
     initialize: function () {
     }
 });

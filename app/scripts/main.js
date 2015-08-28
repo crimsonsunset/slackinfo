@@ -18,6 +18,8 @@ $(document).ready(function () {
         app.mainView = new app.MainView().render();
         app.router = new app.Router();
         Backbone.history.start();
+        componentHandler.upgradeDom();
+        createTextFills();
     }
 
 });

@@ -55,8 +55,3 @@ app.SongList = Backbone.Collection.extend({
             });
     }
 });
-
-
-//_.extend(app.SongList, Backbone.Events).on("search", function(data) {
-//    console.log(data);
-//});

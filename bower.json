@@ -11,6 +11,7 @@
     "randomColor": "latest",
     "animate.css": "latest",
     "fuse.js": "latest",
-    "lunr.js": "latest"
+    "lunr.js": "latest",
+    "jquery-textfill": "latest"
   }
 }
