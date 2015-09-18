@@ -1,18 +1,14 @@
-<script type="text/template" id="switch_template">
-
-    <div class="mdl-cell mdl-cell--8-col mdl-grid switch-box">
         <h5 class=" mdl-cell mdl-cell--12-col">Filters</h5>
-        <% _.each(switches, function(d) { %>
-        <p><%= d %></p>
-        <% }); %>
 
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-cell mdl-cell--3-col" for="<%= title %>">
-            <input type="checkbox" id='<%= title %>' class="mdl-switch__input"/>
+
+        <% _.each(this.switchRefObj, function(e) { %>
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-cell mdl-cell--3-col" for="<%= e.name %>" id="switch-<%= e.name %>">
+            <input type="checkbox" id='<%= e.name %>' class="mdl-switch__input"/>
 
             <div class='resize'>
-                <span class=""><%= title %></span>
+                <span class="capitalize"><%= e.name %></span>
             </div>
         </label>
-    </div>
 
-</script>
+
+        <% }); %>

@@ -13,12 +13,18 @@ $(document).ready(function () {
             app.songList,
             ['artist', 'contributor', 'service', 'tags', 'title'], {threshold: 0.2, useModels: true});
         app.mainView = new app.MainView();
+    }
+
+    //These need to wait for songs to all be fetched
+    Backbone.listenTo(app.controlsModel, 'loadedSongs', function (inObj) {
+        console.log('okay, now done with fetching all the songs')
+        app.controlsModel.sortTags();
+        app.switchView = new app.SwitchView().render();
+        componentHandler.upgradeDom();
+        createTextFills();
         //todo: emit view finished event here
         app.router = new app.Router();
         Backbone.history.start();
-        //d = new app.SwitchView({title: 'Top Tags', arr: ['t1','t2','t3','t4']}).render()
-        componentHandler.upgradeDom();
-        createTextFills();
-    }
+    });
 
 });

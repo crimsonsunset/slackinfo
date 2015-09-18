@@ -86,39 +86,69 @@ app.HeaderView = Backbone.View.extend({
     }
 });
 
-//tags,genre,contributors,service
+//tags,contributors,service
 app.SwitchView = Backbone.View.extend({
     //tagName: 'div',
     el: '.switch-box',
+    switchRefObj : {},
     render: function () {
-        console.log('REDNER switch' + this.title)
-        this.$el.append(this.template({title:this.title}))
-
-        //this.$el.html(this.template({title:this.title}))
-        console.log(this.$el.html())
-
-        //was just testing this out, now need to add to the switch list
-
+        this.$el.append(this.template(this.switchRefObj))
         return this;
     },
     initialize: function (configObj) {
         console.log('INIT switches')
-        //this.title = configObj.title;
-        //this.btnArr = configObj.arr;
-
-
-        //this.template = _.template( $("#switch_template").html());
-        //console.log(this.template({title:this.title}))
-
-
-        //this.btnRowTemplate = _.template( $("#filter_btn_row_template").html(), {} );
-        //this.btnTemplate = _.template( $("#filter_btn_template").html(), {} );
-
-
-        //this.$el.html(this.template(this.model.toJSON()))
-        //this.$el.html( this.template );
+        var that = this;
+        var topBtns = [];
+        //take top 12 tags to make the buttons
+        console.log(app.controlsModel.get('filterList'))
+        _.each(app.controlsModel.get('filterList'), function(e,i,l){
+            that.switchRefObj[e] = {
+                name:e,
+                isOn:false,
+                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 11)
+            }
+        });
+        //console.log(this.switchRefObj)
         return this;
     },
-    createBtnRow: function () {
+    toggleBtnRow: function (event,i) {
+        console.log(event)
+        event.stopImmediatePropagation();
+        event.stopPropagation();
+        //this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
+    },
+    events: {
+        'click .mdl-switch': 'toggleBtnRow'
+    }
+});
+
+
+app.BtnRowView = Backbone.View.extend({
+    el: 'header',
+    render: function () {
+        this.$el.append(this.template(this.switchRefObj))
+        return this;
+    },
+    initialize: function (configObj) {
+        console.log('INIT switches')
+        var that = this;
+        var topBtns = [];
+        //take top 12 tags to make the buttons
+        console.log(app.controlsModel.get('filterList'))
+        _.each(app.controlsModel.get('filterList'), function(e,i,l){
+            that.switchRefObj[e] = {
+                name:e,
+                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 11)
+            }
+        });
+        console.log(this.switchRefObj)
+        return this;
+    },
+    toggleBtnRow: function (e) {
+        console.log('toggling row bro');
+        console.log(e.target.innerText)
+    },
+    events: {
+        'click .resize': 'toggleBtnRow'
     }
 });

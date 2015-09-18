@@ -38,8 +38,7 @@ app.SongList = Backbone.Collection.extend({
                     } else {}
                 });
                 return $.when.apply(null, deferreds).done(function () {
-                    console.log('okay, now done with fetching all the songs')
-                    app.controlsModel.sortTags();
+                    app.controlsModel.trigger('loadedSongs',{});
                 });
             })
             .fail(function (data) {
