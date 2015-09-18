@@ -1,15 +1,8 @@
-app.Todo = Backbone.Model.extend({
-    defaults: {
-        title: '',
-        completed: false
-
-    }
-});
-
 app.Song = Backbone.Model.extend({
     defaults: {
         title: '',
         artist: '',
+        artist_info: {},
         tags: [],
         url: '',
         contributor: '',
@@ -17,12 +10,12 @@ app.Song = Backbone.Model.extend({
         thumbnail: '',
         description: ''
     },
-    MUSIC_API_STR : 'http://musicbrainz.org/ws/2/artist/',
-    ARTIST_QUERY_STR : '?query=artist:',
-    TAG_STR : '?inc=tags',
-    FMT_STR : '&fmt=json',
+    MUSIC_API_STR : 'http://ws.audioscrobbler.com/2.0/',
+    ARTIST_QUERY_STR : '?method=artist.getinfo&artist=',
+    KEY_STR : '&api_key=2c1f6dc5af310f10ddf07f0dd8492741',
+    FMT_STR : '&format=json',
+    promise : {},
     initialize: function(inMsg) {
-
         this.contributor = getUser(inMsg.user)
         if (inMsg.attachments) {
             this.set({service: inMsg.attachments[0].service_name || ''})
@@ -30,7 +23,6 @@ app.Song = Backbone.Model.extend({
             this.set({description: inMsg.attachments[0].text || ''})
             this.set({url: inMsg.attachments[0].title_link || ''})
             this.set({thumbnail: inMsg.attachments[0].thumb_url || ''})
-
 
             //artists come in differently per service
             switch(this.get('service').toLowerCase()){
@@ -67,9 +59,9 @@ app.Song = Backbone.Model.extend({
         }
         //must remove slashes from all artist name since they will break the get call
         this.set({artist:this.get('artist').replace('/','')})
-        //this.fetchSongData();
+        this.promise = this.fetchSongDataz();
+
     },
-    //http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=agalloch&api_key=2c1f6dc5af310f10ddf07f0dd8492741&format=json
     fetchSongData: function() {
         var artistStr = encodeURIComponent(this.get('artist'))
         var that = this
@@ -96,23 +88,15 @@ app.Song = Backbone.Model.extend({
     },
     fetchSongDataz: function() {
         var artistStr = encodeURIComponent(this.get('artist'))
-        var that = this
-        return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.FMT_STR)
+        var that = this;
+        console.log('making call to API')
+        return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.KEY_STR+this.FMT_STR)
             .done(function (data) {
-                //todo: figure out a better way to injest this than just taking the first one as the right one
-                if (data.artists.length !== 0) {
-                    var id = data.artists[0].id
-                    return $.getJSON(that.MUSIC_API_STR+id+that.TAG_STR+that.FMT_STR)
-                        .done(function (data) {
-                            //todo: add more data here from http://musicbrainz.org/doc/Development/JSON_Web_Service#Artist
-                            //if its called for
-                            that.set({tags:_.pluck(data.tags, 'name')})
-                        })
-                } else {
-                    return
-                }
-
-
+                that.set('artist_info',data.artist)
+                that.set('tags',_.pluck(data.artist.tags.tag, 'name'))
+                _.each(that.get('tags'), function (tag) {
+                    app.controlsModel.addTagToTally(tag)
+                });
             })
             .fail(function (data) {
                 console.log("failed fetching song data");

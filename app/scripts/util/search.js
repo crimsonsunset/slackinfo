@@ -3,13 +3,25 @@ app.SearchService = (function () {
     var A = function (libraryPath, items, keyArr, options) {
         this.libName = '';
         this.searchObj = {};
-        this.fullArr = items
         var that = this;
+        this.useModels = false;
+
+        //support for returning/using backbone collection
+        if (options.useModels) {
+            this.fullArr = _.pluck(items.models, 'attributes');
+            this.modelArr = items.models;
+            this.useModels = true;
+            for (var i = 0; i < this.fullArr.length; i++) {
+                this.fullArr[i].index = i;
+            }
+        }else{
+            this.fullArr = items
+        }
+
 
         switch (libraryPath) {
             case contains(libraryPath, "fuse"):
                 this.libName = "fuse";
-
                 //higher threshold = fuzzier -- these are fuze defaults
                 this.options = options || {
                         caseSensitive: false,
@@ -70,7 +82,6 @@ app.SearchService = (function () {
     A.prototype.search = function(inStr){
         var retArr = [];
         switch (this.libName) {
-
             case "fuse":
                 retArr = this.searchObj.search(inStr);
                 break;
@@ -83,6 +94,15 @@ app.SearchService = (function () {
             default :
                 console.log("library not supported yet")
                 throw "error"
+        }
+        if (this.useModels) {
+            var newRetArr = [];
+            for (var i = 0; i < retArr.length; i++) {
+                newRetArr.push(this.modelArr[retArr[i].index])
+            }
+            retArr=newRetArr
+        } else {
+
         }
         return retArr
     }

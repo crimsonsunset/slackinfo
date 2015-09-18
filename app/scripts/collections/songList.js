@@ -1,22 +1,10 @@
-app.TodoList = Backbone.Collection.extend({
-    model: app.Todo,
-    localStorage: new Store("backbone-todo"),
-    completed: function () {
-        return this.filter(function (todo) {
-            return todo.get('completed');
-        });
-    },
-    remaining: function () {
-        return this.without.apply(this, this.completed());
-    }
-});
-
 app.SongList = Backbone.Collection.extend({
     model: app.Song,
     url: '/api/songs',
     SONG_URL: 'app/templates/testDay.json',
     //localStorage: new Store("backbone-song"),
-    comparator : 'title',
+    comparator: 'title',
+    searchService: {},
     initialize: function () {
         return this;
     },
@@ -26,7 +14,7 @@ app.SongList = Backbone.Collection.extend({
         });
     },
     basicSearch: function (inStr) {
-        console.log('searching for: '+ inStr)
+        console.log('searching for: ' + inStr)
         var pattern = new RegExp(inStr, "gi");
         console.log(this)
         return this.filter(function (song) {
@@ -34,20 +22,24 @@ app.SongList = Backbone.Collection.extend({
         });
     },
     fuzzySearch: function (inStr) {
-        var retArr=[]
-        _.each(app.searchService.search(inStr), function (e, i, l) {
-            retArr.push(new app.Song(e))
-        });
-        return retArr
+        //console.log('searching for: ' + inStr)
+        return this.searchService.search(inStr)
     },
     fetchSongs: function () {
         var that = this;
+        var deferreds = [];
         return $.getJSON(this.SONG_URL)
             .done(function (data) {
                 _.each(data, function (e, i, l) {
                     if (e.text.hasUrl() && e.text.matchesService()) {
-                        that.add(new app.Song(e))
+                        var currSong = new app.Song(e);
+                        deferreds.push(currSong.promise)
+                        that.add(currSong)
                     } else {}
+                });
+                return $.when.apply(null, deferreds).done(function () {
+                    console.log('okay, now done with fetching all the songs')
+                    app.controlsModel.sortTags();
                 });
             })
             .fail(function (data) {

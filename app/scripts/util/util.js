@@ -19,13 +19,11 @@ function loadTemplates(views, callback) {
 
     var deferreds = [];
 
-    $.each(views, function(index, view) {
-        var viewName = view+'View'
-        //console.log(viewName)
+    $.each(views, function (index, view) {
+        var viewName = view + 'View'
+        //console.log('loading ',viewName)
         if (app[viewName]) {
-            deferreds.push($.get(app.templates.path + view + '.html', function(data) {
-                //console.log('data from templates loaded')
-                //console.log(data)
+            deferreds.push($.get(app.templates.path + view + '.html', function (data) {
                 app[viewName].prototype.template = _.template(data);
             }));
         } else {
@@ -42,7 +40,7 @@ String.prototype.hasUrl = function () {
 
 String.prototype.matchesService = function () {
     var that = this
-    var didMatch=false
+    var didMatch = false
     _.each(serviceArr, function (e, i, l) {
         if (that.indexOf(e) !== -1) {
             didMatch = true
@@ -63,9 +61,9 @@ function autoSizeText() {
     for (_i = 0, _len = elements.length; _i < _len; _i++) {
         console.log('resizeing something')
         el = elements[_i];
-        _results.push((function(el) {
+        _results.push((function (el) {
             var resizeText, _results1;
-            resizeText = function() {
+            resizeText = function () {
                 var elNewFontSize;
                 elNewFontSize = (parseInt($(el).css('font-size').slice(0, -2)) - 1) + 'px';
                 return $(el).css('font-size', elNewFontSize);
@@ -80,21 +78,14 @@ function autoSizeText() {
     return _results;
 };
 
-function createTextFills(){
+function createTextFills() {
     var resizeTimer;
     //init all resizes first, then debounce resizing to call it again
-    $('.resize').textfill({
-
-    });
-
-    $(window).on('resize', function(e) {
-
+    $('.resize').textfill({});
+    $(window).on('resize', function (e) {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            $('.resize').textfill({
-
-            });
-
+        resizeTimer = setTimeout(function () {
+            $('.resize').textfill({});
         }, 250);
 
     });

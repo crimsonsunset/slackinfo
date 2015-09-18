@@ -29,33 +29,26 @@
 <script src="bower_components/material-design-lite/material.min.js" type="text/javascript"></script>
 <script src="bower_components/randomColor/randomColor.js" type="text/javascript"></script>
 <script src="bower_components/jquery-textfill/source/jquery.textfill.min.js" type="text/javascript"></script>
-<!--<script src="bower_components/lunr.js/lunr.min.js" type="text/javascript"></script>-->
-<!--<script src="bower_components/fuse.js/src/fuse.min.js" type="text/javascript"></script>-->
+
 <script type="text/javascript">
     var app = {};
     app.config = {};
     app.config.appName = 'slackinfo';
     app.templates = {};
-    app.templates.names = ['Song','SongList','SongCard', 'Main'];
+    app.templates.names = ['Song','SongList','SongCard','Header', 'Switch','Main'];
     app.templates.path = 'app/templates/';
     app.config.appVersion = '0.1';
 </script>
-<!--todo: figure out what the hell this needs to be here for-->
-<script type="text/template" id="item-template">
-</script>
-
-
 
 <script src="app/scripts/main.js" type="text/javascript"></script>
 <script src="app/scripts/models/song.js" type="text/javascript"></script>
 <script src="app/scripts/models/controlsModel.js" type="text/javascript"></script>
-<script src="app/scripts/collections/musicList.js" type="text/javascript"></script>
-<script src="app/scripts/views/todoView.js" type="text/javascript"></script>
-<script src="app/scripts/views/appView.js" type="text/javascript"></script>
+<script src="app/scripts/collections/songList.js" type="text/javascript"></script>
+<script src="app/scripts/views/subViews.js" type="text/javascript"></script>
+<script src="app/scripts/views/mainViews.js" type="text/javascript"></script>
 <script src="app/scripts/util/router.js" type="text/javascript"></script>
 <script src="app/scripts/util/util.js" type="text/javascript"></script>
 <script src="app/scripts/util/search.js" type="text/javascript"></script>
-
 
 </body>
 </html>
