@@ -2,6 +2,7 @@ app.ControlsModel = Backbone.Model.extend({
     defaults: {
         currSongList : [],
         filterList : ['tags','contributors', 'services'],
+        switchRefObj : {}
     },
     initialize: function () {
         //console.log('init controls model')

@@ -74,11 +74,6 @@ app.HeaderView = Backbone.View.extend({
     el: '#controls',
     render: function () {
         this.$el.html(this.template());
-
-        //for (var i = 0; i < app.controlsModel.filterList.length; i++) {
-        //
-        //}
-
         return this;
     },
     initialize: function () {
@@ -88,7 +83,6 @@ app.HeaderView = Backbone.View.extend({
 
 //tags,contributors,service
 app.SwitchView = Backbone.View.extend({
-    //tagName: 'div',
     el: '.switch-box',
     switchRefObj : {},
     render: function () {
@@ -98,7 +92,6 @@ app.SwitchView = Backbone.View.extend({
     initialize: function (configObj) {
         console.log('INIT switches')
         var that = this;
-        var topBtns = [];
         //take top 12 tags to make the buttons
         console.log(app.controlsModel.get('filterList'))
         _.each(app.controlsModel.get('filterList'), function(e,i,l){
@@ -108,23 +101,32 @@ app.SwitchView = Backbone.View.extend({
                 topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 11)
             }
         });
-        //console.log(this.switchRefObj)
+        app.controlsModel.set({'switchRefObj': this.switchRefObj})
+        this.listenTo(app.controlsModel, 'rowToggle', function (inObj) {
+            //todo: add button row spawns here
+            console.log('sdasdzzzz')
+        });
         return this;
     },
     toggleBtnRow: function (event,i) {
-        console.log(event)
-        event.stopImmediatePropagation();
-        event.stopPropagation();
-        //this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
+        console.log(event.target.id)
+        var rowName = event.target.id;
+        this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
+        app.controlsModel.trigger('rowToggle',rowName);
     },
+    stopIt: function (event,i) {
+        event.stopPropagation();
+    },
+    //todo: the stopIt seems silly, fix
     events: {
-        'click .mdl-switch': 'toggleBtnRow'
+        'click .mdl-switch': 'toggleBtnRow',
+        'click .resize,.capitalize,.mdl-switch__track,.mdl-switch__thumb,.mdl-switch__ripple-container': 'stopIt'
     }
 });
 
 
 app.BtnRowView = Backbone.View.extend({
-    el: 'header',
+    el: '.switch-box',
     render: function () {
         this.$el.append(this.template(this.switchRefObj))
         return this;
