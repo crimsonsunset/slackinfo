@@ -1,0 +1,8 @@
+
+<div class="mdl-cell mdl-cell--12-col mdl-grid filter-btns" id="<%=this.rowId %>-btnRow" style="display: none">
+    <% _.each(this.topBtns, function(e) { %>
+    <button id="<%= e %>" class="mdl-cell mdl-cell--1-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <%= e %>
+    </button>
+    <% }); %>
+</div>

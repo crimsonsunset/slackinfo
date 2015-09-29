@@ -34,7 +34,6 @@ app.SongListView = Backbone.View.extend({
         //console.log('renderList');
         this.$el.empty();
         var that = this;
-        //console.log(app.controlsModel.get('currSongList'))
         _.each(songs, function(song){
             that.addOne(song)
         });
@@ -90,7 +89,6 @@ app.SwitchView = Backbone.View.extend({
         return this;
     },
     initialize: function (configObj) {
-        console.log('INIT switches')
         var that = this;
         //take top 12 tags to make the buttons
         console.log(app.controlsModel.get('filterList'))
@@ -102,14 +100,19 @@ app.SwitchView = Backbone.View.extend({
             }
         });
         app.controlsModel.set({'switchRefObj': this.switchRefObj})
-        this.listenTo(app.controlsModel, 'rowToggle', function (inObj) {
-            //todo: add button row spawns here
-            console.log('sdasdzzzz')
-        });
+        this.listenTo(app.controlsModel, 'rowToggle', this.toggleBtnRow);
         return this;
     },
-    toggleBtnRow: function (event,i) {
-        console.log(event.target.id)
+    toggleBtnRow: function (rowId) {
+        var selector = $("#"+rowId+"-btnRow")
+        if (!this.switchRefObj[rowId].btnRow) {
+            this.switchRefObj[rowId].btnRow = new app.BtnRowView(_.pluck(this.switchRefObj[rowId].topBtns, 'name'),rowId).render();
+        } else {
+            selector.slideToggle();
+        }
+
+    },
+    btnRowChange: function (event,i) {
         var rowName = event.target.id;
         this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
         app.controlsModel.trigger('rowToggle',rowName);
@@ -117,40 +120,36 @@ app.SwitchView = Backbone.View.extend({
     stopIt: function (event,i) {
         event.stopPropagation();
     },
-    //todo: the stopIt seems silly, fix
     events: {
-        'click .mdl-switch': 'toggleBtnRow',
+        'click .mdl-switch': 'btnRowChange',
         'click .resize,.capitalize,.mdl-switch__track,.mdl-switch__thumb,.mdl-switch__ripple-container': 'stopIt'
     }
 });
 
-
 app.BtnRowView = Backbone.View.extend({
-    el: '.switch-box',
+    el: '.btn-box',
+    topBtns: [],
+    rowId: '',
     render: function () {
-        this.$el.append(this.template(this.switchRefObj))
+        this.$el.append(this.template(this.topBtns))
+        $('#'+this.rowId+'-btnRow').slideToggle();
         return this;
     },
-    initialize: function (configObj) {
-        console.log('INIT switches')
+    initialize: function (topBtns,rowId) {
+        this.topBtns = topBtns;
+        this.rowId = rowId;
         var that = this;
-        var topBtns = [];
-        //take top 12 tags to make the buttons
-        console.log(app.controlsModel.get('filterList'))
-        _.each(app.controlsModel.get('filterList'), function(e,i,l){
-            that.switchRefObj[e] = {
-                name:e,
-                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 11)
-            }
-        });
-        console.log(this.switchRefObj)
+        //_.each(this.topBtns, function(filterBtn){
+        //    console.log(filterBtn)
+        //});
         return this;
     },
-    toggleBtnRow: function (e) {
-        console.log('toggling row bro');
-        console.log(e.target.innerText)
+    filterBtnClick: function (e) {
+        event.stopPropagation();
+        console.log('Clicked FILTER BTN');
+        console.log(e.target.id)
     },
     events: {
-        'click .resize': 'toggleBtnRow'
+        'click .mdl-button': 'filterBtnClick'
     }
 });
