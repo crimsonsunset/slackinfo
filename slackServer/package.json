@@ -1,0 +1,34 @@
+{
+    "name": "smpollingapp",
+    "version": "0.0.0",
+    "description": "app for polling",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "latest",
+        "express": "latest",
+        "logfmt": "latest",
+        "method-override": "latest",
+        "mongoose": "latest",
+        "underscore": "latest",
+        "backbone": "latest",
+        "jquery": "latest",
+        "cors": "latest"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "node server.js",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/joesangiorgio/pollingapp.git"
+    },
+    "keywords": [
+        "polling"
+    ],
+    "engines": {
+        "node": "0.10.x"
+    },
+    "author": "joesangiorgio",
+    "license": "MIT"
+}
