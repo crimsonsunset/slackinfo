@@ -31,8 +31,6 @@ var songSchema   = new Schema({
     user: String
 });
 
-console.log('gggg')
-
 var songModel = mongoose.model(collName, songSchema);
 
 // configuration ===========================================
@@ -61,6 +59,8 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 // routes ==================================================
 require('./app/routes')(app,express,songModel,_); // pass our application into our routes
 
+// external API
+require('./app/slackAPI')(app,express,_); // pass our application into our external api
 
 // REGISTER OUR ROUTES -------------------------------
 app.use('/api', router);
@@ -72,4 +72,4 @@ app.listen(port);
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 exports = module.exports = app; 						// expose app
 
-//TODO: uptime plugins, unit tests? scaling via changing collectionId, cronjob for db duplication keyvalue store for collection names
+aaa();

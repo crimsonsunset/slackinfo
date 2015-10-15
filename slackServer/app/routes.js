@@ -1,5 +1,4 @@
-module.exports = function (app, express, Answer, _) {
-
+module.exports = function (app, express, Song, _) {
 
     var POST_ELEMENTS = 7
 
@@ -16,27 +15,56 @@ module.exports = function (app, express, Answer, _) {
 
     // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
     router.get('/', function (req, res) {
-        res.json({ message: 'hooray! welcome to our api!' });
+        res.json({message: 'hooray! welcome to our api!'});
     });
 
     router.route('/song')
         .post(function (req, res) {
             console.log("POST in SONG")
+            var dbSong = new Song();
+
+            if (!req.body) {
+                console.log('someone posting crap');
+                res.send("Please POST a valid Object");
+            } else {
+                dbSong = _.extend(dbSong, req.body);
+                var message = {};
+
+                Song.find({url: dbSong.url}, function (err, songs) {
+                    if (err) {return console.error(err);}
+                    if (songs.length === 0) {
+                        console.log('saving song in db')
+                        dbSong.save(function (err) {
+                            if (err)
+                                res.send("FAIL " + err);
+                            else {}
+                        });
+                        message = {data: {message: 'successfully added song to db'}}
+                    } else {
+                        //this song already exists in db
+                        console.log('song already in DB')
+                        message = {data: {message: 'song already exists in db, skipping'}}
+                    }
+                    res.status(200)
+                        .send(message);
+                });
+            }
+            console.log("Finished posting in order")
+
         })
         .get(function (req, res) {
             console.log("GET in SONG")
             console.log(req.query['id'])
 
-            var resultJSON ={}
+            var resultJSON = {}
             if (!req.query['id']) {
                 res.status(406)
-                    .send({error:'You must include a songID in your query string'});
+                    .send({error: 'You must include a songID in your query string'});
             } else {
                 res.status(200)
-                    .send({song:{}});
+                    .send({song: {}});
             }
         });
-
 
 
     router.route('/order')
@@ -58,7 +86,7 @@ module.exports = function (app, express, Answer, _) {
                 ans.save(function (err) {
                     if (err)
                         res.send("FAIL " + err);
-                    res.json({ message: 'Successfully Created Order' });
+                    res.json({message: 'Successfully Created Order'});
                 });
             }
             console.log("Finished posting in order")
@@ -72,9 +100,9 @@ module.exports = function (app, express, Answer, _) {
 
             try {
                 Answer.count({}, function (err, numRecords) {
-//                    console.log("first err is " + err)
+                    //                    console.log("first err is " + err)
                     Answer.find({}, function (err, dbTable) {
-//                        console.log("second err is " + err)
+                        //                        console.log("second err is " + err)
                         calcStats(numRecords, dbTable)
                     })
                 })
@@ -192,8 +220,9 @@ module.exports = function (app, express, Answer, _) {
             var A = key(a), B = key(b);
             //alert(A + " , " + B)
             return ((A < B) ? -1 :
-                (A > B) ? +1 : 0) * [-1, 1][+!!reverse];
+                    (A > B) ? +1 : 0) * [-1, 1][+!!reverse];
         }
     };
+
 
 };

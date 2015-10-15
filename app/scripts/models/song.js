@@ -16,7 +16,7 @@ app.Song = Backbone.Model.extend({
     FMT_STR : '&format=json',
     promise : {},
     initialize: function(inMsg) {
-        this.contributor = getUser(inMsg.user)
+        this.set('contributor',getUser(inMsg.user))
         app.controlsModel.addToTally('contributors',this.contributor)
         if (inMsg.attachments) {
             this.set({service: inMsg.attachments[0].service_name || ''})
@@ -89,22 +89,32 @@ app.Song = Backbone.Model.extend({
                 console.log("failed fetching song data");
             });
     },
-    fetchSongDataz: function() {
+    fetchSongDataz: function () {
         var artistStr = encodeURIComponent(this.get('artist'))
         var that = this;
         console.log('MAKING CALL TO API BROOOO')
-        return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.KEY_STR+this.FMT_STR)
+        return $.getJSON(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR)
             .done(function (data) {
-                that.set('artist_info',data.artist)
-                that.set('tags',_.pluck(data.artist.tags.tag, 'name'))
+                //use url as unique to avoid dupes [hash no bueno]
+                that.set('artist_info', data.artist)
+                that.set('tags', _.pluck(data.artist.tags.tag, 'name'))
+                //that.set('hashzzz',that.get('url').sdbm_hash())
                 _.each(that.get('tags'), function (tag) {
-                    app.controlsModel.addToTally('tags',tag)
+                    app.controlsModel.addToTally('tags', tag)
                 });
+                $.ajax({
+                    url: "http://localhost:8080/api/song",
+                    method: "POST",
+                    contentType: 'application/json',
+                    data: JSON.stringify(that)
+                })
+                    .done(function (data) {
+                        console.log('post to NODE IS DONE BTUH')
+                        console.log(data)
+                    })
             })
             .fail(function (data) {
                 console.log("failed fetching song data");
             });
     }
-
-
 });

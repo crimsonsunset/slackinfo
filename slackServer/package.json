@@ -1,7 +1,7 @@
 {
-    "name": "smpollingapp",
-    "version": "0.0.0",
-    "description": "app for polling",
+    "name": "slackserver",
+    "version": "0.0.1",
+    "description": "server for slackinfo",
     "main": "server.js",
     "dependencies": {
         "body-parser": "latest",
@@ -24,7 +24,7 @@
         "url": "https://bitbucket.org/joesangiorgio/pollingapp.git"
     },
     "keywords": [
-        "polling"
+        "slack"
     ],
     "engines": {
         "node": "0.10.x"

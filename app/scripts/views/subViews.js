@@ -36,6 +36,7 @@ app.SongListView = Backbone.View.extend({
         var that = this;
         _.each(songs, function(song){
             that.addOne(song)
+            console.log(song)
         });
         return this;
     },
