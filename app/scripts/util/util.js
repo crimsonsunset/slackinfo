@@ -1,18 +1,4 @@
-var userObj = {
-    'U06HEA4DP': 'Joe',
-    'U06J76HFC': 'Sang',
-    'U06J9BRL0': 'Choe',
-    'U06J2UTA6': 'Alex',
-    'U06JAHAV7': 'James',
-    'llll': 'Gutz'
-}
-
 var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
-
-//todo: figure out a better less hard coded way to do this
-function getUser(ind) {
-    return userObj[ind]
-}
 
 // Asynchronously load templates located in separate .html files
 function loadTemplates(views, callback) {

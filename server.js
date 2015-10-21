@@ -25,32 +25,6 @@ app.get('/', function (req, res) {
 
   console.log('GET received with: ',req)
 
-  ////server requires more information to complete a call. see https://developer.marvel.com/documentation/authorization
-  ////for more information
-  //var timeStamp = String(Date.now())
-  //var hash = md5(timeStamp+PRIVATE_KEY+PUBLIC_KEY)
-  //
-  //var params = {
-  //  apikey: PUBLIC_KEY,
-  //  ts: timeStamp,
-  //  hash: hash
-  //};
-  //
-  //var characterId = req.param("characterId")
-  //delete req.query["characterId"]
-  //
-  //var fullURL = APIURL + characterId+ COMICS_FETCH_STR+ param(params) +"&"+ param(req.query)
-  //
-  //console.log(characterId+" and "+param(req.query))
-  //
-  ////at this point, url has been massaged into the format Marvel API is expecting.
-  //request(fullURL, function (error, response, body) {
-  //
-  //  if (!error && response.statusCode == 200) {
-  //    console.log("Success on Server!")
-  //    res.send(response.body);
-  //  }
-  //})
 
       res.send('response.body');
 

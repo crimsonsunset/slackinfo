@@ -16,8 +16,8 @@ app.Song = Backbone.Model.extend({
     FMT_STR : '&format=json',
     promise : {},
     initialize: function(inMsg) {
-        this.set('contributor',getUser(inMsg.user))
-        app.controlsModel.addToTally('contributors',this.contributor)
+        this.set('contributor',app.controlsModel.get('users')[inMsg.user])
+        app.controlsModel.addToTally('contributors',this.get('contributor'))
         if (inMsg.attachments) {
             this.set({service: inMsg.attachments[0].service_name || ''})
             //this.set({title: inMsg.attachments[0].title || ''})

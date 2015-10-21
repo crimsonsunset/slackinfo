@@ -3,8 +3,14 @@ var express        = require('express');
 var app            = express();
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
+var param = require('node-jquery-param');
 var methodOverride = require('method-override');
+var request = require('request');
 var _ = require('underscore');
+
+// external API
+var slackAPI = require('./app/slackAPI')(request,param,_); // pass our application into our external api
+
 
 var cors = require('cors')
 app.use(cors());
@@ -34,7 +40,7 @@ var songSchema   = new Schema({
 var songModel = mongoose.model(collName, songSchema);
 
 // configuration ===========================================
-	
+
 // config files
 var db = require('./config/db');
 
@@ -57,19 +63,14 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // routes ==================================================
-require('./app/routes')(app,express,songModel,_); // pass our application into our routes
+require('./app/routes')(app,express,songModel,_, slackAPI); // pass our application into our routes
 
-// external API
-require('./app/slackAPI')(app,express,_); // pass our application into our external api
 
 // REGISTER OUR ROUTES -------------------------------
 app.use('/api', router);
-
 
 
 // start app ===============================================
 app.listen(port);
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 exports = module.exports = app; 						// expose app
-
-aaa();

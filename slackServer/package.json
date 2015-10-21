@@ -12,6 +12,8 @@
         "underscore": "latest",
         "backbone": "latest",
         "jquery": "latest",
+        "request": "latest",
+        "node-jquery-param": "latest",
         "cors": "latest"
     },
     "devDependencies": {},

@@ -1,4 +1,4 @@
-module.exports = function (app, express, Song, _) {
+module.exports = function (app, express, Song, _, slackAPI) {
 
     var POST_ELEMENTS = 7
 
@@ -66,6 +66,25 @@ module.exports = function (app, express, Song, _) {
             }
         });
 
+
+
+    router.route('/users')
+        .get(function (req, res) {
+            console.log("GET in users")
+
+            var resultJSON = {}
+                res.status(200)
+                    .send(slackAPI.getUsers());
+        });
+
+    router.route('/export')
+        .get(function (req, res) {
+            console.log("GET in EXPORT")
+
+            //console.log(slackAPI.getExport())
+                res.status(200)
+                    .send(slackAPI.getExport());
+        });
 
     router.route('/order')
 

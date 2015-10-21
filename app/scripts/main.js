@@ -1,11 +1,15 @@
-var app = app || {}; // create namespace for our app
+var app = app || {};
 $(document).ready(function () {
 
     app.songList = new app.SongList();
     app.controlsModel = new app.ControlsModel();
-    $.when(app.songList.fetchSongs(),
-        loadTemplates(app.templates.names, function () {}))
-        .then(init);
+
+    app.controlsModel.getUsers().then(function () {
+            $.when(app.songList.fetchSongs(),
+                loadTemplates(app.templates.names, function () {}))
+                .then(init);
+        }
+    );
 
     function init() {
         //todo: emit data finished event here

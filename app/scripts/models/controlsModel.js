@@ -2,10 +2,26 @@ app.ControlsModel = Backbone.Model.extend({
     defaults: {
         currSongList : [],
         filterList : ['tags','contributors', 'services'],
+        users : [],
+        serverRoutes : {
+            users: 'users'
+        },
         switchRefObj : {}
     },
     initialize: function () {
         //console.log('init controls model')
+        return this;
+    },
+    getUsers: function(){
+        var that = this;
+        return $.getJSON(app.config.serverURL+this.get('serverRoutes')['users'])
+            .done(function (data) {
+                console.log('GOT USERSSS')
+                that.set('users', data)
+            })
+            .fail(function (data) {
+                console.log("failed fetching users");
+            });
     },
     sortTags: function () {
         var that = this;
@@ -14,6 +30,9 @@ app.ControlsModel = Backbone.Model.extend({
         })
     },
     addToTally: function (obj,tag) {
+        console.log('adding to tally')
+        console.log(obj)
+        console.log(tag)
         //initalize if needed
         var currObj = this.get(obj)
         var currTallyObj = (!currObj) ? this.attributes[obj] = {} : currObj;
