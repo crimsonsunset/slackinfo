@@ -12,9 +12,10 @@
         "underscore": "latest",
         "backbone": "latest",
         "jquery": "latest",
-        "request": "latest",
         "node-jquery-param": "latest",
-        "cors": "latest"
+        "cors": "latest",
+        "request-promise": "latest",
+        "promise": "latest"
     },
     "devDependencies": {},
     "scripts": {

@@ -1,5 +1,6 @@
-module.exports =  function (request,param,_) {
+module.exports = function (param, _, request, promise) {
     var START_STAMP = '1434326400';
+    var CHANNEL_NAME = 'music';
     var slackAPI = {
             channels: {},
             users: {},
@@ -14,64 +15,49 @@ module.exports =  function (request,param,_) {
         authToken = '',
         params = {};
 
-    function slackGet(type){
+    function slackGet(type) {
         params = {
             token: authToken
         };
 
         var URL = slackAPI.endpoints[type] + '?' + param(params);
         var specifier = (type == 'users') ? 'members' : 'channels';
-        request(URL, function (error, response, body) {
+        return request(URL, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 var items = JSON.parse(response.body)[specifier]
-                _.each(items, function(e,i,l){
+                _.each(items, function (e, i, l) {
                     slackAPI[type][e.id] = e.name
                 });
                 //console.log(slackAPI[type])
             }
-        })
-        return slackAPI[type]
+        }).promise()
 
     }
 
-    slackGet('channels')
     slackGet('users')
+    slackGet('channels').then(function () {slackAPI['channels'] = _.invert(slackAPI['channels'])})
 
-
-    slackAPI.getUsers = function () {
-        console.log('getting users');
-        if (slackAPI.users.length !== 0) {
-            return slackGet('users');
-        } else {
-            return slackAPI.users()
-        }
-
+    slackAPI.getData = function (specifier) {
+        return slackAPI[specifier]
     }
 
     slackAPI.getExport = function () {
 
-        //console.log(slackAPI.channels['music'])
-
         params = {
             token: authToken,
-            channel: 'C06JLNH8A',
+            channel: slackAPI['channels'][CHANNEL_NAME],
             count: '1000',
             oldest: START_STAMP
         };
-
-        var ret = request(slackAPI.endpoints['history'] + '?' + param(params), function (error, response, body) {
+        return request(slackAPI.endpoints['history'] + '?' + param(params), function (error, response, body) {
 
             if (!error && response.statusCode == 200) {
                 console.log("Success on Server!")
                 slackAPI.lastImportDate = String(Date.now())
-                console.log(response.body)
-                return response.body
+                ret = response.body
             }
-        })
-        console.log('ret')
-        console.log(ret)
+        }).promise()
 
-        return ret
 
     };
 

@@ -22,29 +22,5 @@ app.MainView = Backbone.View.extend({
     spawnCard: function (card) {
         $('.card-holder').empty().append(card.$el)
         return this;
-    },
-    searchChanged: function (e) {
-
-        var currSongList = app.controlsModel.get('currSongList')
-        var inText = $(e.target).val();
-        if (inText.length <= 2) {
-            app.controlsModel.set({'currSongList': app.songList.models});
-        }
-        else if (inText.length >2) {
-            //var testArr = app.songList.basicSearch(inText)
-            var testArr = app.songList.fuzzySearch(inText)
-            //todo: a bit of a hack, CID prevents isEqual from working as expected.
-            //making them all NA to pass test when necessary.
-            _.each(testArr, function (e, i, l) {
-                e.cid = 'NA'
-            });
-            if (!_.isEqual(testArr,currSongList)) {
-                //setting the controls model will trigger a view update cuz view is listening for change
-                app.controlsModel.set({'currSongList': testArr});
-            }
-        } else {}
-    },
-    events: {
-        'keyup .search-field': 'searchChanged'
     }
 });

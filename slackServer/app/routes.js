@@ -1,6 +1,4 @@
-module.exports = function (app, express, Song, _, slackAPI) {
-
-    var POST_ELEMENTS = 7
+module.exports = function (app, express, Song, _, slackAPI, promise) {
 
     // create our router
     router = express.Router();
@@ -67,23 +65,31 @@ module.exports = function (app, express, Song, _, slackAPI) {
         });
 
 
-
     router.route('/users')
         .get(function (req, res) {
             console.log("GET in users")
+            res.status(200)
+                .send(slackAPI.getData('users'));
+        });
 
-            var resultJSON = {}
-                res.status(200)
-                    .send(slackAPI.getUsers());
+    router.route('/channels')
+        .get(function (req, res) {
+            console.log("GET in channels")
+            res.status(200)
+                .send(slackAPI.getData('channels'));
         });
 
     router.route('/export')
         .get(function (req, res) {
-            console.log("GET in EXPORT")
-
-            //console.log(slackAPI.getExport())
+            console.log("GET in EXPORT");
+            slackAPI.getExport().then(function (data) {
+                var messages = JSON.parse(data).messages
                 res.status(200)
-                    .send(slackAPI.getExport());
+                    .send(messages);
+            }, function (reason) {
+                console.log('failed export on route');
+                console.log(reason);
+            });
         });
 
     router.route('/order')

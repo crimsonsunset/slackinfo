@@ -36,7 +36,7 @@ app.SongListView = Backbone.View.extend({
         var that = this;
         _.each(songs, function(song){
             that.addOne(song)
-            console.log(song)
+            //console.log(song)
         });
         return this;
     },
@@ -72,12 +72,51 @@ app.SongCardView = Backbone.View.extend({
 
 app.HeaderView = Backbone.View.extend({
     el: '#controls',
+    searchField: {},
     render: function () {
+        console.log('rendering headerrzzz')
+        var that = this;
         this.$el.html(this.template());
+        this.searchField = $('#search')
+        this.listenTo(app.controlsModel, 'click-filterBtn', function (data) {
+            $('.mdl-textfield__input').val(data).parent().addClass('is-dirty');
+            //that.searchField.val(data).parent().addClass('is-focused');
+            that._searchFor(data)
+        });
         return this;
     },
     initialize: function () {
         //this.id = this.model.cid
+    },
+    searchChanged: function (e) {
+        var inText = $(e.target).val();
+        this._searchFor(inText)
+    },
+    _searchFor: function(inText){
+        var currSongList = app.controlsModel.get('currSongList')
+        if (inText.length <= 2) {
+            app.controlsModel.set({'currSongList': app.songList.models});
+        }
+        else if (inText.length >2) {
+            //var testArr = app.songList.basicSearch(inText)
+            var testArr = app.songList.fuzzySearch(inText)
+            //todo: a bit of a hack, CID prevents isEqual from working as expected.
+            //making them all NA to pass test when necessary.
+            _.each(testArr, function (e, i, l) {
+                e.cid = 'NA'
+            });
+            if (!_.isEqual(testArr,currSongList)) {
+                //setting the controls model will trigger a view update cuz view is listening for change
+                app.controlsModel.set({'currSongList': testArr});
+            }
+        } else {}
+    },
+    helloz: function(inText){
+        console.log('hellozzzz', inText)
+    },
+    events: {
+        'keyup .search-field': 'searchChanged',
+        'change .search-field': 'helloz'
     }
 });
 
@@ -93,12 +132,17 @@ app.SwitchView = Backbone.View.extend({
         var that = this;
         //take top 12 tags to make the buttons
         console.log(app.controlsModel.get('filterList'))
+        //clean the list for duplicate type tags
+
+
         _.each(app.controlsModel.get('filterList'), function(e,i,l){
             that.switchRefObj[e] = {
                 name:e,
                 isOn:false,
-                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 11)
+                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 12)
+                //topBtns: that._cleanArr(app.controlsModel.attributes[e+'Sorted'])
             }
+            //slice(0, 12)
         });
         app.controlsModel.set({'switchRefObj': this.switchRefObj})
         this.listenTo(app.controlsModel, 'rowToggle', this.toggleBtnRow);
@@ -120,6 +164,20 @@ app.SwitchView = Backbone.View.extend({
     },
     stopIt: function (event,i) {
         event.stopPropagation();
+    },
+    _cleanArr: function (arr) {
+        //todo: this shit
+        var origArr = arr
+        _.each(arr, function(e,i,l){
+            _.each(origArr, function(e2,i2,l2){
+
+                if (e.name) {
+
+                } else {
+
+                }
+            })
+        })
     },
     events: {
         'click .mdl-switch': 'btnRowChange',
@@ -149,6 +207,7 @@ app.BtnRowView = Backbone.View.extend({
         event.stopPropagation();
         console.log('Clicked FILTER BTN');
         console.log(e.target.id)
+        app.controlsModel.trigger('click-filterBtn',e.target.id);
     },
     events: {
         'click .mdl-button': 'filterBtnClick'

@@ -30,9 +30,6 @@ app.ControlsModel = Backbone.Model.extend({
         })
     },
     addToTally: function (obj,tag) {
-        console.log('adding to tally')
-        console.log(obj)
-        console.log(tag)
         //initalize if needed
         var currObj = this.get(obj)
         var currTallyObj = (!currObj) ? this.attributes[obj] = {} : currObj;

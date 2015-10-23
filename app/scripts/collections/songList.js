@@ -1,7 +1,7 @@
 app.SongList = Backbone.Collection.extend({
     model: app.Song,
     url: '/api/songs',
-    SONG_URL: 'app/templates/testDay.json',
+    SONG_URL: 'app/exports/1.json',
     //localStorage: new Store("backbone-song"),
     comparator: 'title',
     searchService: {},
@@ -32,12 +32,14 @@ app.SongList = Backbone.Collection.extend({
             .done(function (data) {
                 _.each(data, function (e, i, l) {
                     if (e.text.hasUrl() && e.text.matchesService()) {
+                        //todo: figure out how to parse out duplicates and failed API calls using the defered's reject
                         var currSong = new app.Song(e);
                         deferreds.push(currSong.promise)
                         that.add(currSong)
                     } else {}
                 });
                 return $.when.apply(null, deferreds).done(function () {
+                    console.log('DONE LOADING SONGS')
                     app.controlsModel.trigger('loadedSongs',{});
                 });
             })

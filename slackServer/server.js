@@ -5,11 +5,12 @@ var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var param = require('node-jquery-param');
 var methodOverride = require('method-override');
-var request = require('request');
+var rp = require('request-promise');
 var _ = require('underscore');
+var promise = require('promise');
 
 // external API
-var slackAPI = require('./app/slackAPI')(request,param,_); // pass our application into our external api
+var slackAPI = require('./app/slackAPI')(param,_,rp,promise); // pass our application into our external api
 
 
 var cors = require('cors')
@@ -63,7 +64,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // routes ==================================================
-require('./app/routes')(app,express,songModel,_, slackAPI); // pass our application into our routes
+require('./app/routes')(app,express,songModel,_, slackAPI,promise); // pass our application into our routes
 
 
 // REGISTER OUR ROUTES -------------------------------

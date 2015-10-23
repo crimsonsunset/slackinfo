@@ -62,41 +62,27 @@ app.Song = Backbone.Model.extend({
         }
         //must remove slashes from all artist name since they will break the get call
         this.set({artist:this.get('artist').replace('/','')})
-        this.promise = this.fetchSongDataz();
+        this.promise = this.fetchSongData();
 
     },
-    fetchSongData: function() {
-        var artistStr = encodeURIComponent(this.get('artist'))
-        var that = this
-        return $.getJSON(this.MUSIC_API_STR+this.ARTIST_QUERY_STR+artistStr+this.FMT_STR)
-            .done(function (data) {
-                //todo: figure out a better way to injest this than just taking the first one as the right one
-                if (data.artists.length !== 0) {
-                    var id = data.artists[0].id
-                    return $.getJSON(that.MUSIC_API_STR+id+that.TAG_STR+that.FMT_STR)
-                        .done(function (data) {
-                            //todo: add more data here from http://musicbrainz.org/doc/Development/JSON_Web_Service#Artist
-                            //if its called for
-                            that.set({tags:_.pluck(data.tags, 'name')})
-                        })
-                } else {
-                    return
-                }
-
-
-            })
-            .fail(function (data) {
-                console.log("failed fetching song data");
-            });
-    },
-    fetchSongDataz: function () {
+    fetchSongData: function () {
         var artistStr = encodeURIComponent(this.get('artist'))
         var that = this;
-        console.log('MAKING CALL TO API BROOOO')
-        return $.getJSON(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR)
+        //console.log('MAKING CALL TO API BROOOO')
+        var def = $.getJSON(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR)
             .done(function (data) {
+
+                if (data.error) {
+                    //console.log('got an erorrzz',def)
+                    //console.log(def.promise().promise())
+                    //def.promise().reject(this,['failtime'])
+                    return -1;
+                }
                 //use url as unique to avoid dupes [hash no bueno]
                 that.set('artist_info', data.artist)
+
+                console.log(that.get('artist'), data)
+
                 that.set('tags', _.pluck(data.artist.tags.tag, 'name'))
                 //that.set('hashzzz',that.get('url').sdbm_hash())
                 _.each(that.get('tags'), function (tag) {
@@ -109,12 +95,13 @@ app.Song = Backbone.Model.extend({
                     data: JSON.stringify(that)
                 })
                     .done(function (data) {
-                        console.log('post to NODE IS DONE BTUH')
-                        console.log(data)
+                        //console.log('post to NODE IS DONE BTUH')
+                        //console.log(data)
                     })
             })
             .fail(function (data) {
                 console.log("failed fetching song data");
             });
+        return def
     }
 });
