@@ -12,7 +12,7 @@ module.exports = function (param, _, request, promise) {
                 history: 'https://slack.com/api/channels.history'
             }
         },
-        authToken = '',
+        authToken = 'xoxp-6592344449-6592344465-11803303442-ffa8edf4ba',
         params = {};
 
     function slackGet(type) {

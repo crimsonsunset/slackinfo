@@ -77,7 +77,7 @@ function createTextFills() {
     });
 }
 
-String.prototype.sdbm_hash = function() {
+String.prototype.sdbm_hash = function () {
     var hash = 0;
     for (i = 0; i < this.length; i++) {
         var char = this.charCodeAt(i);
@@ -85,3 +85,57 @@ String.prototype.sdbm_hash = function() {
     }
     return hash;
 };
+
+function _removeDupeTags(inArr) {
+    //todo: this shit
+    var origArr = inArr
+    var suspectWords = []
+    var foundMatch = false;
+    _.each(inArr, function (e, i, l) {
+
+        if (e.split(' ').length > 1) {
+            _.each(origArr, function (e2, i2, l2) {
+                if (e != e2 && ((e.indexOf(e2) != -1) || (e2.indexOf(e) != -1))) {
+                    foundMatch = true
+                    //console.log('comparing these shits', e,"|", e2)
+                    suspectWords.push({word: e, index: i})
+                    suspectWords.push({word: e2, index: i2})
+                }
+            })
+        }
+    })
+
+    //at this point, if no match is found can skip the rest
+    if (!foundMatch) {
+        //console.log('no matches, returning originaALLLZSS')
+        return origArr
+    }
+    //console.log('suspectwords are ',suspectWords)
+
+    var smallestWord = 'asdasdasdasdasasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd'
+    var smallestIndex = -1
+    _.each(suspectWords, function (e, i, l) {
+
+        if (e.word.length < smallestWord.length) {
+            smallestWord = e.word
+            smallestIndex = e.index
+        }
+    })
+
+    //console.log('suspectWords are ',suspectWords)
+    //console.log('smallestWOrd is ',smallestWord)
+
+    //todo: LOLOLOLOL :trollface:
+    var badInds = _.uniq(_.pluck(_.reject(suspectWords, function (e) {
+        return e.word === smallestWord
+    }), 'index'))
+
+    console.log('goin in,', origArr)
+    console.log('badInds', badInds)
+
+    _.each(badInds, function (e, i, l) {
+        origArr.splice(e, 1)
+    })
+    console.log('final answer', origArr)
+    return origArr
+}

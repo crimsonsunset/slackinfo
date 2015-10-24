@@ -169,15 +169,27 @@ app.SwitchView = Backbone.View.extend({
         //todo: this shit
         var origArr = arr
         _.each(arr, function(e,i,l){
-            _.each(origArr, function(e2,i2,l2){
 
-                if (e.name) {
+            if (e.name.split(' ').length >1) {
+                console.log('okayyyy, the word is: ',e.name)
+                _.each(origArr, function(e2,i2,l2){
+                    if (e.name != e2.name) {
+                        console.log('comparing these shits', e.name,"|", e2.name)
+                        _.each(e.name.split(' '), function(wordInTag,i2,l2){
+                            //console.log(wordInTag)
+                            if (e2.name.indexOf(wordInTag)!= -1) {
+                                console.log('FOUND ONE')
+                                console.log(wordInTag)
+                            } else {
 
-                } else {
+                            }
+                        })
 
-                }
-            })
+                    }
+                })
+            }
         })
+        return arr
     },
     events: {
         'click .mdl-switch': 'btnRowChange',

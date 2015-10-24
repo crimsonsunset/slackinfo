@@ -16,7 +16,7 @@ app.ControlsModel = Backbone.Model.extend({
         var that = this;
         return $.getJSON(app.config.serverURL+this.get('serverRoutes')['users'])
             .done(function (data) {
-                console.log('GOT USERSSS')
+                console.log('GOT USERSSS', data[Object.keys(data)[0]])
                 that.set('users', data)
             })
             .fail(function (data) {
