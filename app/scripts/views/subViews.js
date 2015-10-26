@@ -219,11 +219,14 @@ app.BtnRowView = Backbone.View.extend({
     },
     filterBtnClick: function (e) {
         event.stopPropagation();
-        console.log('Clicked FILTER BTN');
+        var btnName = $(e.target).attr('data')
+        var target = (e.target.localName == 'span') ? e.target.parentNode : e.target
+        console.log('Clicked FILTER BTN',btnName);
+        console.log(e.target.localName);
         //todo: add support for multi filters
         $('.btn-toggledOn').removeClass('btn-toggledOn')
-        $(e.target).addClass('btn-toggledOn')
-        app.controlsModel.trigger('click-filterBtn',e.target.id);
+        $(target).addClass('btn-toggledOn')
+        app.controlsModel.trigger('click-filterBtn',btnName);
     },
     events: {
         'click .mdl-button': 'filterBtnClick'

@@ -25,7 +25,7 @@ $(document).ready(function () {
         app.controlsModel.sortTags();
         app.switchView = new app.SwitchView().render();
         componentHandler.upgradeDom();
-        createTextFills();
+        createTextFills('resize');
         //todo: emit view finished event here
         app.router = new app.Router();
         Backbone.history.start();
