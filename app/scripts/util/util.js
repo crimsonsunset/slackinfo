@@ -64,14 +64,15 @@ function autoSizeText() {
     return _results;
 };
 
-function createTextFills() {
+function createTextFills(inClass,options) {
     var resizeTimer;
+    var currOpts = _.extend({},options)
     //init all resizes first, then debounce resizing to call it again
-    $('.resize').textfill({});
+    $('.'+inClass).textfill(currOpts);
     $(window).on('resize', function (e) {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-            $('.resize').textfill({});
+            $('.'+inClass).textfill(currOpts);
         }, 250);
 
     });
@@ -130,12 +131,12 @@ function _removeDupeTags(inArr) {
         return e.word === smallestWord
     }), 'index'))
 
-    console.log('goin in,', origArr)
-    console.log('badInds', badInds)
+    //console.log('goin in,', origArr)
+    //console.log('badInds', badInds)
 
     _.each(badInds, function (e, i, l) {
         origArr.splice(e, 1)
     })
-    console.log('final answer', origArr)
+    //console.log('final answer', origArr)
     return origArr
 }

@@ -200,25 +200,29 @@ app.SwitchView = Backbone.View.extend({
 app.BtnRowView = Backbone.View.extend({
     el: '.btn-box',
     topBtns: [],
+    btnWidth: 1,
     rowId: '',
     render: function () {
+        console.log('rendering buttn row', this.btnWidth)
         this.$el.append(this.template(this.topBtns))
         $('#'+this.rowId+'-btnRow').slideToggle();
+        createTextFills('filter-btn', {minFontPixels: 10})
         return this;
     },
     initialize: function (topBtns,rowId) {
         this.topBtns = topBtns;
         this.rowId = rowId;
-        var that = this;
-        //_.each(this.topBtns, function(filterBtn){
-        //    console.log(filterBtn)
-        //});
+        this.btnWidth = (12 / topBtns.length < 2) ? 1 : Math.floor(12 / topBtns.length);
+        console.log('btnWidth is: ', this.btnWidth)
+
         return this;
     },
     filterBtnClick: function (e) {
         event.stopPropagation();
         console.log('Clicked FILTER BTN');
-        console.log(e.target.id)
+        //todo: add support for multi filters
+        $('.btn-toggledOn').removeClass('btn-toggledOn')
+        $(e.target).addClass('btn-toggledOn')
         app.controlsModel.trigger('click-filterBtn',e.target.id);
     },
     events: {

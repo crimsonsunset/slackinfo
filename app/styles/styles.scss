@@ -35,7 +35,15 @@
 
 .filter-btns {
   border: 2px solid green;
-  //display: none;
+}
+.filter-btn{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-toggledOn {
+  background-color: #00BF7E !important;
 }
 
 .main {

@@ -78,6 +78,12 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             res.status(200)
                 .send(slackAPI.getData('channels'));
         });
+    router.route('/noop')
+        .get(function (req, res) {
+            console.log("GET in noop")
+            res.status(200)
+                .send({'status': 'cool story bro'});
+        });
 
     router.route('/export')
         .get(function (req, res) {
