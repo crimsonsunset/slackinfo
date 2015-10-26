@@ -84,6 +84,22 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             res.status(200)
                 .send({'status': 'cool story bro'});
         });
+    router.route('/count')
+        .get(function (req, res) {
+            console.log("GET in count")
+            try {
+                Song.count({}, function (err, numRecords) {
+                    res.status(200)
+                        .send({'count': numRecords});
+                })
+            }
+            catch (e) {
+                throw "cannot connect to DB in count!"
+            }
+
+
+
+        });
 
     router.route('/export')
         .get(function (req, res) {

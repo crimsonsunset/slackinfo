@@ -91,6 +91,7 @@ app.HeaderView = Backbone.View.extend({
     searchChanged: function (e) {
         var inText = $(e.target).val();
         this._searchFor(inText)
+        app.controlsModel.trigger('searchFor',inText);
     },
     _searchFor: function(inText){
         var currSongList = app.controlsModel.get('currSongList')
@@ -111,12 +112,8 @@ app.HeaderView = Backbone.View.extend({
             }
         } else {}
     },
-    helloz: function(inText){
-        console.log('hellozzzz', inText)
-    },
     events: {
-        'keyup .search-field': 'searchChanged',
-        'change .search-field': 'helloz'
+        'keyup .search-field': 'searchChanged'
     }
 });
 
@@ -132,20 +129,17 @@ app.SwitchView = Backbone.View.extend({
         var that = this;
         //take top 12 tags to make the buttons
         console.log(app.controlsModel.get('filterList'))
-        //clean the list for duplicate type tags
-
-
         _.each(app.controlsModel.get('filterList'), function(e,i,l){
             that.switchRefObj[e] = {
                 name:e,
                 isOn:false,
                 topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 12)
-                //topBtns: that._cleanArr(app.controlsModel.attributes[e+'Sorted'])
             }
             //slice(0, 12)
         });
         app.controlsModel.set({'switchRefObj': this.switchRefObj})
         this.listenTo(app.controlsModel, 'rowToggle', this.toggleBtnRow);
+        this.listenTo(app.controlsModel, 'searchFor', this.findBtnBySearch);
         return this;
     },
     toggleBtnRow: function (rowId) {
@@ -162,34 +156,18 @@ app.SwitchView = Backbone.View.extend({
         this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
         app.controlsModel.trigger('rowToggle',rowName);
     },
-    stopIt: function (event,i) {
-        event.stopPropagation();
-    },
-    _cleanArr: function (arr) {
-        //todo: this shit
-        var origArr = arr
-        _.each(arr, function(e,i,l){
-
-            if (e.name.split(' ').length >1) {
-                console.log('okayyyy, the word is: ',e.name)
-                _.each(origArr, function(e2,i2,l2){
-                    if (e.name != e2.name) {
-                        console.log('comparing these shits', e.name,"|", e2.name)
-                        _.each(e.name.split(' '), function(wordInTag,i2,l2){
-                            //console.log(wordInTag)
-                            if (e2.name.indexOf(wordInTag)!= -1) {
-                                console.log('FOUND ONE')
-                                console.log(wordInTag)
-                            } else {
-
-                            }
-                        })
-
-                    }
-                })
+    findBtnBySearch: function(inText){
+        $('.btn-toggledOn').removeClass('btn-toggledOn')
+        _.each(this['switchRefObj'], function(e,i,l){
+            if (e.btnRow) {
+                e.btnRow.$el.find("span").filter(function() {
+                    return $(this).text() == inText;
+                }).parent().addClass('btn-toggledOn')
             }
         })
-        return arr
+    },
+    stopIt: function (event,i) {
+        event.stopPropagation();
     },
     events: {
         'click .mdl-switch': 'btnRowChange',
@@ -213,16 +191,15 @@ app.BtnRowView = Backbone.View.extend({
         this.topBtns = topBtns;
         this.rowId = rowId;
         this.btnWidth = (12 / topBtns.length < 2) ? 1 : Math.floor(12 / topBtns.length);
-        console.log('btnWidth is: ', this.btnWidth)
-
+        //console.log('btnWidth is: ', this.btnWidth)
         return this;
     },
     filterBtnClick: function (e) {
         event.stopPropagation();
         var btnName = $(e.target).attr('data')
         var target = (e.target.localName == 'span') ? e.target.parentNode : e.target
-        console.log('Clicked FILTER BTN',btnName);
-        console.log(e.target.localName);
+        //console.log('Clicked FILTER BTN',btnName);
+        //console.log(e.target.localName);
         //todo: add support for multi filters
         $('.btn-toggledOn').removeClass('btn-toggledOn')
         $(target).addClass('btn-toggledOn')

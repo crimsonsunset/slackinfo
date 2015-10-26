@@ -2,7 +2,7 @@ app.SongList = Backbone.Collection.extend({
     model: app.Song,
     url: '/api/songs',
     SONG_URL: 'app/exports/1.json',
-    //localStorage: new Store("backbone-song"),
+    localStorage: new Backbone.LocalStorage("local-songs"),
     comparator: 'title',
     searchService: {},
     initialize: function () {
@@ -36,12 +36,32 @@ app.SongList = Backbone.Collection.extend({
                         var currSong = new app.Song(e);
                         deferreds.push(currSong.promise)
                         that.add(currSong)
+                        currSong.save();
                     } else {}
                 });
                 return $.when.apply(null, deferreds).done(function () {
                     console.log('DONE LOADING SONGS')
                     app.controlsModel.trigger('loadedSongs',{});
                 });
+            })
+            .fail(function (data) {
+                console.log("failed loading songs");
+            });
+    },
+    serverNoop: function () {
+        var that = this;
+        return $.getJSON(app.config.serverURL+"noop")
+            .done(function (data) {
+                console.log('done with server noop')
+                var promise = new $.Deferred().resolve('zzz');
+                return $.when.apply(null, [promise]).done(function () {
+                    setTimeout(function(){
+                        console.log('DONE LOADING SONGsdsdsdsdsdS')
+                        app.controlsModel.trigger('loadedSongs',{});
+                    },1000)
+                });
+
+
             })
             .fail(function (data) {
                 console.log("failed loading songs");

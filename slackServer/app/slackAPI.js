@@ -54,12 +54,17 @@ module.exports = function (param, _, request, promise) {
             if (!error && response.statusCode == 200) {
                 console.log("Success on Server!")
                 slackAPI.lastImportDate = String(Date.now())
-                ret = response.body
+                //ret = response.body
+                parseSlackResponse(response.body)
             }
         }).promise()
 
 
     };
+
+    function parseSlackResponse(messages){
+        console.log('alritey here we go gunna parse it up')
+    }
 
     return slackAPI;
 };

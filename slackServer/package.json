@@ -15,7 +15,8 @@
         "node-jquery-param": "latest",
         "cors": "latest",
         "request-promise": "latest",
-        "promise": "latest"
+        "promise": "latest",
+        "node-schedule": "latest"
     },
     "devDependencies": {},
     "scripts": {

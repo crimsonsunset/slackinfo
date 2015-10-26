@@ -8,6 +8,7 @@ var methodOverride = require('method-override');
 var rp = require('request-promise');
 var _ = require('underscore');
 var promise = require('promise');
+var cron = require('node-schedule');
 
 // external API
 var slackAPI = require('./app/slackAPI')(param,_,rp,promise); // pass our application into our external api
@@ -64,7 +65,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // routes ==================================================
-require('./app/routes')(app,express,songModel,_, slackAPI,promise); // pass our application into our routes
+var routes = require('./app/routes')(app,express,songModel,_, slackAPI,promise); // pass our application into our routes
 
 
 // REGISTER OUR ROUTES -------------------------------
@@ -74,4 +75,14 @@ app.use('/api', router);
 // start app ===============================================
 app.listen(port);
 console.log('Magic happens on port ' + port); 			// shoutout to the user
-exports = module.exports = app; 						// expose app
+exports = module.exports = app;
+
+//var job = cron.scheduleJob('* * * * *', function(){
+//    console.log('The answer to life, the universe, and everything!');
+//    slackAPI.getExport()
+//});
+var slackJob = cron.scheduleJob('0 6 * * *', function(){
+    console.log('woa its time for ea real slack export');
+    slackAPI.getExport()
+});
+

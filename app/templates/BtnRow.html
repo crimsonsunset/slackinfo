@@ -3,7 +3,7 @@
     <% var that = this %>
     <% _.each(this.topBtns, function(e) { %>
     <button id="<%= e %>" data="<%= e %>" class="mdl-cell mdl-cell--<%= that.btnWidth %>-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent filter-btn">
-        <span data="<%= e %>" ><%= e %></span>
+        <span class='capitalize'data="<%= e %>" ><%= e %></span>
     </button>
     <% }); %>
 </div>
