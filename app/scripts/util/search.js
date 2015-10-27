@@ -70,7 +70,6 @@ app.SearchService = (function () {
     }
 
     function loadLib(libPath) {
-        //todo: write for webview/html context
         return $.getScript(libPath)
             .done(function (script, textStatus) {
             })

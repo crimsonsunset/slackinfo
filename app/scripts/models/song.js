@@ -81,7 +81,6 @@ app.Song = Backbone.Model.extend({
                 //use url as unique to avoid dupes [hash no bueno]
                 that.set('artist_info', data.artist)
 
-                //todo: clean this up or leave it impossible to read on purpose??
                 //remove duplicate-ish tags
                 var filteredTags = _removeDupeTags(_.pluck(data.artist.tags.tag, 'name'))
                 //var filteredTags = _.pluck(data.artist.tags.tag, 'name')
