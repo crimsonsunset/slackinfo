@@ -3,7 +3,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
     // create our router
     router = express.Router();
 
-
     // middleware to use for all requests
     router.use(function (req, res, next) {
         // do logging
@@ -47,7 +46,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                         .send(message);
                 });
             }
-            console.log("Finished posting in order")
 
         })
         .get(function (req, res) {
@@ -64,7 +62,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             }
         });
 
-
     router.route('/users')
         .get(function (req, res) {
             console.log("GET in users")
@@ -78,12 +75,14 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             res.status(200)
                 .send(slackAPI.getData('channels'));
         });
+
     router.route('/noop')
         .get(function (req, res) {
             console.log("GET in noop")
             res.status(200)
                 .send({'status': 'cool story bro'});
         });
+
     router.route('/count')
         .get(function (req, res) {
             console.log("GET in count")
@@ -138,125 +137,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             }
             console.log("Finished posting in order")
 
-        })
-
-    router.route('/stats')
-
-        .get(function (req, res) {
-            console.log("Getting in stats")
-
-            try {
-                Answer.count({}, function (err, numRecords) {
-                    //                    console.log("first err is " + err)
-                    Answer.find({}, function (err, dbTable) {
-                        //                        console.log("second err is " + err)
-                        calcStats(numRecords, dbTable)
-                    })
-                })
-            }
-            catch (e) {
-                throw "cannot connect to DB in stats!"
-            }
-
-
-            function calcStats(numRecords, dbTable) {
-                var firstRun = true;
-                var tallyObj1 = {}
-                var tallyObj2 = {}
-                var tallyObj3 = {}
-                var tallyObj4 = {}
-                var tallyObj5 = {}
-                for (var i = 0; i < dbTable.length; i++) {
-                    var currRecord = dbTable[i].toObject();
-                    if (firstRun) {
-                        _.each(currRecord["order"], function (e2, i2, l2) {
-                            tallyObj1[e2] = {"val": 0, "name": e2}
-                            tallyObj2[e2] = {"val": 0, "name": e2}
-                            tallyObj3[e2] = {"val": 0, "name": e2}
-                            tallyObj4[e2] = {"val": 0, "name": e2}
-                            tallyObj5[e2] = {"val": 0, "name": e2}
-                        });
-                        firstRun = false;
-                    }
-                    for (var key in currRecord) {
-                        if (currRecord.hasOwnProperty(key)) {
-                            switch (key) {
-                                case "sessionId", "_id", "order", "__v":
-                                    break;
-                                case "a1":
-                                    tallyObj1[currRecord[key]].val++;
-                                    break;
-                                case "a2":
-                                    tallyObj2[currRecord[key]].val++;
-                                    break;
-                                case "a3":
-                                    tallyObj3[currRecord[key]].val++;
-                                    break;
-                                case "a4":
-                                    tallyObj4[currRecord[key]].val++;
-                                    break;
-                                case "a5":
-                                    tallyObj5[currRecord[key]].val++;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-                }
-                var tallyArr1 = [];
-                var tallyArr2 = [];
-                var tallyArr3 = [];
-                var tallyArr4 = [];
-                var tallyArr5 = [];
-                for (var i in tallyObj1) {
-                    tallyArr1.push(tallyObj1[i])
-                    tallyArr2.push(tallyObj2[i])
-                    tallyArr3.push(tallyObj3[i])
-                    tallyArr4.push(tallyObj4[i])
-                    tallyArr5.push(tallyObj5[i])
-                }
-                tallyArr1.sort(sort_by('val', false, function (a) {
-                    return a
-                }));
-
-                //                console.log('tallyArr is + ' + JSON.stringify(tallyArr1))
-
-
-                if (tallyArr1.length == 0) {
-                    res.json({
-                        1: {
-                            name: "placeholder",
-                            score: 0,
-                            percentage: 0
-                        },
-                        2: {
-                            name: "placeholder2",
-                            score: 0,
-                            percentage: 0
-                        },
-                        "total": 0
-                    });
-
-                } else {
-                    res.json({
-                        1: {
-                            name: tallyArr1[0].name,
-                            score: tallyArr1[0].val,
-                            percentage: tallyArr1[0].val / numRecords
-                        },
-                        2: {
-                            name: tallyArr1[1].name,
-                            score: tallyArr1[1].val,
-                            percentage: tallyArr1[1].val / numRecords
-                        },
-                        "total": numRecords
-                    });
-
-                }
-
-
-            }
         })
 
     var sort_by = function (field, reverse, primer) {

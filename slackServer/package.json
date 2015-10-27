@@ -1,13 +1,10 @@
 {
     "name": "slackserver",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "server for slackinfo",
     "main": "server.js",
     "dependencies": {
-        "body-parser": "latest",
         "express": "latest",
-        "logfmt": "latest",
-        "method-override": "latest",
         "mongoose": "latest",
         "underscore": "latest",
         "backbone": "latest",
