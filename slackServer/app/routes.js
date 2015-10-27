@@ -107,6 +107,7 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             }
         });
 
+
     router.route('/count')
         .get(function (req, res) {
             console.log("GET in count")

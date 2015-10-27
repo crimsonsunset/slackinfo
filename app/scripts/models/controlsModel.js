@@ -1,6 +1,7 @@
 app.ControlsModel = Backbone.Model.extend({
     defaults: {
         currSongList : [],
+        //localStorage: new Backbone.LocalStorage("local-controls"),
         filterList : ['tags','contributors', 'services'],
         users : [],
         serverRoutes : {

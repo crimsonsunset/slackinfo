@@ -28,7 +28,7 @@ app.SongList = Backbone.Collection.extend({
     },
     burnItDown: function () {
         _.chain(this.models).clone().each(function (model) {
-            console.log('deleting model ' + model.id);
+            //console.log('deleting model ' + model.id);
             model.destroy();
         });
     },
