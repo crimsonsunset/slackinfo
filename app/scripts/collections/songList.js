@@ -48,49 +48,5 @@ app.SongList = Backbone.Collection.extend({
             .fail(function (data) {
                 console.log("failed fetching");
             });
-    },
-
-
-    fetchSongs: function () {
-        var that = this;
-        var deferreds = [];
-        return $.getJSON(this.SONG_URL)
-            .done(function (data) {
-                _.each(data, function (e, i, l) {
-                    if (e.text.hasUrl() && e.text.matchesService()) {
-                        //todo: figure out how to parse out duplicates and failed API calls using the defered's reject
-                        var currSong = new app.Song(e);
-                        deferreds.push(currSong.promise)
-                        that.add(currSong)
-                        currSong.save();
-                    } else {}
-                });
-                return $.when.apply(null, deferreds).done(function () {
-                    console.log('DONE LOADING SONGS')
-                    app.controlsModel.trigger('loadedSongs', {});
-                });
-            })
-            .fail(function (data) {
-                console.log("failed loading songs");
-            });
-    },
-    serverNoop: function () {
-        var that = this;
-        return $.getJSON(app.config.serverURL + "noop")
-            .done(function (data) {
-                console.log('done with server noop')
-                var promise = new $.Deferred().resolve('zzz');
-                return $.when.apply(null, [promise]).done(function () {
-                    setTimeout(function () {
-                        console.log('DONE LOADING SONGsdsdsdsdsdS')
-                        app.controlsModel.trigger('loadedSongs', {});
-                    }, 1000)
-                });
-
-
-            })
-            .fail(function (data) {
-                console.log("failed loading songs");
-            });
     }
 });

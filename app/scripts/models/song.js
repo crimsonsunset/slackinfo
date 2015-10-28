@@ -10,7 +10,6 @@ app.Song = Backbone.Model.extend({
         thumbnail: '',
         description: ''
     },
-    promise: {},
     initialize: function (attr) {
         this.set('attributes', attr)
         return this;

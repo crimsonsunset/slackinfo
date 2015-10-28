@@ -1,7 +1,7 @@
 var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
 
 // Asynchronously load templates located in separate .html files
-function loadTemplates(views, callback) {
+function loadTemplates(views) {
 
     var deferreds = [];
 
@@ -17,7 +17,7 @@ function loadTemplates(views, callback) {
         }
     });
     //console.log('loaded temps inside')
-    return $.when.apply(null, deferreds).done(callback);
+    return $.when.apply(null, deferreds);
 }
 
 String.prototype.hasUrl = function () {

@@ -52,7 +52,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             console.log("GET in SONG")
             console.log(req.query['id'])
 
-            var resultJSON = {}
             if (!req.query['id']) {
                 res.status(406)
                     .send({error: 'You must include a songID in your query string'});
@@ -79,9 +78,11 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
     router.route('/noop')
         .get(function (req, res) {
             console.log("GET in noop")
+            slackAPI.test()
             res.status(200)
                 .send({'status': 'cool story bro'});
         });
+
 
     router.route('/collection')
         .get(function (req, res) {
@@ -100,13 +101,12 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             console.log("GET in collection")
             if (app.isReady) {
                 res.status(200)
-                    .send({tallies: app.songList.getTallies()});
+                    .send(app.songList.getTallies());
             } else {
                 res.status(409)
                     .send({error: 'The Server is currently pulling data, please refresh the page'});
             }
         });
-
 
     router.route('/count')
         .get(function (req, res) {
@@ -138,17 +138,62 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             });
         });
 
-    var sort_by = function (field, reverse, primer) {
-        var key = function (x) {
-            return primer ? primer(x[field]) : x[field]
-        };
-        return function (a, b) {
-            var A = key(a), B = key(b);
-            //alert(A + " , " + B)
-            return ((A < B) ? -1 :
-                    (A > B) ? +1 : 0) * [-1, 1][+!!reverse];
-        }
-    };
+    router.route('/date')
+        .get(function (req, res) {
+            console.log("GET in DATE");
+            app.getLastExportDate().then(function (date) {
+                res.status(200)
+                    .send(date);
+            }, function (reason) {
+                console.log('failed export on route');
+                console.log(reason);
+            });
+        });
+
+
+
+    router.route('/resetdate')
+        .get(function (req, res) {
+            console.log("GET in DATE");
+            app.getLastExportDate().then(function (date) {
+                res.status(200)
+                    .send(date);
+            }, function (reason) {
+                console.log('failed export on route');
+                console.log(reason);
+            });
+        });
+
+
+    router.route('/allexports')
+        .get(function (req, res) {
+            console.log("GET in allexports");
+            var lastDate;
+            app.getLastExportDate().then(function (date) {
+
+                getNextExport(date)
+
+                function getNextExport(date){
+                    slackAPI.getExport(date).then(function (data) {
+                        if (JSON.parse(data).has_more) {
+                            console.log('============== OKAY, KEEP LOOPING ===========')
+                            getNextExport(app.lastExportDate)
+                        } else {
+                            app.restoreStateFromDB();
+                            return
+                        }
+                    })
+                }
+
+
+
+                res.status(200)
+                    .send('asdzzzz');
+            }, function (reason) {
+                console.log('failed export on route');
+                console.log(reason);
+            });
+        });
 
 
 };

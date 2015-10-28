@@ -13,6 +13,7 @@
     var port = process.env.PORT || 8080;
     app.isReady = false;
 
+
     //Change to use different collections in the DB
     var collName = "SONGLIST";
     var songSchema   = new mongoose.Schema({
@@ -32,6 +33,10 @@
         url: String,
         user: String
     });
+    var exportDateCollName = "last-export-date";
+    var exportDateSchema   = new mongoose.Schema({
+        date: String
+    });
 
     function loadConfig(){
         // config files
@@ -46,9 +51,9 @@
     }
 
     function startServer(){
-        // start app ===============================================
+        app.isReady = true;
         app.listen(port);
-        console.log('Magic happens on port ' + port); 			// shoutout to the user
+        console.log('Magic happens on port ' + port); // shoutout to the user
         app.exports = module.exports = app;
 
         //var job = cron.scheduleJob('* * * * *', function(){
@@ -60,6 +65,7 @@
             app.slackAPI.getExport()
         });
     }
+
 
     app.saveSongToDB= function(song){
         var dbSong = new app.dbModel();
@@ -74,11 +80,12 @@
                     return -1;
                 }
                 if (songs.length === 0) {
-                    console.log('saving song in db')
+                    //console.log('saving song in db')
                     dbSong.save(function (err) {
-                        if (err)
-                            def.reject('false')
-                        console.log('FAIL + err');
+                        if (err){
+                            console.log('failed saving song to db');
+                            reject('false')
+                        }
                     });
                     message = {data: {message: 'successfully added song to db'}}
                     resolve(true)
@@ -90,25 +97,75 @@
                 }
             });
         });
+    },
+    app.getLastExportDate = function () {
+        return new promise(function(resolve,reject){
+            app.dateModel.findOne(function (err, resp) {
+                if (err){
+                    resolve(false)
+                    console.log("error getting last export date"+err)
+                }else{
+                    app.lastExportDate = resp.date
+                    resolve(resp.date)
+                }
+            });
+        })
+
     }
+    app.restoreStateFromDB = function(){
+        app.songList.burnItDown()
+        return new promise(function(resolve,reject){
+            app.dbModel.find(function (err, resp) {
+                if (err){
+                    console.log("error getting last export date"+err)
+                    reject(false)
+                }else{
+                    _.each(resp, function (e, i, l) {
+                        app.songList.add(new app.songModel(_.omit(e['_doc'], '__v'),true))
+                    })
+
+                    console.log('alrite got the backup', app.songList.length)
+                    //console.log('alrite got the backup', app.songList.getTallies())
+                    resolve(true)
+                }
+            })
+
+
+        })
+    }
+
 
     function init(){
         app.dbModel = mongoose.model(collName, songSchema);
+        app.dateModel = mongoose.model(exportDateCollName, exportDateSchema);
 
         loadConfig();
 
         app.songModel = require('./app/server_song')(app,Backbone,_, rp,promise,require('./config/tokens').lastFMkey);
         var SongList = require('./app/server_songList')(app,Backbone,_, rp,promise,app.songModel);
         app.songList = new SongList();
-        app.slackAPI = require('./app/slackAPI')(app,param,_,rp,promise,require('./config/tokens').token, app.songModel, app.songList); // pass our application into our external api
+        app.slackAPI = require('./app/slackAPI')(app,param,_,rp,promise,require('./config/tokens').token, app.songModel, app.songList, app.dateModel);
         app.routes = require('./app/routes')(app,express,app.dbModel,_, app.slackAPI,promise); // pass our application into our routes
-
 
         // REGISTER OUR ROUTES -------------------------------
         app.use('/api', router);
-        startServer();
-    }
 
+
+        //check that the collection is up to snuff
+        app.dbModel.count({}, function (err, numRecords) {
+            if (app.songList.models.length != numRecords ) {
+                console.log('not up to snuffzzz')
+                app.restoreStateFromDB().then(function(){
+                    startServer();
+                });
+            } else {
+                startServer();
+            }
+        })
+
+        //todo: remove
+        //startServer();
+    }
     init();
 
 }())

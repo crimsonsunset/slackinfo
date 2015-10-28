@@ -9,14 +9,34 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
             contributor: '',
             service: '',
             thumbnail: '',
-            description: ''
+            description: '',
+            isValid: true
         },
         MUSIC_API_STR : 'http://ws.audioscrobbler.com/2.0/',
         ARTIST_QUERY_STR : '?method=artist.getinfo&artist=',
         KEY_STR : lastFMKey,
         FMT_STR : '&format=json',
         promise : {},
-        initialize: function(inMsg) {
+        nonIntegratedServiceArr : ['hypem'],
+        talliedAttrs : ['contributor','service', 'tags'],
+        initialize: function(inMsg,fromBackup) {
+            var that = this;
+            if (fromBackup) {
+                _.each(inMsg, function (e, i, l) {
+                    that.set(i,e)
+                    if (that.talliedAttrs.indexOf(i) != -1 ) {
+                        //todo: fix/clean
+                        if (i == 'tags') {
+                            _.each(that.get(i), function (tag) {
+                                app.songList.addToTally('tags', tag)
+                            });
+                        } else {
+                            app.songList.addToTally(i+'s',that.get(i))
+                        }
+                    }
+                })
+                return;
+            }
 
             this.set('contributor',app.users[inMsg.user])
             app.songList.addToTally('contributors',this.get('contributor'))
@@ -50,30 +70,59 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
                         this.set({artist: inMsg.attachments[0].author_name || ''})
                         break;
                     default:
-                        console.log('default')
-                        this.set({artist: 'NO_ARTIST'})
+                        console.log('wtf is this', inMsg)
+                        this.set('isValid',false)
                         break;
                 }
 
             } else {
+
+                //check that its in the supported service list
+                var serviceName = false;
+                _.each(this.nonIntegratedServiceArr, function (e, i, l) {
+                    if (inMsg.text.indexOf(e) != -1) {
+                        serviceName = e;
+                        return;
+                    }
+                });
+
+                //error handling for wierd messages / non supported
+                if (serviceName == false) {
+                    this.set('isValid',false)
+                    return new promise(function(resolve,reject){
+                        resolve(false)
+                    });
+                }
+
+
                 //todo: services that dont have integration blocks (added hypem here)
-                this.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
-                this.set({service: 'hypem' || ''})
-                var decodedStr = decodeURI(this.get('url')).replace(/\+/g,'');
-                var songAttrArr = decodedStr.split('-');
-                var title = songAttrArr[0].slice(songAttrArr[0].lastIndexOf("/")+1)
-                this.set({artist: title.trim() || ''});
-                this.set({title: songAttrArr[1].trim() || ''});
+                //todo: add more fuckin integrations [hypem] https://api.hypem.com/api-docs/#!/tracks/item_get
+                try {
+                    this.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
+                    this.set({service: serviceName || ''})
+                    var decodedStr = decodeURI(this.get('url')).replace(/\+/g,'');
+                    var songAttrArr = decodedStr.split('-');
+                    var title = songAttrArr[0].slice(songAttrArr[0].lastIndexOf("/")+1)
+                    this.set({artist: title.trim() || ''});
+                    this.set({title: songAttrArr[1].trim() || ''});
+                }
+                catch (err) {
+                    this.set('isValid',false)
+                    console.log('ERRONEOUS HYPEM SONG')
+                }
             }
             //must remove slashes from all artist name since they will break the get call
             this.set({artist:this.get('artist').replace('/','')})
-            this.promise = this.fetchSongData();
 
+            //final check, if no artist its invalid
+            if (this.get('artist').length == 0) {
+                this.set('isValid',false)
+            }
+            this.promise = this.fetchSongData();
         },
         fetchSongData: function () {
             var artistStr = encodeURIComponent(this.get('artist'))
             var that = this;
-            //console.log('MAKING CALL TO API BROOOO')
             return request(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR,function (error, response, body) {
 
                 if (!error && response.statusCode == 200) {

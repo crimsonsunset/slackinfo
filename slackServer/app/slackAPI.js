@@ -1,11 +1,10 @@
-module.exports = function (app,param, _, request, promise,slackToken,Song,SongList) {
+module.exports = function (app,param, _, request, promise,slackToken,Song,SongList,exportDate) {
     var START_STAMP = '1434326400';
     var CHANNEL_NAME = 'music';
     var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
     var slackAPI = {
             channels: {},
             users: {},
-            lastImportDate: '',
             baseURL: 'https://slack.com/api/',
             endpoints: {
                 channels: 'https://slack.com/api/channels.list',
@@ -35,36 +34,34 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
 
     }
 
-    slackGet('users').then(function () {
-        app.users = slackAPI['users']
-    });
-    slackGet('channels').then(function () {
-        slackAPI['channels'] = _.invert(slackAPI['channels'])
-        //todo: remove this call, only for testing
-        slackAPI.getExport();
-    });
-
     slackAPI.getData = function (specifier) {
         return slackAPI[specifier]
     }
+    slackAPI.test = function () {
+        console.log(SongList.models.length)
+        console.log(app.songList.getTallies())
+    }
 
-    slackAPI.getExport = function () {
+    slackAPI.getExport = function (startDate) {
         app.isReady = false;
-
         params = {
             token: authToken,
             channel: slackAPI['channels'][CHANNEL_NAME],
             count: '1000',
-            oldest: START_STAMP
+            oldest: startDate || START_STAMP
         };
+
+        console.log('about to call slack w', params.oldest)
 
         return request(slackAPI.endpoints['history'] + '?' + param(params), function (error, response, body) {
 
             if (!error && response.statusCode == 200) {
                 console.log("Success on Server!")
-                slackAPI.lastImportDate = String(Date.now())
-                //ret = response.body
-                parseSlackResponse(JSON.parse(response.body).messages)
+                if (JSON.parse(response.body).messages.length == 0) {
+                    console.log('it just didnt work bruh')
+                } else {
+                    parseSlackResponse(JSON.parse(response.body).messages)
+                }
             }
         }).promise()
 
@@ -72,30 +69,47 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
     };
 
     function parseSlackResponse(messages){
-        console.log('alritey here we go gunna parse it up')
-        var that = this;
         var deferreds = [];
+        var latestDate = messages[0].ts
         _.each(messages, function (e, i, l) {
             if (_hasUrl(e.text) && _matchesService(e.text)) {
-                //todo: figure out how to parse out duplicates and failed API calls using the defered's reject
-
-                //console.log('adding: ')
-                //console.log(e)
                 var currSong = new Song(e);
                 deferreds.push(currSong.promise)
-                app.saveSongToDB(currSong).then(function(res){
-                    //todo: reserved for something if need to know if db save worked
-                    //console.log('res', res)
+
+                //$.when would be nicer
+                Promise.all([currSong.promise]).then(function(res){
+
+                    if (currSong.get('isValid') == false) {
+                        console.log('got a weird message, not saving it', currSong.attributes.text)
+                    } else {
+                        app.saveSongToDB(currSong).then(function(res){
+                            //todo: reserved for something if need to know if db save worked
+                            //console.log('res', res)
+                        })
+                        SongList.add(currSong)
+
+                    }
+
                 })
-                SongList.add(currSong)
             } else {}
         });
 
         return Promise.all(deferreds).then(function(res){
-            console.log('done with all the calls')
-            //console.log(SongList.getTallies())
-            //console.log(SongList.models)
+            console.log('done with all the calls', latestDate);
+            exportDate.remove({}, function(err) {
+                    if (err) {
+                        console.log('failed CLEARING exportDate in DB')
+                    }
+                }
+            );
+            var dbDate = new exportDate({date:latestDate});
+            dbDate.save(function (err) {
+                if (err)
+                    console.log('failed SAVING exportDate in DB')
+            });
+            app.lastExportDate = latestDate;
             app.isReady = true;
+            console.log('-------', latestDate)
         })
     }
 
@@ -113,6 +127,16 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
         })
         return didMatch
     }
+
+
+    slackGet('users').then(function () {
+        app.users = slackAPI['users']
+    });
+    slackGet('channels').then(function () {
+        slackAPI['channels'] = _.invert(slackAPI['channels'])
+        //todo: remove this call, only for testing
+        //slackAPI.getExport();
+    });
 
     return slackAPI;
 };
