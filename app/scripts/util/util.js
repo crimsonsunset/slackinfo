@@ -88,7 +88,6 @@ String.prototype.sdbm_hash = function () {
 };
 
 function _removeDupeTags(inArr) {
-    //todo: this shit
     var origArr = inArr
     var suspectWords = []
     var foundMatch = false;

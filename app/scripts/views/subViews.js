@@ -122,6 +122,8 @@ app.SwitchView = Backbone.View.extend({
     el: '.switch-box',
     switchRefObj : {},
     render: function () {
+        console.log('rendignering swithcest')
+        console.log(this.switchRefObj)
         this.$el.append(this.template(this.switchRefObj))
         return this;
     },

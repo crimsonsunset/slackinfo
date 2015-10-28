@@ -1,10 +1,14 @@
 app.ControlsModel = Backbone.Model.extend({
     defaults: {
         currSongList : [],
+        //localStorage: new Backbone.LocalStorage("local-controls"),
         filterList : ['tags','contributors', 'services'],
         users : [],
         serverRoutes : {
-            users: 'users'
+            users: 'users',
+            count: 'count',
+            tallies: 'tallies',
+            collection: 'collection'
         },
         switchRefObj : {}
     },
@@ -12,15 +16,15 @@ app.ControlsModel = Backbone.Model.extend({
         //console.log('init controls model')
         return this;
     },
-    getUsers: function(){
+    getFromServer: function(route){
         var that = this;
-        return $.getJSON(app.config.serverURL+this.get('serverRoutes')['users'])
+        return $.getJSON(app.config.serverURL+this.get('serverRoutes')[route])
             .done(function (data) {
-                console.log('GOT USERSSS', data[Object.keys(data)[0]])
-                that.set('users', data)
+                console.log('GOT stuff', data)
+                that.set(route, data)
             })
             .fail(function (data) {
-                console.log("failed fetching users");
+                console.log("failed fetching",route);
             });
     },
     sortTags: function () {

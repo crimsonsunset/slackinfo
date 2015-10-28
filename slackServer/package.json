@@ -13,6 +13,7 @@
         "cors": "latest",
         "request-promise": "latest",
         "promise": "latest",
+        "backbone": "latest",
         "node-schedule": "latest"
     },
     "devDependencies": {},

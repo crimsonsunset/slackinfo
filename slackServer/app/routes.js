@@ -83,13 +83,38 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                 .send({'status': 'cool story bro'});
         });
 
+    router.route('/collection')
+        .get(function (req, res) {
+            console.log("GET in collection")
+            if (app.isReady) {
+                res.status(200)
+                    .send({models: app.songList.models, tallies: app.songList.getTallies()});
+            } else {
+                res.status(409)
+                    .send({error: 'The Server is currently pulling data, please refresh the page'});
+            }
+        });
+
+    router.route('/tallies')
+        .get(function (req, res) {
+            console.log("GET in collection")
+            if (app.isReady) {
+                res.status(200)
+                    .send({tallies: app.songList.getTallies()});
+            } else {
+                res.status(409)
+                    .send({error: 'The Server is currently pulling data, please refresh the page'});
+            }
+        });
+
+
     router.route('/count')
         .get(function (req, res) {
             console.log("GET in count")
             try {
                 Song.count({}, function (err, numRecords) {
                     res.status(200)
-                        .send({'count': numRecords});
+                        .send(String(numRecords));
                 })
             }
             catch (e) {
@@ -112,32 +137,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                 console.log(reason);
             });
         });
-
-    router.route('/order')
-
-        // create an order
-        .post(function (req, res) {
-
-            console.log("POSTING IN ORDER")
-
-            var ans = new Answer();		// create a new instance of the Bear model
-            //            console.log(JSON.stringify(ans))
-
-            if (Object.keys(req.body).length != POST_ELEMENTS) {
-                res.send("Please POST a valid Object");
-            } else {
-                for (var e in req.body) {
-                    ans[e] = req.body[e]
-                }
-                ans.save(function (err) {
-                    if (err)
-                        res.send("FAIL " + err);
-                    res.json({message: 'Successfully Created Order'});
-                });
-            }
-            console.log("Finished posting in order")
-
-        })
 
     var sort_by = function (field, reverse, primer) {
         var key = function (x) {
