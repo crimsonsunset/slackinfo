@@ -35,14 +35,23 @@ $(document).ready(function () {
         console.log('count',count[0])
         console.log('models')
         console.log(models)
+
+            _.each(tallies[0].tallies, function (e, i, l) {
+                app.controlsModel.set(i,e)
+            })
             if (models.length === count[0]) {
                 //nothing has changed on the server, can use localstorage
+                console.log('no change bruh')
+
+                //set the tallies back up
+                console.log(tallies[0].tallies)
+
                 init();
             } else {
                 //theres something new on the server, dump old collection and use what's stored there
+                console.log('we got some CHANGES change bruh')
                 app.songList.burnItDown();
                 app.songList.fetchFromServer().then(init);
-
             }
 
 
@@ -51,6 +60,7 @@ $(document).ready(function () {
 
 
     function init() {
+
         //todo: emit data finished event here
         console.log('Init function! ')
         app.searchService, app.songList.searchService = new app.SearchService('bower_components/fuse.js/src/fuse.min.js',
@@ -58,7 +68,8 @@ $(document).ready(function () {
             ['artist', 'contributor', 'service', 'tags', 'title'], {threshold: 0.2, useModels: true});
         app.mainView = new app.MainView();
 
-        //app.controlsModel.trigger('loadedSongs',{});
+        app.controlsModel.trigger('loadedSongs',{});
+
     }
 
     //These need to wait for songs to all be fetched

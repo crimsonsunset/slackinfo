@@ -34,6 +34,7 @@ app.SongList = Backbone.Collection.extend({
     },
     fetchFromServer: function () {
         var that = this;
+        var deferreds = [];
         return $.getJSON(app.config.serverURL + 'collection')
             .done(function (data) {
                 console.log('GOT stuff')
@@ -43,7 +44,6 @@ app.SongList = Backbone.Collection.extend({
                     that.add(currSong)
                     currSong.save();
                 })
-
             })
             .fail(function (data) {
                 console.log("failed fetching");
