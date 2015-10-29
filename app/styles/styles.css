@@ -1,5 +1,14 @@
-#songapp {
-  border: 2px solid; }
+.page-content {
+  margin-top: 65px; }
+
+.mdl-layout-title {
+  margin-left: -62px; }
+
+.search-cont {
+  color: #e8eaf6; }
+
+.white-text {
+  color: #e8eaf6; }
 
 .search-box {
   width: calc(100% - 30px); }
@@ -8,24 +17,14 @@
   .search-box i {
     left: 0px; }
 
+.remove-min-height {
+  min-height: 10px !important; }
+
 .switch-box {
-  border: 2px dashed blue; }
-  .switch-box h5 {
-    margin-top: 6px;
-    text-align: center;
-    font-size: 17px; }
-  .switch-box label {
-    border: 2px dashed; }
+  min-height: 10px !important; }
 
 .resize {
-  margin-left: 12px;
-  border: 1px solid red; }
-
-.btn-box {
-  border: 2px solid blue; }
-
-.filter-btns {
-  border: 2px solid green; }
+  margin-left: 12px; }
 
 .filter-btn {
   white-space: nowrap;
@@ -33,16 +32,12 @@
   text-overflow: ellipsis; }
 
 .btn-toggledOn {
-  background-color: #00BF7E !important; }
+  background-color: #3f51b5 !important; }
 
 .main {
   max-width: 900px;
   margin: 0 auto;
   border: 2px solid; }
-
-.songs {
-  max-height: 450px;
-  border: 2px dashed purple; }
 
 .song-list {
   border: 2px solid red;

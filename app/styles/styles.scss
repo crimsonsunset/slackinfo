@@ -1,40 +1,72 @@
+$blue-light: #e8eaf6;
+$blue-1: #9fa8da;
+$blue-2: #3f51b5;
+$blue-3: #3d5afe;
+$blue-dark: #1a237e;
+$box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+$radius: 4px;
+
 #songapp {
-  border: 2px solid;
+  //border: 2px solid;
+  //background-color: $blue-light
+}
+
+.page-content{
+  margin-top: 65px;
+}
+
+.mdl-layout-title{
+  margin-left: -62px;
+}
+.search-cont{
+  color: #e8eaf6;
+  //background-color: $blue-2;
+  //
+  //border-radius: $radius;
+}
+.white-text{
+  color: #e8eaf6;
 }
 
 .search-box {
-  width: calc(100% - 30px);
-  input{
+ width: calc(100% - 30px);
+  input {
     left: 20px;
   }
-  i{
+  i {
     left: 0px;
   }
 }
 
+
+.remove-min-height{
+  min-height: 10px !important;
+}
+
 .switch-box {
-  border: 2px dashed blue;
-  h5{
-    margin-top: 6px;
-    text-align: center;
-    font-size: 17px;
-  }
-  label{
-    border: 2px dashed;
-  }
+  min-height: 10px !important;
+  //border: 2px dashed blue;
+  //h5{
+  //  margin-top: 6px;
+  //  text-align: center;
+  //  font-size: 17px;
+  //}
+  //label{
+  //  border: 2px dashed;
+  //}
 }
 
 .resize{
   margin-left: 12px;
-  border: 1px solid red;
+  //border: 1px solid red;
 }
 
 .btn-box{
-  border: 2px solid blue;
+  //border: 2px solid blue;
 }
 
 .filter-btns {
-  border: 2px solid green;
+  //border: 2px solid green;
 }
 .filter-btn{
   white-space: nowrap;
@@ -43,7 +75,9 @@
 }
 
 .btn-toggledOn {
-  background-color: #00BF7E !important;
+
+  background-color: rgb(63, 81, 181) !important;
+  //background-color: #00BF7E !important;
 }
 
 .main {
@@ -53,8 +87,8 @@
 }
 
 .songs{
-  max-height: 450px;
-  border: 2px dashed purple;
+  //max-height: 450px;
+  //border: 2px dashed purple;
 }
 
 .song-list {

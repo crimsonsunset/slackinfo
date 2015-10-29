@@ -1,30 +1,88 @@
-<form action="#" class="mdl-cell mdl-cell--4-col" style="border: 2px solid red;">
-    <div>
-        <i class="material-icons">search</i>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Music: GoonsInc</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
 
-        <div class="mdl-textfield mdl-js-textfield search-box">
-            <input class="mdl-textfield__input  search-field" type="text" id="search"/>
-            <label class="mdl-textfield__label" for="search">Search Here
-            </label>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="search">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input search-field" type="text" name="hello"
+                           id="search" />
+                </div>
+            </div>
+
+
+            <!--<form action="#">-->
+                <!--<div class="search-cont white-text">-->
+                    <!--<i class="material-icons">search</i>-->
+
+                    <!--<div class="mdl-textfield mdl-js-textfield search-box">-->
+                        <!--<input class="mdl-textfield__input search-field" type="text" id="search"/>-->
+                        <!--<label class="mdl-textfield__label white-text" for="search">Search Here</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</form>-->
+
+
+            <!--<nav class="mdl-navigation mdl-layout&#45;&#45;large-screen-only">-->
+                <!--<a class="mdl-navigation__link" href="">Link</a>-->
+                <!--<a class="mdl-navigation__link" href="">Link</a>-->
+                <!--<a class="mdl-navigation__link" href="">Link</a>-->
+                <!--<a class="mdl-navigation__link" href="">Link</a>-->
+            <!--</nav>-->
+
+
+
         </div>
-    </div>
+    </header>
+</div>
 
-</form>
 
-<div class="mdl-cell mdl-cell--8-col mdl-grid switch-box"></div>
 
-<div class="mdl-cell mdl-cell--12-col mdl-grid btn-box">
+<!--<form action="#" class="mdl-cell mdl-cell&#45;&#45;4-col">-->
+    <!--<div class="search-cont mdl-shadow&#45;&#45;2dp">-->
+        <!--<i class="material-icons">search</i>-->
+
+        <!--<div class="mdl-textfield mdl-js-textfield search-box">-->
+            <!--<input class="mdl-textfield__input search-field" type="text" id="search"/>-->
+            <!--<label class="mdl-textfield__label white-text" for="search">Search Here</label>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<!--</form>-->
+<main class="mdl-layout__content">
+    <div class="page-content">
+
+
+
+        <!-- Your content goes here -->
+
+
+
+
+
+<div class="mdl-cell mdl-cell--12-col mdl-grid switch-box mdl-card mdl-shadow--4dp"></div>
+
+<div class="btn-box">
 </div>
 
 <script type="text/template" id="filter_btn_row_template">
-    <div class="mdl-cell mdl-cell--12-col mdl-grid filter-btns">
+    <div class="mdl-cell mdl-cell--12-col mdl-grid filter-btns mdl-card mdl-shadow--4dp">
     </div>
 </script>
 
-<script type="text/template" id="filter_btn_template">
-    <button class="mdl-cell mdl-cell--3-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Button
-    </button>
-</script>
+    </div>
+</main>
 
 

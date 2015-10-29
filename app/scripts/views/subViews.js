@@ -79,8 +79,9 @@ app.HeaderView = Backbone.View.extend({
         this.$el.html(this.template());
         this.searchField = $('#search')
         this.listenTo(app.controlsModel, 'click-filterBtn', function (data) {
-            $('.mdl-textfield__input').val(data).parent().addClass('is-dirty');
-            //that.searchField.val(data).parent().addClass('is-focused');
+            console.log('asdzzzasddsasd')
+            $('.mdl-textfield--expandable').addClass('is-focused');
+            $('.mdl-textfield__input').val(data);
             that._searchFor(data)
         });
         return this;

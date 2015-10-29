@@ -17,6 +17,7 @@ $(document).ready(function () {
             _.each(tallies[0], function (e, i, l) {
                 app.controlsModel.set(i, e)
             });
+            console.log('comparing ', models.length, count[0])
             if (models.length === count[0]) {
                 //nothing has changed on the server, can use localstorage
                 console.log('no change bruh')
