@@ -5,6 +5,7 @@ $blue-3: #3d5afe;
 $blue-dark: #1a237e;
 $box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 $radius: 4px;
+$picHolderWidth: 100px;
 
 #songapp {
   //border: 2px solid;
@@ -26,6 +27,9 @@ $radius: 4px;
 }
 .white-text{
   color: #e8eaf6;
+}
+.border{
+  border: 2px solid red;
 }
 
 .search-box {
@@ -92,25 +96,59 @@ $radius: 4px;
 }
 
 .song-list {
-  border: 2px solid red;
-  height: auto;
+  //border: 2px solid red;
   overflow: scroll;
+  height: 650px;
+}
+
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .song {
-  white-space: nowrap;
   width: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 2px solid;
-  height: 50px;
+  //border: 1px solid black;
+  height: auto;
+  min-height: 91px !important;
+}
+.contrib {
+  padding: 10px 0px 0px 10px !important;
 }
 
 .song .song-text {
-  text-align: center;
+  text-align: left;
+  width: calc(100% - 70px);
+  //border: 2px solid red;
+  margin-left: 10px;
+  margin-bottom: -14px;
+  font-size: medium;
 }
 
 .song-card {
+}
+
+.song-expand-cont{
+  //border: 2px dashed;
+  display: none;
+}
+.img-holder {
+  //border: 2px solid blue;
+  padding: 10px;
+  float: left;
+  width: 150px
+}
+.info-right-side {
+  //border: 2px solid purple;
+  float: left;
+  width: calc(100% - 200px);
+  margin-left: 10px;
+}
+.summary{
+  max-height: 100px;
+  //border: 2px dashed orange;
+  overflow: scroll !important;
 }
 
 .song-card img {
@@ -118,7 +156,49 @@ $radius: 4px;
   float: right;
 }
 
-.demo-card-image.mdl-card {
+#controls{
+  padding: 0px !important;
+}
+.controls{
+  padding: 0px !important;
+}
+
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px;
+}
+
+
+.bottom{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  //height: 22px;
+  padding: 10px 10px 25px 10px !important;
+}
+
+.card-image {
+  width:125px;
+  height:125px;
+  //border:2px solid blue;
+  alt:""
+
   /*width: 256px;*/
   /*height: 256px;*/
   /*background: url('https://d3rt1990lpmkn.cloudfront.net/cover/17576d8352989483a3067003e929ca400a74d3e6') center / cover;*/

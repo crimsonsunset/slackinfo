@@ -5,6 +5,8 @@ app.MainView = Backbone.View.extend({
     initialize: function () {
         //render the app which has the containers, then can populate containers with the subviews
         this.render();
+
+        //todo: make this lazy load, comment out to test timing
         app.songListView, this.songListView = new app.SongListView({collection: app.songList}).render();
         app.headerView, this.headerView = new app.HeaderView().render();
         //app.switchView, this.switchView = new app.SwitchView().render();

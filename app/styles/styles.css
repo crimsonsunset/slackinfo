@@ -10,6 +10,9 @@
 .white-text {
   color: #e8eaf6; }
 
+.border {
+  border: 2px solid red; }
+
 .search-box {
   width: calc(100% - 30px); }
   .search-box input {
@@ -40,29 +43,85 @@
   border: 2px solid; }
 
 .song-list {
-  border: 2px solid red;
-  height: auto;
-  overflow: scroll; }
+  overflow: scroll;
+  height: 650px; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .song {
-  white-space: nowrap;
   width: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 2px solid;
-  height: 50px; }
+  height: auto;
+  min-height: 91px !important; }
+
+.contrib {
+  padding: 10px 0px 0px 10px !important; }
 
 .song .song-text {
-  text-align: center; }
+  text-align: left;
+  width: calc(100% - 70px);
+  margin-left: 10px;
+  margin-bottom: -14px;
+  font-size: medium; }
+
+.song-expand-cont {
+  display: none; }
+
+.img-holder {
+  padding: 10px;
+  float: left;
+  width: 150px; }
+
+.info-right-side {
+  float: left;
+  width: calc(100% - 200px);
+  margin-left: 10px; }
+
+.summary {
+  max-height: 100px;
+  overflow: scroll !important; }
 
 .song-card img {
   padding: 10px;
   float: right; }
 
-.demo-card-image.mdl-card {
-  /*width: 256px;*/
-  /*height: 256px;*/
-  /*background: url('https://d3rt1990lpmkn.cloudfront.net/cover/17576d8352989483a3067003e929ca400a74d3e6') center / cover;*/ }
+#controls {
+  padding: 0px !important; }
+
+.controls {
+  padding: 0px !important; }
+
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+.site-footer, .page-wrap:after {
+  height: 50px; }
+
+.bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 10px 25px 10px !important; }
+
+.card-image {
+  width: 125px;
+  height: 125px;
+  alt: ""; }
 
 .demo-card-image > .mdl-card__actions {
   height: 52px;

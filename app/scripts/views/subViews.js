@@ -4,15 +4,17 @@ app.SongView = Backbone.View.extend({
     render: function () {
         var d = this.template(this.model.toJSON())
         this.$el.html(d)
-        this.$(".song").css('background-color', randomColor({luminosity: 'light'}));
+        //this.$(".song").css('background-color', randomColor({luminosity: 'light'}));
         return this;
     },
     initialize: function () {
         //this.listenTo(this.model, "change", this.songChanged);
     },
     showSongCard: function (e) {
-        //console.log('showSongCard')
-        app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
+        console.log('showSongCard',this.model.id)
+        $('#'+this.model.id).slideToggle()
+
+        //app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
     },
     songChanged: function (e) {
         //console.log('songchanged')
@@ -28,6 +30,7 @@ app.SongListView = Backbone.View.extend({
         console.log('rendiner sonlistview')
         this.$el.empty();
         this.collection.each(this.addOne, this);
+        createTextFills('song-text', {minFontPixels: 15, maxFontPixels: 23})
         return this; // enable chained calls
     },
     renderList : function(songs){

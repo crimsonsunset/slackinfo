@@ -113,7 +113,8 @@
 
     }
     app.restoreStateFromDB = function(){
-        app.songList.burnItDown()
+        app.songList.burnItDown();
+        console.log('burned it bro')
         return new promise(function(resolve,reject){
             app.dbModel.find(function (err, resp) {
                 if (err){
@@ -129,8 +130,6 @@
                     resolve(true)
                 }
             })
-
-
         })
     }
 

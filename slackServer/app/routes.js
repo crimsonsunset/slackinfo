@@ -179,7 +179,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                             console.log('============== OKAY, KEEP LOOPING ===========')
                             getNextExport(app.lastExportDate)
                         } else {
-                            app.restoreStateFromDB();
                             return
                         }
                     })
