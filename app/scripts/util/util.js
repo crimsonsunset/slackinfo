@@ -87,6 +87,26 @@ String.prototype.sdbm_hash = function () {
     return hash;
 };
 
+Date.prototype.toPrettyString = function(){
+
+    var month = this.getUTCMonth() + 1; //months from 1-12
+    var day = this.getUTCDate();
+    var year = this.getUTCFullYear();
+
+    return month + "/" + day  + "/" + year;
+}
+
+function makeDatePretty(inDate){
+    var date = new Date(inDate)
+
+    var month = date.getUTCMonth() + 1; //months from 1-12
+    var day = date.getUTCDate();
+    var year = date.getUTCFullYear();
+
+    return month + "/" + day  + "/" + year;
+}
+
+
 function _removeDupeTags(inArr) {
     var origArr = inArr
     var suspectWords = []

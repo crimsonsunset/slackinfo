@@ -14,6 +14,7 @@
         "request-promise": "latest",
         "promise": "latest",
         "backbone": "latest",
+        "restartable": "latest",
         "node-schedule": "latest"
     },
     "devDependencies": {},

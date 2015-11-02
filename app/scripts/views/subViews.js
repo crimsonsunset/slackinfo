@@ -8,7 +8,9 @@ app.SongView = Backbone.View.extend({
         return this;
     },
     initialize: function () {
-        //this.listenTo(this.model, "change", this.songChanged);
+        var d = new Date(Number(this.model.get('date')))
+        this.model.set('prettyDate',makeDatePretty(d) )
+        return this;
     },
     showSongCard: function (e) {
         console.log('showSongCard', this.model.id)
@@ -27,7 +29,7 @@ app.SongView = Backbone.View.extend({
 app.SongListView = Backbone.View.extend({
     el: '.song-list',
     numRendered: 0,
-    chunk: 6,
+    chunk: 10,
     spinner: '<div class="spinner-holder"><div class="mdl-spinner mdl-js-spinner is-active spinner"></div></div>',
     initialize: function () {
         app.controlsModel.set({'currSongList': this.collection.models});
@@ -53,7 +55,6 @@ app.SongListView = Backbone.View.extend({
         console.log('rendner chunk, starting at', this.numRendered)
         for (var i = 0; i < this.chunk; i++) {
             if (app.controlsModel.get('currSongList')[this.numRendered]) {
-                console.log('addingit')
                 this.addOne(app.controlsModel.get('currSongList')[this.numRendered]);
                 this.numRendered++;
             }
@@ -73,9 +74,9 @@ app.SongListView = Backbone.View.extend({
         this.$el.append(songView.render().el);
     },
     infiniteScroll: function () {
-        //todo: figure out why scroll event doesnt work
+        //todo: figure out why scroll event doesnt work, fix spinner
         var that = this
-        this.$el.scroll(function (e) {
+        this.$el.scroll(_.throttle(function (e) {
             var elem = $(e.currentTarget);
             //register listener for infinite-scrolling
             if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight()) {
@@ -85,11 +86,12 @@ app.SongListView = Backbone.View.extend({
                     that.renderChunk();
                     that.$el.append(that.spinner);
                     componentHandler.upgradeDom();
-                    console.log('done RENDERING CHUnasdz')
-
+                    setTimeout(function () {
+                        $('.spinner-holder').remove( ".spinner-holder" )
+                    },1500)
                 }
             }
-        })
+        },500))
     },
     //doesnt work?? wtf
     events: {
@@ -117,7 +119,6 @@ app.HeaderView = Backbone.View.extend({
     searchField: {},
     fromKeyboard: false,
     render: function () {
-        console.log('rendering headerrzzz')
         var that = this;
         this.$el.html(this.template());
         this.searchField = $('#search')
@@ -177,8 +178,6 @@ app.SwitchView = Backbone.View.extend({
     el: '.switch-box',
     switchRefObj: {},
     render: function () {
-        console.log('rendignering swithcest')
-        console.log(this.switchRefObj)
         this.$el.append(this.template(this.switchRefObj))
         return this;
     },
@@ -209,7 +208,6 @@ app.SwitchView = Backbone.View.extend({
 
     },
     btnRowChange: function (event, fromKeyboard) {
-        console.log('asdasz', event)
         //for keyboard shortcuts
         if (event.clientX != 0) {
             var rowName = event.target.id;

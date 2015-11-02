@@ -1,12 +1,31 @@
 {
   "name": "slackinfo",
   "dependencies": {
-    "express": "~4.10.2",
-    "request": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "underscore": "latest",
+    "backbone": "latest",
+    "jquery": "latest",
     "node-jquery-param": "latest",
-    "cors": "latest"
+    "cors": "latest",
+    "request-promise": "latest",
+    "promise": "latest",
+    "backbone": "latest",
+    "node-schedule": "latest"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-bower": "latest"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": "latest"
   }
 }

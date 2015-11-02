@@ -3,11 +3,9 @@
 
 .spinner-holder {
   width: 100%;
-  border: 1px solid;
   text-align: center; }
 
 .spinner {
-  border: 2px dashed orange;
   margin: 0 auto; }
 
 .mdl-layout-title {
@@ -90,7 +88,7 @@
 
 .summary {
   max-height: 100px;
-  overflow: scroll !important; }
+  overflow: hidden !important; }
 
 .song-card img {
   padding: 10px;

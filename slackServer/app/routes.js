@@ -1,4 +1,4 @@
-module.exports = function (app, express, Song, _, slackAPI, promise) {
+module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
 
     // create our router
     router = express.Router();
@@ -132,6 +132,7 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                 var messages = JSON.parse(data).messages
                 res.status(200)
                     .send(messages);
+
             }, function (reason) {
                 console.log('failed export on route');
                 console.log(reason);
@@ -170,9 +171,7 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
             console.log("GET in allexports");
             var lastDate;
             app.getLastExportDate().then(function (date) {
-
                 getNextExport(date)
-
                 function getNextExport(date){
                     slackAPI.getExport(date).then(function (data) {
                         if (JSON.parse(data).has_more) {
@@ -183,9 +182,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise) {
                         }
                     })
                 }
-
-
-
                 res.status(200)
                     .send('asdzzzz');
             }, function (reason) {

@@ -28,7 +28,6 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
                 _.each(items, function (e, i, l) {
                     slackAPI[type][e.id] = e.name
                 });
-                //console.log(slackAPI[type])
             }
         }).promise()
 
@@ -136,7 +135,7 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
         slackAPI['channels'] = _.invert(slackAPI['channels'])
 
         //todo: remove this call, only for testing
-        slackAPI.getExport();
+        //slackAPI.getExport();
     });
 
     return slackAPI;

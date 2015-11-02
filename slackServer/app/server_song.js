@@ -10,6 +10,7 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
             service: '',
             thumbnail: '',
             description: '',
+            date: '',
             isValid: true
         },
         MUSIC_API_STR : 'http://ws.audioscrobbler.com/2.0/',
@@ -25,7 +26,6 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
                 _.each(inMsg, function (e, i, l) {
                     that.set(i,e)
                     if (that.talliedAttrs.indexOf(i) != -1 ) {
-                        //todo: fix/clean
                         if (i == 'tags') {
                             _.each(that.get(i), function (tag) {
                                 app.songList.addToTally('tags', tag)
@@ -39,9 +39,12 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
             }
 
             this.set('contributor',app.users[inMsg.user])
+            //todo: is this actually really the time? nobody really knows. fuck you timestamps
+            this.set('date',String(inMsg.ts).replace(".", "").slice(0,13))
             app.songList.addToTally('contributors',this.get('contributor'))
 
             if (inMsg.attachments) {
+
                 this.set({service: inMsg.attachments[0].service_name || ''})
                 //this.set({title: inMsg.attachments[0].title || ''})
                 this.set({description: inMsg.attachments[0].text || ''})

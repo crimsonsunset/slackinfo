@@ -54,4 +54,4 @@ $(document).ready(function () {
     }
 });
 
-//todo: fix loading, fix top viewport, fix localstorage, add keyboard shortcuts, more animations, put dates under names
+//todo: fix spinner and scrolling, fix top viewport, hypem support, fix localstorage, more animations, fix grunt

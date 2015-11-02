@@ -2,17 +2,13 @@
   "name": "slackinfo",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "latest",
     "underscore": "latest",
     "jquery": "latest",
     "backbone": "latest",
     "backbone.localStorage": "latest",
     "material-design-lite": "latest",
-    "randomColor": "latest",
     "animate.css": "latest",
     "fuse.js": "latest",
-    "lunr.js": "latest",
-    "jquery.stickyFooter": "latest",
     "jquery-textfill": "latest"
   }
 }
