@@ -1,0 +1,15 @@
+<h5 class=" mdl-cell mdl-cell--12-col">Filters</h5>
+
+
+<% _.each(this.switchRefObj, function(e) { %>
+<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-cell mdl-cell--4-col " for="<%= e.name %>"
+       id="switch-<%= e.name %>">
+    <input type="checkbox" id='<%= e.name %>' class="mdl-switch__input mdl-color--deep-orange-400"/>
+
+    <div class='resize'>
+        <span class="capitalize"><%= e.name %></span>
+    </div>
+</label>
+
+
+<% }); %>

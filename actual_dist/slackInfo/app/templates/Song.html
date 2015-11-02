@@ -1,0 +1,65 @@
+<div class="animated fadeInUp mdl-cell mdl-cell--12-col song mdl-card mdl-shadow--2dp">
+    <!--<div class="mdl-card__title expand">-->
+    <h1 class="song-text ellipsis">
+        <a href='<%= url %>' target="_blank"> <span class='capitalize'><%= title %> - <%= artist %></span></a>
+    </h1>
+    <!--</div>-->
+    <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">expand_more</i>
+        </button>
+    </div>
+    <div class="mdl-card__supporting-text contrib">
+        <p><%= contributor %> on <%= prettyDate %>  </p>
+    </div>
+
+    <div class="song-expand-cont" id="<%= id %>">
+        <!--<div class="mdl-grid border">-->
+
+
+            <div class="img-holder ">
+                <img src='
+        <% if (thumbnail) { %>
+            <%= thumbnail %>
+        <% }else{ %>
+            https://placeholdit.imgix.net/~text?txtsize=33&txt=joe%20is%20the%20best&w=500&h=500
+        <% } %>'
+                     class="card-image"/>
+
+            </div>
+
+
+            <div class="info-right-side">
+                <div class="">Tags</div>
+                <div class="mdl-card__supporting-text">
+
+                    <% if (tags.length != 0) { %>
+                    <%= tags %>
+                    <% }else{ %>
+                    No Tags Available
+                    <% } %>
+                </div>
+                <div class="">Summary</div>
+
+                <div class="mdl-card__supporting-text summary ">
+                    <% if (artist_info.bio && artist_info.bio.content != "") { %>
+
+                    <%= artist_info.bio.summary %>
+                    <% }else{ %>
+                    No Summary Available
+                    <% } %>
+                </div>
+
+
+            <!--</div>-->
+
+
+        </div>
+    </div>
+
+    <div class="card-holder  mdl-cell mdl-cell--12-col ">
+        <div></div>
+    </div>
+
+
+</div>

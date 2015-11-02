@@ -1,0 +1,150 @@
+.page-content {
+  margin-top: 65px; }
+
+.spinner-holder {
+  width: 100%;
+  text-align: center; }
+
+.spinner {
+  margin: 0 auto; }
+
+.mdl-layout-title {
+  margin-left: -62px; }
+
+.search-cont {
+  color: #e8eaf6; }
+
+.white-text {
+  color: #e8eaf6; }
+
+.border {
+  border: 2px solid red; }
+
+.search-box {
+  width: calc(100% - 30px); }
+  .search-box input {
+    left: 20px; }
+  .search-box i {
+    left: 0px; }
+
+.remove-min-height {
+  min-height: 10px !important; }
+
+.switch-box {
+  min-height: 10px !important; }
+
+.resize {
+  margin-left: 12px; }
+
+.filter-btn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.btn-toggledOn {
+  background-color: #3f51b5 !important; }
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid; }
+
+.song-list {
+  overflow: scroll;
+  height: 650px; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.song {
+  width: auto;
+  height: auto;
+  min-height: 91px !important; }
+
+.contrib {
+  padding: 10px 0px 0px 10px !important; }
+
+.song .song-text {
+  text-align: left;
+  width: calc(100% - 70px);
+  margin-left: 10px;
+  margin-bottom: -14px;
+  font-size: medium; }
+
+.song-expand-cont {
+  display: none; }
+
+.img-holder {
+  padding: 10px;
+  float: left;
+  width: 150px; }
+
+.info-right-side {
+  float: left;
+  width: calc(100% - 200px);
+  margin-left: 10px; }
+
+.summary {
+  max-height: 100px;
+  overflow: hidden !important; }
+
+.song-card img {
+  padding: 10px;
+  float: right; }
+
+#controls {
+  padding: 0px !important; }
+
+.controls {
+  padding: 0px !important; }
+
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+.site-footer, .page-wrap:after {
+  height: 50px; }
+
+.bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 10px 25px 10px !important; }
+
+.card-image {
+  width: 125px;
+  height: 125px;
+  alt: ""; }
+
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2); }
+
+.demo-card-image__filename {
+  color: #fff; }
+
+@font-face {
+  font-family: "And Black";
+  src: url("myfont-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/and_black.woff") format("woff"), url("fonts/and_black.ttf") format("truetype"); }
+body {
+  margin: 0; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+/*# sourceMappingURL=styles.css.map */
