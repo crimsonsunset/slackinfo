@@ -11,8 +11,8 @@ app.SongView = Backbone.View.extend({
         //this.listenTo(this.model, "change", this.songChanged);
     },
     showSongCard: function (e) {
-        console.log('showSongCard',this.model.id)
-        $('#'+this.model.id).slideToggle()
+        console.log('showSongCard', this.model.id)
+        $('#' + this.model.id).slideToggle()
 
         //app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
     },
@@ -26,37 +26,76 @@ app.SongView = Backbone.View.extend({
 
 app.SongListView = Backbone.View.extend({
     el: '.song-list',
+    numRendered: 0,
+    chunk: 6,
+    spinner: '<div class="spinner-holder"><div class="mdl-spinner mdl-js-spinner is-active spinner"></div></div>',
+    initialize: function () {
+        app.controlsModel.set({'currSongList': this.collection.models});
+
+        //watch the currSongList for changes, which will happen when search or filter occurs
+        var that = this
+        this.listenTo(app.controlsModel, 'change:currSongList', function (data) {
+            console.log('triggering herez')
+            that.numRendered=0
+            that.renderList(data.get('currSongList'))
+        });
+        this.infiniteScroll();
+        return this;
+    },
     render: function () {
-        console.log('rendiner sonlistview')
+        console.log('RENDERING songlist')
         this.$el.empty();
         this.collection.each(this.addOne, this);
         createTextFills('song-text', {minFontPixels: 15, maxFontPixels: 23})
         return this; // enable chained calls
     },
-    renderList : function(songs){
-        //console.log('renderList');
+    renderChunk: function () {
+        console.log('rendner chunk, starting at', this.numRendered)
+        for (var i = 0; i < this.chunk; i++) {
+            if (app.controlsModel.get('currSongList')[this.numRendered]) {
+                console.log('addingit')
+                this.addOne(app.controlsModel.get('currSongList')[this.numRendered]);
+                this.numRendered++;
+            }
+        }
+        createTextFills('song-text', {minFontPixels: 15, maxFontPixels: 23})
+        return this; // enable chained calls
+    },
+    renderList: function (songs) {
+        console.log('renderList');
         this.$el.empty();
         var that = this;
-        _.each(songs, function(song){
-            that.addOne(song)
-            //console.log(song)
-        });
+        this.renderChunk();
         return this;
     },
     addOne: function (song) {
         var songView = new app.SongView({model: song});
         this.$el.append(songView.render().el);
     },
-    initialize: function () {
-        app.controlsModel.set({'currSongList': this.collection});
-
-        //watch the currSongList for changes, which will happen when search or filter occurs
+    infiniteScroll: function () {
+        //todo: figure out why scroll event doesnt work
         var that = this
-        this.listenTo(app.controlsModel, 'change:currSongList', function (data) {
-            that.renderList(data.get('currSongList'))
-        });
-        return this;
+        this.$el.scroll(function (e) {
+            var elem = $(e.currentTarget);
+            //register listener for infinite-scrolling
+            if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight()) {
+                console.log("hit bottom",app.songList.models.length, that.numRendered)
+                if (that.numRendered < app.controlsModel.get('currSongList').length) {
+                    console.log("REACHED BOTTOM, CALLING");
+                    that.renderChunk();
+                    that.$el.append(that.spinner);
+                    componentHandler.upgradeDom();
+                    console.log('done RENDERING CHUnasdz')
+
+                }
+            }
+        })
+    },
+    //doesnt work?? wtf
+    events: {
+        'scroll .song-list': 'infiniteScroll'
     }
+
 });
 
 app.SongCardView = Backbone.View.extend({
@@ -76,13 +115,13 @@ app.SongCardView = Backbone.View.extend({
 app.HeaderView = Backbone.View.extend({
     el: '#controls',
     searchField: {},
+    fromKeyboard: false,
     render: function () {
         console.log('rendering headerrzzz')
         var that = this;
         this.$el.html(this.template());
         this.searchField = $('#search')
         this.listenTo(app.controlsModel, 'click-filterBtn', function (data) {
-            console.log('asdzzzasddsasd')
             $('.mdl-textfield--expandable').addClass('is-focused');
             $('.mdl-textfield__input').val(data);
             that._searchFor(data)
@@ -93,16 +132,21 @@ app.HeaderView = Backbone.View.extend({
         //this.id = this.model.cid
     },
     searchChanged: function (e) {
-        var inText = $(e.target).val();
-        this._searchFor(inText)
-        app.controlsModel.trigger('searchFor',inText);
+        console.log(this.fromKeyboard)
+        if (!this.fromKeyboard) {
+            var inText = $(e.target).val();
+            this._searchFor(inText)
+            app.controlsModel.trigger('searchFor', inText);
+        }else{
+            this.fromKeyboard=false
+        }
     },
-    _searchFor: function(inText){
+    _searchFor: function (inText) {
         var currSongList = app.controlsModel.get('currSongList')
         if (inText.length <= 2) {
             app.controlsModel.set({'currSongList': app.songList.models});
         }
-        else if (inText.length >2) {
+        else if (inText.length > 2) {
             //var testArr = app.songList.basicSearch(inText)
             var testArr = app.songList.fuzzySearch(inText)
             //todo: a bit of a hack, CID prevents isEqual from working as expected.
@@ -110,13 +154,20 @@ app.HeaderView = Backbone.View.extend({
             _.each(testArr, function (e, i, l) {
                 e.cid = 'NA'
             });
-            if (!_.isEqual(testArr,currSongList)) {
+            if (!_.isEqual(testArr, currSongList)) {
                 //setting the controls model will trigger a view update cuz view is listening for change
                 app.controlsModel.set({'currSongList': testArr});
             }
-        } else {}
+        } else {
+        }
     },
     events: {
+        'click #search-btn': function(e){
+            console.log('asdasz')
+            if (e.clientX == 0) {
+                this.fromKeyboard = true
+            }
+        },
         'keyup .search-field': 'searchChanged'
     }
 });
@@ -124,7 +175,7 @@ app.HeaderView = Backbone.View.extend({
 //tags,contributors,service
 app.SwitchView = Backbone.View.extend({
     el: '.switch-box',
-    switchRefObj : {},
+    switchRefObj: {},
     render: function () {
         console.log('rendignering swithcest')
         console.log(this.switchRefObj)
@@ -135,11 +186,11 @@ app.SwitchView = Backbone.View.extend({
         var that = this;
         //take top 12 tags to make the buttons
         console.log(app.controlsModel.get('filterList'))
-        _.each(app.controlsModel.get('filterList'), function(e,i,l){
+        _.each(app.controlsModel.get('filterList'), function (e, i, l) {
             that.switchRefObj[e] = {
-                name:e,
-                isOn:false,
-                topBtns: app.controlsModel.attributes[e+'Sorted'].slice(0, 12)
+                name: e,
+                isOn: false,
+                topBtns: app.controlsModel.attributes[e + 'Sorted'].slice(0, 12)
             }
             //slice(0, 12)
         });
@@ -149,30 +200,34 @@ app.SwitchView = Backbone.View.extend({
         return this;
     },
     toggleBtnRow: function (rowId) {
-        var selector = $("#"+rowId+"-btnRow")
+        var selector = $("#" + rowId + "-btnRow")
         if (!this.switchRefObj[rowId].btnRow) {
-            this.switchRefObj[rowId].btnRow = new app.BtnRowView(_.pluck(this.switchRefObj[rowId].topBtns, 'name'),rowId).render();
+            this.switchRefObj[rowId].btnRow = new app.BtnRowView(_.pluck(this.switchRefObj[rowId].topBtns, 'name'), rowId).render();
         } else {
             selector.slideToggle();
         }
 
     },
-    btnRowChange: function (event,i) {
-        var rowName = event.target.id;
-        this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
-        app.controlsModel.trigger('rowToggle',rowName);
+    btnRowChange: function (event, fromKeyboard) {
+        console.log('asdasz', event)
+        //for keyboard shortcuts
+        if (event.clientX != 0) {
+            var rowName = event.target.id;
+            this.switchRefObj[rowName].isOn = !this.switchRefObj[rowName].isOn;
+            app.controlsModel.trigger('rowToggle', rowName);
+        }
     },
-    findBtnBySearch: function(inText){
+    findBtnBySearch: function (inText) {
         $('.btn-toggledOn').removeClass('btn-toggledOn')
-        _.each(this['switchRefObj'], function(e,i,l){
+        _.each(this['switchRefObj'], function (e, i, l) {
             if (e.btnRow) {
-                e.btnRow.$el.find("span").filter(function() {
+                e.btnRow.$el.find("span").filter(function () {
                     return $(this).text() == inText;
                 }).parent().addClass('btn-toggledOn')
             }
         })
     },
-    stopIt: function (event,i) {
+    stopIt: function (event, i) {
         event.stopPropagation();
     },
     events: {
@@ -189,11 +244,11 @@ app.BtnRowView = Backbone.View.extend({
     render: function () {
         console.log('rendering buttn row', this.btnWidth)
         this.$el.append(this.template(this.topBtns))
-        $('#'+this.rowId+'-btnRow').slideToggle();
+        $('#' + this.rowId + '-btnRow').slideToggle();
         createTextFills('filter-btn', {minFontPixels: 10})
         return this;
     },
-    initialize: function (topBtns,rowId) {
+    initialize: function (topBtns, rowId) {
         this.topBtns = topBtns;
         this.rowId = rowId;
         this.btnWidth = (12 / topBtns.length < 2) ? 1 : Math.floor(12 / topBtns.length);
@@ -209,7 +264,7 @@ app.BtnRowView = Backbone.View.extend({
         //todo: add support for multi filters
         $('.btn-toggledOn').removeClass('btn-toggledOn')
         $(target).addClass('btn-toggledOn')
-        app.controlsModel.trigger('click-filterBtn',btnName);
+        app.controlsModel.trigger('click-filterBtn', btnName);
     },
     events: {
         'click .mdl-button': 'filterBtnClick'

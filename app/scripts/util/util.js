@@ -64,15 +64,15 @@ function autoSizeText() {
     return _results;
 };
 
-function createTextFills(inClass,options) {
+function createTextFills(inClass, options) {
     var resizeTimer;
-    var currOpts = _.extend({},options)
+    var currOpts = _.extend({}, options)
     //init all resizes first, then debounce resizing to call it again
-    $('.'+inClass).textfill(currOpts);
+    $('.' + inClass).textfill(currOpts);
     $(window).on('resize', function (e) {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-            $('.'+inClass).textfill(currOpts);
+            $('.' + inClass).textfill(currOpts);
         }, 250);
 
     });

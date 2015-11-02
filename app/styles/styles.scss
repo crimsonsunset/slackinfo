@@ -15,6 +15,16 @@ $picHolderWidth: 100px;
 .page-content{
   margin-top: 65px;
 }
+.spinner-holder {
+  width: 100%;
+  border: 1px solid;
+  text-align: center;
+}
+
+.spinner {
+  border: 2px dashed orange;
+  margin: 0 auto;
+}
 
 .mdl-layout-title{
   margin-left: -62px;
