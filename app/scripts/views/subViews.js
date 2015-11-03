@@ -76,10 +76,8 @@ app.SongListView = Backbone.View.extend({
     infiniteScroll: function () {
         //todo: figure out why scroll event doesnt work, fix spinner
         var that = this
-        this.$el.scroll(_.throttle(function (e) {
-            var elem = $(e.currentTarget);
-            //register listener for infinite-scrolling
-            if (elem[0].scrollHeight - elem.scrollTop() <= elem.outerHeight()) {
+        this.$el.bind('scroll', function(){
+            if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight){
                 console.log("hit bottom",app.songList.models.length, that.numRendered)
                 if (that.numRendered < app.controlsModel.get('currSongList').length) {
                     console.log("REACHED BOTTOM, CALLING");
@@ -91,7 +89,7 @@ app.SongListView = Backbone.View.extend({
                     },1500)
                 }
             }
-        },500))
+        });
     },
     //doesnt work?? wtf
     events: {

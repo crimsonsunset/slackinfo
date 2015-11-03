@@ -54,4 +54,4 @@ $(document).ready(function () {
     }
 });
 
-//todo: fix spinner and scrolling, fix top viewport, hypem support, fix localstorage, more animations, fix grunt
+//todo:  fix top viewport, hypem support, fix localstorage, more animations, fix grunt, fix arrows, change to sort by date, cross broswer, change load from server

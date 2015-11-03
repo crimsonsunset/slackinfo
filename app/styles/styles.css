@@ -50,8 +50,9 @@
   border: 2px solid; }
 
 .song-list {
+  height: 650px;
   overflow: scroll;
-  height: 650px; }
+  position: absolute; }
 
 .ellipsis {
   white-space: nowrap;
@@ -60,7 +61,6 @@
 
 .song {
   width: auto;
-  height: auto;
   min-height: 91px !important; }
 
 .contrib {

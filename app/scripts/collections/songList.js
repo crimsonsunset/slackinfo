@@ -40,6 +40,13 @@ app.SongList = Backbone.Collection.extend({
                 console.log('GOT stuff')
                 console.log(data)
                 _.each(data.models, function (e, i, l) {
+
+
+                    //todo: this is for loading testing
+                    //if (i > 30) {
+                    //    console.log('adding only 30')
+                    //    return
+                    //}
                     var currSong = new app.Song(e);
                     that.add(currSong)
                     currSong.save();

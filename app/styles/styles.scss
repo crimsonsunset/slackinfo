@@ -105,8 +105,11 @@ $picHolderWidth: 100px;
 
 .song-list {
   //border: 2px solid red;
-  overflow: scroll;
   height: 650px;
+  overflow: scroll;
+  //border: 2px solid;
+  position: absolute;
+
 }
 
 .ellipsis{
@@ -118,7 +121,6 @@ $picHolderWidth: 100px;
 .song {
   width: auto;
   //border: 1px solid black;
-  height: auto;
   min-height: 91px !important;
 }
 .contrib {
