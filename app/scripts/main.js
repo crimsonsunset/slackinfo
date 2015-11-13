@@ -8,27 +8,19 @@ $(document).ready(function () {
         loadTemplates(app.templates.names),
         app.controlsModel.getFromServer('users'),
         app.controlsModel.getFromServer('count'),
-        app.controlsModel.getFromServer('tallies'),
-        app.songList.fetch()
+        app.controlsModel.getFromServer('tallies')
     )
-        .then(function (templates, users, count, tallies, models) {
+        .then(function (templates, users, count, tallies) {
 
             //set the tallies back up
             _.each(tallies[0], function (e, i, l) {
                 app.controlsModel.set(i, e)
             });
-            console.log('comparing ', models.length, count[0])
-            if (models.length === count[0]) {
-                //nothing has changed on the server, can use localstorage
-                console.log('no change bruh')
-                init();
-            } else {
+
                 //theres something new on the server, dump old collection and use db
                 console.log('we got some CHANGES change bruh')
-                app.songList.burnItDown();
+                //app.songList.burnItDown();
                 app.songList.fetchFromServer().then(init);
-            }
-
 
         })
 
@@ -54,4 +46,4 @@ $(document).ready(function () {
     }
 });
 
-//todo:  fix top viewport, hypem support, fix localstorage, more animations, fix grunt, fix arrows, change to sort by date, cross broswer, change load from server
+//todo:  fix top viewport, hypem support, fix localstorage, more animations, fix grunt, fix arrows, cross broswer, change load from server

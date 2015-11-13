@@ -1,10 +1,15 @@
 //templates are loaded from loadTemplates() in util
 app.SongView = Backbone.View.extend({
     tagName: 'div',
+    icon: '',
     render: function () {
+        //todo: this seems like it might be a hack and break shit keep eye on it
+        this.model.set('id',this.model.get('_id'))
         var d = this.template(this.model.toJSON())
-        this.$el.html(d)
-        //this.$(".song").css('background-color', randomColor({luminosity: 'light'}));
+        var e = this.$el.html(d)
+        this.icon = $(this.$el).find('.rotate')
+        console.log('thisicon')
+        console.log(this.icon)
         return this;
     },
     initialize: function () {
@@ -15,6 +20,7 @@ app.SongView = Backbone.View.extend({
     showSongCard: function (e) {
         console.log('showSongCard', this.model.id)
         $('#' + this.model.id).slideToggle()
+        this.icon.toggleClass("down")  ;
 
         //app.mainView.spawnCard(new app.SongCardView({model: this.model}).render())
     },

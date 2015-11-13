@@ -24,9 +24,12 @@ $picHolderWidth: 100px;
   margin: 0 auto;
 }
 
+
 .mdl-layout-title{
   margin-left: -62px;
 }
+
+
 .search-cont{
   color: #e8eaf6;
   //background-color: $blue-2;
@@ -239,4 +242,16 @@ body {
 //util classes
 .capitalize{
   text-transform: capitalize;
+}
+
+.rotate{
+  -moz-transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+.rotate.down{
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
 }

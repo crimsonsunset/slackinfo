@@ -1,10 +1,10 @@
 app.SongList = Backbone.Collection.extend({
     model: app.Song,
     url: '/api/songs',
-    SONG_URL: 'app/exports/1.json',
-    COUNT_URL: '/count',
-    localStorage: new Backbone.LocalStorage("local-songs"),
-    comparator: 'title',
+    //localStorage: new Backbone.LocalStorage("local-songs"),
+    comparator: function(song) {
+        return - song.get('date');
+    },
     searchService: {},
     initialize: function () {
         return this;
@@ -49,7 +49,7 @@ app.SongList = Backbone.Collection.extend({
                     //}
                     var currSong = new app.Song(e);
                     that.add(currSong)
-                    currSong.save();
+                    //currSong.save();
                 })
             })
             .fail(function (data) {
