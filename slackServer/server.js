@@ -57,7 +57,7 @@
     function startServer(){
         app.isReady = true;
         app.listen(port);
-        console.log('Magic happens on port ' + port); // shoutout to the user
+        console.log('Server is ready. Magic happens on port ' + port); // shoutout to the user
         app.exports = module.exports = app;
 
         //var job = cron.scheduleJob('* * * * *', function(){
@@ -158,7 +158,7 @@
         //check that the collection is up to snuff
         app.dbModel.count({}, function (err, numRecords) {
             if (app.songList.models.length != numRecords ) {
-                console.log('not up to snuffzzz')
+                console.log('not up to snuff, need to restore server state from db')
                 app.restoreStateFromDB().then(function(){
                     startServer();
 
