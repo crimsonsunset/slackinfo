@@ -20,8 +20,8 @@
     },
     "devDependencies": {},
     "scripts": {
-        "test": "nodemon server.js",
-        "start": "nodemon server.js"
+        "test": "node server.js",
+        "start": "node server.js"
     },
     "repository": {
         "type": "git",

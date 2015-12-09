@@ -12,6 +12,17 @@ module.exports = function (grunt) {
             server:'slackServer/server.js',
             dependencies:'bower_components/'
         },
+        //nodemon and watch are blocking, need to run them on diff threads
+        concurrent: {
+            tasks: [
+                'nodemon',
+                'watch'
+            ],
+            options: {
+                logConcurrentOutput: true
+            }
+        },
+
         concat: {
             dist: {
                 src: ['<%= paths.js %>**'],
@@ -113,16 +124,22 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     grunt.registerTask('build', ['concat', 'uglify', 'bower:dist']);
     grunt.registerTask('serve', function (target) {
         console.log('lets get the party started')
         grunt.task.run([
             'connect:livereload',
-            'watch',
-            'nodemon:dev'
+            'concurrent:tasks'
         ]);
     });
     grunt.registerTask('default', ['watch']);
+
+    //grunt.event.once('livereload.sass', function(host, port) {
+    //
+    //    console.log('joes so sassy')
+    //});
+
 
 };
