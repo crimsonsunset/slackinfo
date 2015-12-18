@@ -113,7 +113,7 @@ app.SongCardView = Backbone.View.extend({
 });
 
 app.HeaderView = Backbone.View.extend({
-    el: '#controls',
+    el: '#headerCont',
     searchField: {},
     fromKeyboard: false,
     render: function () {
@@ -252,7 +252,7 @@ app.BtnRowView = Backbone.View.extend({
         return this;
     },
     filterBtnClick: function (e) {
-        event.stopPropagation();
+        e.stopPropagation();
         var btnName = $(e.target).attr('data')
         var target = (e.target.localName == 'span') ? e.target.parentNode : e.target
         //console.log('Clicked FILTER BTN',btnName);

@@ -1,4 +1,4 @@
-module.exports = function (app,param, _, request, promise,slackToken,Song,SongList,exportDate) {
+module.exports = function (app, param, _, request, promise, slackToken, Song, SongList, exportDate) {
     var START_STAMP = '1434326400';
     var CHANNEL_NAME = 'music';
     var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
@@ -67,7 +67,7 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
 
     };
 
-    function parseSlackResponse(messages){
+    function parseSlackResponse(messages) {
         var deferreds = [];
         var latestDate = messages[0].ts
         _.each(messages, function (e, i, l) {
@@ -76,12 +76,12 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
                 deferreds.push(currSong.promise)
 
                 //$.when would be nicer
-                Promise.all([currSong.promise]).then(function(res){
+                Promise.all([currSong.promise]).then(function (res) {
 
                     if (currSong.get('isValid') == false) {
                         console.log('got a weird message, not saving it', currSong.attributes.text)
                     } else {
-                        app.saveSongToDB(currSong).then(function(res){
+                        app.saveSongToDB(currSong).then(function (res) {
                             //todo: reserved for something if need to know if db save worked
                             //console.log('res', res)
                         })
@@ -93,15 +93,15 @@ module.exports = function (app,param, _, request, promise,slackToken,Song,SongLi
             } else {}
         });
 
-        return Promise.all(deferreds).then(function(res){
+        return Promise.all(deferreds).then(function (res) {
             console.log('done with all the calls', latestDate);
-            exportDate.remove({}, function(err) {
+            exportDate.remove({}, function (err) {
                     if (err) {
                         console.log('failed CLEARING exportDate in DB')
                     }
                 }
             );
-            var dbDate = new exportDate({date:latestDate});
+            var dbDate = new exportDate({date: latestDate});
             dbDate.save(function (err) {
                 if (err)
                     console.log('failed SAVING exportDate in DB')

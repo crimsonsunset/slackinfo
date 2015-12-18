@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         paths:{
             styles:'app/styles/',
+            templates:'app/templates/',
             js:'app/scripts/',
             dist:'dist/',
             assets:'app/images/',
@@ -41,7 +42,10 @@ module.exports = function (grunt) {
         },
         watch: {
             html: {
-                files: ['<%= paths.index %>']
+                files: ['<%= paths.templates %>*.html'],
+                options: {
+                    livereload: true
+                }
             },
             js: {
                 files: ['<%= paths.js %>**/*.js'],

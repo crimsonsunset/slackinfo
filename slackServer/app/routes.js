@@ -83,7 +83,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
                 .send({'status': 'cool story bro'});
         });
 
-
     router.route('/collection')
         .get(function (req, res) {
             console.log("GET in collection")

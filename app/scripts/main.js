@@ -46,7 +46,8 @@ $(document).ready(function () {
         app.switchView = new app.SwitchView().render();
         componentHandler.upgradeDom();
         createTextFills('resize');
-            //$(".bottom").stickyFooter();
+
+
         //todo: emit view finished event here
         app.router = new app.Router();
         Backbone.history.start();
