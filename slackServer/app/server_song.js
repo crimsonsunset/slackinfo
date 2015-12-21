@@ -14,8 +14,10 @@ module.exports = function (app, Backbone, _, request, promise, lastFMKey) {
             isValid: true
         },
         MUSIC_API_STR: 'http://ws.audioscrobbler.com/2.0/',
+        HYPEM_API_STR: 'https://api.hypem.com/v2/tracks/',
         ARTIST_QUERY_STR: '?method=artist.getinfo&artist=',
         KEY_STR: lastFMKey,
+        HYPEM_KEY_STR: '?key=swagger',
         FMT_STR: '&format=json',
         promise: {},
         nonIntegratedServiceArr: ['hypem'],
@@ -95,50 +97,66 @@ module.exports = function (app, Backbone, _, request, promise, lastFMKey) {
                         this.set('isValid', false)
                         break;
                 }
+                that._cleanUpAndGetMetaData()
 
-            } else {
+            }
 
-                //check that its in the supported service list
-                var serviceName = false;
-                _.each(this.nonIntegratedServiceArr, function (e, i, l) {
-                    if (inMsg.text.indexOf(e) != -1) {
-                        serviceName = e;
-                        return;
+
+            else {
+
+                this.promise = new promise(function (resolve, reject) {
+
+                    //check that its in the supported service list
+                    var serviceName = false;
+                    _.each(that.nonIntegratedServiceArr, function (e, i, l) {
+                        if (inMsg.text.indexOf(e) != -1) {
+                            serviceName = e;
+                            return;
+                        }
+                    });
+
+                    //error handling for wierd messages / non supported
+                    if (serviceName == false) {
+                        that.set('isValid', false)
+                        resolve(false)
+                    } else {
+                        //todo: services that dont have integration blocks (added hypem here)
+                        //todo: add more fuckin integrations [hypem] https://api.hypem.com/api-docs/#!/tracks/item_get
+                        switch (serviceName) {
+                            case 'hypem':
+                                try {
+                                    that.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
+                                    that.set({service: serviceName || ''})
+                                    var decodedStr = decodeURI(that.get('url')).replace(/\+/g, '');
+                                    var halfStr = decodedStr.slice(decodedStr.lastIndexOf("track/") + 6)
+                                    var trackId = halfStr.slice(0, halfStr.lastIndexOf("/"))
+                                    that.getTagsFromHypem(trackId).then(function (res) {
+                                        console.log('done getting hypem data', res)
+                                        resolve(that._cleanUpAndGetMetaData())
+                                    }).catch(function (res) {
+                                        that.set('isValid', false)
+                                        console.log('FAILEDZZ HypemData')
+                                        resolve(false)
+                                    })
+
+                                }
+                                catch (err) {
+                                    that.set('isValid', false)
+                                    console.log('ERRONEOUS HYPEM SONG')
+                                    resolve(false)
+                                }
+                                break;
+                            default:
+                                console.log('wtf is that-- unsupported CRAZY msg type', inMsg)
+                                that.set('isValid', false)
+                                resolve(false)
+                                break;
+                        }
                     }
                 });
-
-                //error handling for wierd messages / non supported
-                if (serviceName == false) {
-                    this.set('isValid', false)
-                    return new promise(function (resolve, reject) {
-                        resolve(false)
-                    });
-                } else {
-                    //todo: services that dont have integration blocks (added hypem here)
-                    //todo: add more fuckin integrations [hypem] https://api.hypem.com/api-docs/#!/tracks/item_get
-                    try {
-                        this.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
-                        this.set({service: serviceName || ''})
-                        var decodedStr = decodeURI(this.get('url')).replace(/\+/g, '');
-                        var songAttrArr = decodedStr.split('-');
-                        var title = songAttrArr[0].slice(songAttrArr[0].lastIndexOf("/") + 1)
-                        this.set({artist: title.trim() || ''});
-                        this.set({title: songAttrArr[1].trim() || ''});
-                    }
-                    catch (err) {
-                        this.set('isValid', false)
-                        console.log('ERRONEOUS HYPEM SONG')
-                    }
-                }
             }
-            //must remove slashes from all artist name since they will break the get call
-            this.set({artist: this.get('artist').replace('/', '')})
 
-            //final check, if no artist its invalid
-            if (this.get('artist').length == 0) {
-                this.set('isValid', false)
-            }
-            this.promise = this.fetchSongData();
+
         },
         fetchSongData: function () {
             var artistStr = encodeURIComponent(this.get('artist'))
@@ -164,7 +182,37 @@ module.exports = function (app, Backbone, _, request, promise, lastFMKey) {
                 }
             }).promise()
         },
+        getTagsFromHypem: function (trackId) {
+            var that = this;
+            return request(this.HYPEM_API_STR + trackId + this.HYPEM_KEY_STR, function (error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    var data = JSON.parse(response.body)
+                    if (data.error) {
+                        return -1;
+                    }
+                    that.set({artist: data.artist || ''})
+                    that.set({title: data.title || ''})
+                    console.log('done setting hypem DATA')
+                }
+                if(error){
+                    console.log('got an error from hypem API')
+                    return false
+                }
+            }).promise()
+        },
         //todo: clean this up or leave it impossible to read on purpose??
+        _cleanUpAndGetMetaData: function () {
+            //must remove slashes from all artist name since they will break the get call
+            this.set({artist: this.get('artist').replace('/', '')})
+
+            //final check, if no artist its invalid
+            if (this.get('artist').length == 0) {
+                this.set('isValid', false)
+            }
+            this.promise = this.fetchSongData();
+            return this.promise;
+
+        },
         _removeDupeTags: function (inArr) {
             var origArr = inArr
             var suspectWords = []

@@ -18,7 +18,7 @@
 
 
     //Change to use different collections in the DB
-    var collName = "SONGLIST";
+    var collName = "SONGLISTDEV";
     var songSchema   = new mongoose.Schema({
         artist: String,
         artist_info: mongoose.Schema.Types.Mixed,
@@ -70,7 +70,6 @@
         });
     }
 
-
     app.saveSongToDB= function(song){
         var dbSong = new app.dbModel();
         dbSong = _.extend(dbSong, song.attributes);
@@ -103,20 +102,20 @@
             });
         });
     },
-    app.getLastExportDate = function () {
-        return new promise(function(resolve,reject){
-            app.dateModel.findOne(function (err, resp) {
-                if (err){
-                    resolve(false)
-                    console.log("error getting last export date"+err)
-                }else{
-                    app.lastExportDate = resp.date
-                    resolve(resp.date)
-                }
-            });
-        })
+        app.getLastExportDate = function () {
+            return new promise(function(resolve,reject){
+                app.dateModel.findOne(function (err, resp) {
+                    if (err){
+                        resolve(false)
+                        console.log("error getting last export date"+err)
+                    }else{
+                        app.lastExportDate = resp.date
+                        resolve(resp.date)
+                    }
+                });
+            })
 
-    }
+        }
     app.restoreStateFromDB = function(){
         app.songList.burnItDown();
         console.log('burned it bro')
@@ -149,7 +148,7 @@
         var SongList = require('./app/server_songList')(app,Backbone,_, rp,promise,app.songModel);
         app.songList = new SongList();
         app.slackAPI = require('./app/slackAPI')(app,param,_,rp,promise,require('./config/tokens').token, app.songModel, app.songList, app.dateModel);
-        app.routes = require('./app/routes')(app,express,app.dbModel,_, app.slackAPI,promise, restart); // pass our application into our routes
+        app.routes = require('./app/routes')(app,express,app.dbModel,_, app.slackAPI,promise, restart,rp,app.songModel); // pass our application into our routes
 
         // REGISTER OUR ROUTES -------------------------------
         app.use('/api', router);
@@ -172,6 +171,5 @@
         //startServer();
     }
     init();
-
 
 }())

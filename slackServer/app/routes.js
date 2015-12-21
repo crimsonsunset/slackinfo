@@ -1,4 +1,4 @@
-module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
+module.exports = function (app, express, Song, _, slackAPI, promise, restart, request,Songz) {
 
     // create our router
     router = express.Router();
@@ -121,7 +121,6 @@ module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
             }
 
 
-
         });
 
     router.route('/export')
@@ -150,7 +149,59 @@ module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
             });
         });
 
+    router.route('/initial')
+        .get(function (req, res) {
+            console.log("GET in INITIAL");
+            app.getLastExportDate().then(function (date) {
+                res.status(200)
+                    .send(date);
+            }, function (reason) {
+                console.log('failed export on route');
+                console.log(reason);
+            });
+        });
 
+    router.route('/test')
+        .get(function (req, res1) {
+            console.log("GET in test");
+            var serviceArr = ['soundcloud', 'youtube', 'hypem', 'spotify']
+            _hasUrl = function (str) {
+                return new RegExp("([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?").test(str)
+            };
+
+            _matchesService = function (str) {
+                var didMatch = false
+                _.each(serviceArr, function (e, i, l) {
+                    if (str.indexOf(e) !== -1) {
+                        didMatch = true
+                        return true
+                    }
+                })
+                return didMatch
+            }
+
+
+            var deferreds = [];
+            var messages= require('./exports/66.json').messages
+            _.each(messages, function (e, i, l) {
+                if (_hasUrl(e.text) && _matchesService(e.text)) {
+                    var currSong = new Songz(e);
+                    deferreds.push(currSong.promise)
+                    Promise.all([currSong.promise]).then(function (res) {
+                        console.log('Promise Came back from single song')
+                        console.log(res)
+                    })
+
+                }
+            });
+
+            return Promise.all(deferreds).then(function (res) {
+                console.log('All the promises came back from the asst APIs, SENDING data back to the route')
+                console.log(res)
+                res1.status(200)
+                    .send(res);
+            })
+        });
 
     router.route('/resetdate')
         .get(function (req, res) {
@@ -171,7 +222,7 @@ module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
             var lastDate;
             app.getLastExportDate().then(function (date) {
                 getNextExport(date)
-                function getNextExport(date){
+                function getNextExport(date) {
                     slackAPI.getExport(date).then(function (data) {
                         if (JSON.parse(data).has_more) {
                             console.log('============== OKAY, KEEP LOOPING ===========')
@@ -181,6 +232,7 @@ module.exports = function (app, express, Song, _, slackAPI, promise, restart) {
                         }
                     })
                 }
+
                 res.status(200)
                     .send('asdzzzz');
             }, function (reason) {
