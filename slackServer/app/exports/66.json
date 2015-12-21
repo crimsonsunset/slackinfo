@@ -1,0 +1,49 @@
+{
+    "ok": true,
+    "oldest": "1443916800",
+    "messages": [
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/open.spotify.com\/track\/2Th9n7O96iGtVVHcg0j1uZ>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "La Plage - Mark",
+                    "title_link": "https:\/\/open.spotify.com\/track\/2Th9n7O96iGtVVHcg0j1uZ",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/5502c1f12eae7ad3fe02ce45c61b46bedfbad066",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: La Plage - Mark",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/2Th9n7O96iGtVVHcg0j1uZ\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/2Th9n7O96iGtVVHcg0j1uZ",
+                    "id": 1
+                }
+            ],
+            "ts": "1444066328.000087"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/hypem.com\/track\/2dnjh\/stwo+-+Haunted+%28feat.+Sevdaliza%29>",
+            "ts": "1445006066.000430"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/hypem.com\/track\/2djr6\/Dillistone+-+Sad+%26+High>",
+            "ts": "1444845623.000401"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/hypem.com\/track\/2bpxk\/SOFI+TUKKER+-+Drinkee+(Original+Mix)>",
+            "ts": "1444067153.000089"
+        }
+
+    ],
+    "has_more": false
+}
