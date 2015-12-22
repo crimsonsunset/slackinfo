@@ -12,9 +12,10 @@
         "node-jquery-param": "latest",
         "cors": "latest",
         "request-promise": "latest",
+        "request": "latest",
         "promise": "latest",
-        "backbone": "latest",
         "restartable": "latest",
+        "nodemon": "latest",
         "node-schedule": "latest"
     },
     "devDependencies": {},
@@ -24,7 +25,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://bitbucket.org/joesangiorgio/pollingapp.git"
+        "url": ""
     },
     "keywords": [
         "slack"

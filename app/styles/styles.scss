@@ -9,11 +9,19 @@ $picHolderWidth: 100px;
 
 #songapp {
   //border: 2px solid;
-  //background-color: $blue-light
+  //background-color: $blue-light;
+  //height: auto;
+  //overflow: auto
 }
 
-.page-content{
+.mainCont{
+  position:  relative;
+  max-width: 840px;
+  margin: 0 auto;
+}
+.top-controls{
   margin-top: 65px;
+  border: 2px dashed blue;
 }
 .spinner-holder {
   width: 100%;
@@ -170,10 +178,7 @@ $picHolderWidth: 100px;
   float: right;
 }
 
-#controls{
-  padding: 0px !important;
-}
-.controls{
+#headerCont{
   padding: 0px !important;
 }
 
@@ -226,13 +231,6 @@ html, body {
 
 .demo-card-image__filename {
   color: #fff;
-}
-
-@font-face {
-  font-family: "And Black";
-  src: url("myfont-webfont.eot?#iefix") format('embedded-opentype'),
-  url("fonts/and_black.woff") format('woff'),
-  url("fonts/and_black.ttf") format('truetype');
 }
 
 body {

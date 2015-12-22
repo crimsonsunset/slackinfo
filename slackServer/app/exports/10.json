@@ -1,0 +1,3031 @@
+{
+    "ok": true,
+    "oldest": "1449695826.002147",
+    "messages": [
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "oh i know she is",
+            "ts": "1450475369.002557"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "hahahahahahaha",
+            "ts": "1450474571.002556"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "\/giphy spoiler alert",
+            "attachments": [
+                {
+                    "fallback": "giphy: <http:\/\/giphy.com\/gifs\/gravity-falls-gf-ZEuhQwDM8gvAc>",
+                    "image_url": "http:\/\/media4.giphy.com\/media\/ZEuhQwDM8gvAc\/giphy.gif",
+                    "image_width": 500,
+                    "image_height": 361,
+                    "image_bytes": 173697,
+                    "title": "spoiler alert",
+                    "id": 1,
+                    "title_link": "http:\/\/giphy.com\/gifs\/gravity-falls-gf-ZEuhQwDM8gvAc"
+                }
+            ],
+            "ts": "1450474568.002555",
+            "reactions": [
+                {
+                    "name": "scumbagjoe",
+                    "users": [
+                        "U06J9BRL0"
+                    ],
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "the girtl is cooler",
+            "ts": "1450474519.002554"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "it's ok",
+            "ts": "1450473759.002553"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "oh i know that song",
+            "ts": "1450473759.002552"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "I\u2019m Finn\u2026duh",
+            "ts": "1450473735.002551"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<http:\/\/spotify-starwars.com\/> <!channel>",
+            "attachments": [
+                {
+                    "title": "Spotify Star Wars",
+                    "title_link": "http:\/\/spotify-starwars.com\/",
+                    "text": "Which Star Wars character are you? We use Spotify to analyze your listening habits and find out which Star Wars character you match up with.",
+                    "fallback": "Spotify Star Wars",
+                    "image_url": "https:\/\/d16hsdgp0fhdwe.cloudfront.net\/SWxSP_GlobalShare_Card_001_opt3.jpg",
+                    "from_url": "http:\/\/spotify-starwars.com\/",
+                    "image_width": 476,
+                    "image_height": 250,
+                    "image_bytes": 725073,
+                    "id": 1
+                }
+            ],
+            "ts": "1450473729.002549"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "chill AF",
+            "ts": "1450472897.002548"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<@U06J9BRL0>",
+            "ts": "1450472893.002547"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/5f51eKOzliTl6wBgBPHzor>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "St. South - Get Good (Infinitefreefall Remix)",
+                    "title_link": "https:\/\/open.spotify.com\/track\/5f51eKOzliTl6wBgBPHzor",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/463a6f228653dc1ff10b4f0cfc2301a425703a94",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: St. South - Get Good (Infinitefreefall Remix)",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/5f51eKOzliTl6wBgBPHzor\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/5f51eKOzliTl6wBgBPHzor",
+                    "id": 1
+                }
+            ],
+            "ts": "1450472891.002545"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/23wuZgeX1oyJ43QYOTo9s7> babe",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Kehlani - Did I",
+                    "title_link": "https:\/\/open.spotify.com\/track\/23wuZgeX1oyJ43QYOTo9s7",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/63ed318c993192db87a169f63fe449f388498220",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Kehlani - Did I",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/23wuZgeX1oyJ43QYOTo9s7\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/23wuZgeX1oyJ43QYOTo9s7",
+                    "id": 1
+                }
+            ],
+            "ts": "1450468990.002543"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "the weeknd fucking killing it",
+            "ts": "1450468353.002542"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/6ArlDORkzYlMetmkhEuMSk>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Belly - Might Not",
+                    "title_link": "https:\/\/open.spotify.com\/track\/6ArlDORkzYlMetmkhEuMSk",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/168afaeebafeb8edcb2ae5a2418709081f41bac2",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Belly - Might Not",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/6ArlDORkzYlMetmkhEuMSk\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/6ArlDORkzYlMetmkhEuMSk",
+                    "id": 1
+                }
+            ],
+            "ts": "1450468342.002540"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "pusha real good",
+            "ts": "1450456649.002539"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "man I\u2019ve been waiting for this album for a while",
+            "ts": "1450456592.002538"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "Pusha Pusha T",
+            "ts": "1450456583.002537"
+        },
+        {
+            "type": "message",
+            "user": "U06JAHAV7",
+            "text": "Pusha!",
+            "ts": "1450456473.002536"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "you guys remember this song?",
+            "ts": "1450455733.002535"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/open.spotify.com\/track\/41FxOnMexKxf2luPPXz3eh>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "N.A.S.A. - Gifted (feat. Kanye West, Santigold &amp; Lykke Li)",
+                    "title_link": "https:\/\/open.spotify.com\/track\/41FxOnMexKxf2luPPXz3eh",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/0e0ad0c992f04707351048bc2054b39076b2ae5a",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: N.A.S.A. - Gifted (feat. Kanye West, Santigold & Lykke Li)",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/41FxOnMexKxf2luPPXz3eh\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/41FxOnMexKxf2luPPXz3eh",
+                    "id": 1
+                }
+            ],
+            "ts": "1450455730.002533"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "wow every song on this album is a party jam <https:\/\/open.spotify.com\/track\/4eeFwDF1OjhZtvPwhqhcr5>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Pusha T - M.F.T.R.",
+                    "title_link": "https:\/\/open.spotify.com\/track\/4eeFwDF1OjhZtvPwhqhcr5",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/6318de5a856a793163e217f23e6168450c57211d",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Pusha T - M.F.T.R.",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/4eeFwDF1OjhZtvPwhqhcr5\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/4eeFwDF1OjhZtvPwhqhcr5",
+                    "id": 1
+                }
+            ],
+            "ts": "1450454866.002531"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/4AHZRMJCpscmxygCNtC2Qq>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Pusha T - Untouchable",
+                    "title_link": "https:\/\/open.spotify.com\/track\/4AHZRMJCpscmxygCNtC2Qq",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/6318de5a856a793163e217f23e6168450c57211d",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Pusha T - Untouchable",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/4AHZRMJCpscmxygCNtC2Qq\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/4AHZRMJCpscmxygCNtC2Qq",
+                    "id": 1
+                }
+            ],
+            "ts": "1450454632.002529"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<@U06JAHAV7>",
+            "ts": "1450454544.002528"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/6iLgI1bt8nZ8JAls44sxDp>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Pusha T - Intro",
+                    "title_link": "https:\/\/open.spotify.com\/track\/6iLgI1bt8nZ8JAls44sxDp",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/6318de5a856a793163e217f23e6168450c57211d",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Pusha T - Intro",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/6iLgI1bt8nZ8JAls44sxDp\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/6iLgI1bt8nZ8JAls44sxDp",
+                    "id": 1
+                }
+            ],
+            "ts": "1450454542.002526"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "fuck yeah pusha T",
+            "ts": "1450454541.002525"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "it's not",
+            "ts": "1450450712.002524"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1450450062.002523"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wait i think its the same",
+            "ts": "1450450062.002522"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yep this one is great too",
+            "ts": "1450450054.002521"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "this is my favorite remix",
+            "ts": "1450383365.002520"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/www.youtube.com\/watch?v=ooFFveUFrOM>",
+            "attachments": [
+                {
+                    "service_name": "YouTube",
+                    "service_url": "https:\/\/www.youtube.com\/",
+                    "title": "Flight Facilities - Two Bodies feat. Emma Louise (HNNY Remix)",
+                    "title_link": "https:\/\/www.youtube.com\/watch?v=ooFFveUFrOM",
+                    "author_name": "SWAVEfm",
+                    "author_link": "https:\/\/www.youtube.com\/user\/SWAVEfm",
+                    "thumb_url": "https:\/\/i.ytimg.com\/vi\/ooFFveUFrOM\/hqdefault.jpg",
+                    "thumb_width": 480,
+                    "thumb_height": 360,
+                    "fallback": "YouTube Video: Flight Facilities - Two Bodies feat. Emma Louise (HNNY Remix)",
+                    "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/ooFFveUFrOM?feature=oembed&autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                    "video_html_width": 400,
+                    "video_html_height": 225,
+                    "from_url": "https:\/\/www.youtube.com\/watch?v=ooFFveUFrOM",
+                    "id": 1
+                }
+            ],
+            "ts": "1450383363.002518"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "also joe",
+            "ts": "1450383362.002517"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/soundcloud.com\/chvrches\/chvrches-leave-a-trace-goldroom-remix>",
+            "attachments": [
+                {
+                    "service_name": "SoundCloud",
+                    "service_url": "http:\/\/soundcloud.com",
+                    "title": "CHVRCHES - Leave A Trace (Goldroom Remix) by CHVRCHES",
+                    "title_link": "https:\/\/soundcloud.com\/chvrches\/chvrches-leave-a-trace-goldroom-remix",
+                    "author_name": "CHVRCHES",
+                    "author_link": "https:\/\/soundcloud.com\/chvrches",
+                    "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000139903479-wbsn9y-t500x500.jpg",
+                    "text": "New album Every Open Eye out now on iTunes: <http:\/\/po.st\/EOEiT> | Google Play: <http:\/\/po.st\/EOEgp> | Store: <http:\/\/po.st\/ChvrchesStore> | Listen &amp; Share on Spotify: <http:\/\/po.st\/LATsp>\n\nTour dates and sign up to the mailing list: <http:\/\/chvrch.es\/>\n\n<http:\/\/facebook.com\/CHVRCHES|facebook.com\/CHVRCHES>\n<http:\/\/twitter.com\/chvrches|twitter.com\/chvrches>\n<http:\/\/instagram.com\/chvrches|instagram.com\/chvrches>\n<http:\/\/youtube.com\/chvrches|youtube.com\/chvrches>\n<http:\/\/chvrches.tumblr.com\/>",
+                    "fallback": "SoundCloud Audio: Link: CHVRCHES - Leave A Trace (Goldroom Remix) by CHVRCHES",
+                    "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F237975322&show_artwork=true&maxheight=150\"><\/iframe>",
+                    "audio_html_width": 100,
+                    "audio_html_height": 150,
+                    "from_url": "https:\/\/soundcloud.com\/chvrches\/chvrches-leave-a-trace-goldroom-remix",
+                    "thumb_width": 500,
+                    "thumb_height": 500,
+                    "id": 1
+                }
+            ],
+            "ts": "1450383344.002515"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "favorite remix",
+            "ts": "1450371100.002514"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<https:\/\/www.youtube.com\/watch?v=U9LpcAIQZ0w>",
+            "attachments": [
+                {
+                    "service_name": "YouTube",
+                    "service_url": "https:\/\/www.youtube.com\/",
+                    "title": "Flight Facilities - Two Bodies feat. Emma Louise (Henri Remix)",
+                    "title_link": "https:\/\/www.youtube.com\/watch?v=U9LpcAIQZ0w",
+                    "author_name": "Wanderlust",
+                    "author_link": "https:\/\/www.youtube.com\/user\/channel2wanderlust",
+                    "thumb_url": "https:\/\/i.ytimg.com\/vi\/U9LpcAIQZ0w\/hqdefault.jpg",
+                    "thumb_width": 480,
+                    "thumb_height": 360,
+                    "fallback": "YouTube Video: Flight Facilities - Two Bodies feat. Emma Louise (Henri Remix)",
+                    "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/U9LpcAIQZ0w?feature=oembed&autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                    "video_html_width": 400,
+                    "video_html_height": 225,
+                    "from_url": "https:\/\/www.youtube.com\/watch?v=U9LpcAIQZ0w",
+                    "id": 1
+                }
+            ],
+            "ts": "1450371094.002512"
+        },
+        {
+            "type": "message",
+            "user": "U06J76HFC",
+            "text": "<https:\/\/open.spotify.com\/track\/33iv3wnGMrrDugd7GBso1z>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Lit - My Own Worst Enemy",
+                    "title_link": "https:\/\/open.spotify.com\/track\/33iv3wnGMrrDugd7GBso1z",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/9ecd97563c06775d1fa662facea9365372f73167",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Lit - My Own Worst Enemy",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/33iv3wnGMrrDugd7GBso1z\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/33iv3wnGMrrDugd7GBso1z",
+                    "id": 1
+                }
+            ],
+            "ts": "1450370708.002510",
+            "reactions": [
+                {
+                    "name": "scumbagjoe",
+                    "users": [
+                        "U06J9BRL0"
+                    ],
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/soundcloud.com\/theshadowchild\/rinse-fm-16-dec-15-w-bondax>",
+            "attachments": [
+                {
+                    "service_name": "SoundCloud",
+                    "service_url": "http:\/\/soundcloud.com",
+                    "title": "Rinse FM \/\/ 16 Dec 15 \/\/ w\/ Bondax by Shadow Child",
+                    "title_link": "https:\/\/soundcloud.com\/theshadowchild\/rinse-fm-16-dec-15-w-bondax",
+                    "author_name": "Shadow Child",
+                    "author_link": "https:\/\/soundcloud.com\/theshadowchild",
+                    "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000139846043-otwdpo-t500x500.jpg",
+                    "text": "TRACKLIST TO COME",
+                    "fallback": "SoundCloud Audio: Link: Rinse FM \/\/ 16 Dec 15 \/\/ w\/ Bondax by Shadow Child",
+                    "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F237901008&show_artwork=true&maxheight=150\"><\/iframe>",
+                    "audio_html_width": 100,
+                    "audio_html_height": 150,
+                    "from_url": "https:\/\/soundcloud.com\/theshadowchild\/rinse-fm-16-dec-15-w-bondax",
+                    "thumb_width": 500,
+                    "thumb_height": 500,
+                    "id": 1
+                }
+            ],
+            "ts": "1450370226.002508"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "best clapcast in recent memory",
+            "ts": "1450301093.002507"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "for real",
+            "ts": "1450301086.002506"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "LOVING this one",
+            "ts": "1450301083.002505"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "01. Bukka &amp; Molinari - Mind Games (Original Mix) [Exploited]",
+            "ts": "1450299328.002504"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "like the first song",
+            "ts": "1450299264.002503"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "ooo",
+            "ts": "1450299262.002502"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "joe",
+            "ts": "1450292217.002500"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/soundcloud.com\/claptone\/clapcast-20>",
+            "attachments": [
+                {
+                    "service_name": "SoundCloud",
+                    "service_url": "http:\/\/soundcloud.com",
+                    "title": "CLAPCAST #20 by Claptone",
+                    "title_link": "https:\/\/soundcloud.com\/claptone\/clapcast-20",
+                    "author_name": "Claptone",
+                    "author_link": "https:\/\/soundcloud.com\/claptone",
+                    "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000139803894-bt6ssh-t500x500.jpg",
+                    "text": "<http:\/\/www.claptone.com|www.claptone.com>",
+                    "fallback": "SoundCloud Audio: Link: CLAPCAST #20 by Claptone",
+                    "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F237845114&show_artwork=true&maxheight=150\"><\/iframe>",
+                    "audio_html_width": 100,
+                    "audio_html_height": 150,
+                    "from_url": "https:\/\/soundcloud.com\/claptone\/clapcast-20",
+                    "thumb_width": 500,
+                    "thumb_height": 500,
+                    "id": 1
+                }
+            ],
+            "ts": "1450292216.002499"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1450285096.002498"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "i'm curious",
+            "ts": "1450284996.002497"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "i dunno",
+            "ts": "1450284994.002496"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "who cares",
+            "ts": "1450284918.002495"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "why are they so cheap",
+            "ts": "1450284910.002494"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "damn that's cheap",
+            "ts": "1450284907.002493"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<http:\/\/www.stubhub.com\/deadmau5-tickets-tidal-x-presents-deadmau5-brooklyn-barclays-center-12-18-2015\/event\/9473358\/?ticket_id=1174721436&amp;cb=1>",
+            "ts": "1450284687.002492"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "deets",
+            "ts": "1450284132.002491"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "mebs",
+            "ts": "1450284131.002490"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "Anyone wanna see Deadmau5 on Fri for 16 bucks ",
+            "ts": "1450284022.002489"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "\/giphy racist",
+            "attachments": [
+                {
+                    "fallback": "giphy: <http:\/\/giphy.com\/gifs\/racist-thats-mexican-TWhOmZ783UrwA>",
+                    "image_url": "http:\/\/media0.giphy.com\/media\/TWhOmZ783UrwA\/giphy.gif",
+                    "image_width": 150,
+                    "image_height": 134,
+                    "image_bytes": 207367,
+                    "title": "racist",
+                    "id": 1,
+                    "title_link": "http:\/\/giphy.com\/gifs\/racist-thats-mexican-TWhOmZ783UrwA"
+                }
+            ],
+            "ts": "1450283747.002488"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "Git out choe ",
+            "ts": "1450283741.002487"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "you think it's funny cuz he's black",
+            "ts": "1450283725.002486"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "It's a funny picture ",
+            "ts": "1450283701.002485"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "Lol ",
+            "ts": "1450283695.002484"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "No it's not ",
+            "ts": "1450283693.002483"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "that's racist",
+            "ts": "1450283680.002482"
+        },
+        {
+            "type": "message",
+            "subtype": "file_share",
+            "text": "<@U06HEA4DP|joe> uploaded a file: <https:\/\/goonsinc.slack.com\/files\/joe\/F0GQD3Z32\/screenshot_2015-12-16-11-33-05.png|Slack for Android Upload>",
+            "file": {
+                "id": "F0GQD3Z32",
+                "created": 1450283610,
+                "timestamp": 1450283610,
+                "name": "Screenshot_2015-12-16-11-33-05.png",
+                "title": "Slack for Android Upload",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U06HEA4DP",
+                "editable": false,
+                "size": 1300065,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url": "https:\/\/slack-files.com\/files-pub\/T06HEA4D7-F0GQD3Z32-228597a5b4\/screenshot_2015-12-16-11-33-05.png",
+                "url_download": "https:\/\/slack-files.com\/files-pub\/T06HEA4D7-F0GQD3Z32-228597a5b4\/download\/screenshot_2015-12-16-11-33-05.png",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06HEA4D7-F0GQD3Z32\/screenshot_2015-12-16-11-33-05.png",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06HEA4D7-F0GQD3Z32\/download\/screenshot_2015-12-16-11-33-05.png",
+                "thumb_64": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_64.png",
+                "thumb_80": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_80.png",
+                "thumb_360": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_360.png",
+                "thumb_360_w": 203,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_480.png",
+                "thumb_480_w": 270,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_160.png",
+                "thumb_720": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_720.png",
+                "thumb_720_w": 405,
+                "thumb_720_h": 720,
+                "thumb_960": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_960.png",
+                "thumb_960_w": 540,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/slack-files.com\/files-tmb\/T06HEA4D7-F0GQD3Z32-f4b0883db0\/screenshot_2015-12-16-11-33-05_1024.png",
+                "thumb_1024_w": 576,
+                "thumb_1024_h": 1024,
+                "image_exif_rotation": 1,
+                "original_w": 1440,
+                "original_h": 2560,
+                "permalink": "https:\/\/goonsinc.slack.com\/files\/joe\/F0GQD3Z32\/screenshot_2015-12-16-11-33-05.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06HEA4D7-F0GQD3Z32-228597a5b4",
+                "channels": [
+                    "C06JLNH8A"
+                ],
+                "groups": [
+
+                ],
+                "ims": [
+
+                ],
+                "comments_count": 0
+            },
+            "user": "U06HEA4DP",
+            "upload": true,
+            "display_as_bot": false,
+            "username": "<@U06HEA4DP|joe>",
+            "bot_id": null,
+            "ts": "1450283619.002481"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "lol",
+            "ts": "1450221918.002480"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<http:\/\/teamcoco.com\/video\/coheed-and-cambria-cover-of-adele-s-hello-video-premiere?playlist=x%3BeyJ0eXBlIjoicmVjZW50IiwiaWQiOm51bGx9>",
+            "attachments": [
+                {
+                    "service_name": "TeamCoco",
+                    "title": "WORLD PREMIERE: Coheed and Cambria \u201cHello\"",
+                    "title_link": "http:\/\/teamcoco.com\/video\/coheed-and-cambria-cover-of-adele-s-hello-video-premiere?playlist=x%3BeyJ0eXBlIjoicmVjZW50IiwiaWQiOm51bGx9",
+                    "text": "Coheed and Cambria perform a spare, haunting cover of Adele's \"Hello.\"",
+                    "fallback": "TeamCoco: WORLD PREMIERE: Coheed and Cambria \u201cHello\"",
+                    "thumb_url": "http:\/\/cdn.teamcococdn.com\/image\/1000x1000,scale:max\/fn-coheed-c-56708d567eb21.jpg",
+                    "from_url": "http:\/\/teamcoco.com\/video\/coheed-and-cambria-cover-of-adele-s-hello-video-premiere?playlist=x%3BeyJ0eXBlIjoicmVjZW50IiwiaWQiOm51bGx9",
+                    "thumb_width": 1000,
+                    "thumb_height": 562,
+                    "id": 1
+                }
+            ],
+            "ts": "1450219153.002478"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1450218014.002477"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "of a genre",
+            "ts": "1450218013.002476"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "thats it. prog metal is officially too broad",
+            "ts": "1450218006.002475"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yep, it does",
+            "ts": "1450217993.002474"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "s\tProgressive metal, neoclassical metal, mathcore, metalcore[1]",
+            "ts": "1450217990.002473"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1450217943.002472"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "does it",
+            "ts": "1450217942.002471"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "although i really dont think this qualifies as prog",
+            "ts": "1450217941.002470"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": ":metal:",
+            "ts": "1450217929.002469"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "my personal favorite is the title track",
+            "ts": "1450217914.002468"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "awesome lifting music",
+            "ts": "1450217856.002467"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "human abstract",
+            "ts": "1450217850.002466"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i do love that album thou",
+            "ts": "1450217842.002465"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i think im angry",
+            "ts": "1450206023.002464"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "pew pew",
+            "ts": "1450206012.002463"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "punch",
+            "ts": "1450206010.002462"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "kick",
+            "ts": "1450206008.002461"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "angry",
+            "ts": "1450206007.002460"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "only prog that\u2019s worth it to me tbh",
+            "ts": "1450206005.002459"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "angry* prog",
+            "ts": "1450205995.002458"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i wanna kick shit",
+            "ts": "1450205984.002457"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/65V0JocDLPh6DhVRTd3fnY> <@U06HEA4DP> i\u2019m on prog kick today and it\u2019s dumb",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "The Human Abstract - Antebellum",
+                    "title_link": "https:\/\/open.spotify.com\/track\/65V0JocDLPh6DhVRTd3fnY",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/1e128a669f6680a11028ca232097b159dd1744ad",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: The Human Abstract - Antebellum",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/65V0JocDLPh6DhVRTd3fnY\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/65V0JocDLPh6DhVRTd3fnY",
+                    "id": 1
+                }
+            ],
+            "ts": "1450205980.002455"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "\/giphy jam",
+            "attachments": [
+                {
+                    "fallback": "giphy: <http:\/\/giphy.com\/gifs\/90s-1993-phish-l0ODM2yzgIvEk>",
+                    "image_url": "http:\/\/media0.giphy.com\/media\/l0ODM2yzgIvEk\/giphy.gif",
+                    "image_width": 384,
+                    "image_height": 288,
+                    "image_bytes": 1650090,
+                    "title": "jam",
+                    "id": 1,
+                    "title_link": "http:\/\/giphy.com\/gifs\/90s-1993-phish-l0ODM2yzgIvEk"
+                }
+            ],
+            "ts": "1450198814.002454"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i still can\u2019t stand jam bands",
+            "ts": "1450198748.002453"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "very different context of jam party lol",
+            "ts": "1450198712.002452"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "(dream theater convo, last week)",
+            "ts": "1450198581.002451"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i thought u hate jam parties",
+            "ts": "1450198570.002450"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "haha",
+            "ts": "1450198565.002449"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i love that around the 12 min mark this song goes into some weird folk\/country jam party with banjos and shit haha",
+            "ts": "1450198518.002448"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "its a cool mix of both, kinda unique",
+            "ts": "1450198261.002447"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i like thier angry yelling stuff way better than their whiney prog stuff",
+            "edited": {
+                "user": "U06HEA4DP",
+                "ts": "1450198244.000000"
+            },
+            "ts": "1450198238.002445"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "Colors is probably their most acclaimed album",
+            "ts": "1450197750.002444"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<@U06HEA4DP> <https:\/\/open.spotify.com\/track\/2aRmoBES02hW58vstt1Zl8> wait, this song is one of my favorites",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Between The Buried And Me - Ants of the Sky",
+                    "title_link": "https:\/\/open.spotify.com\/track\/2aRmoBES02hW58vstt1Zl8",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/e702e430a962d6eeaff399db58625f71acdfc4d6",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Between The Buried And Me - Ants of the Sky",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/2aRmoBES02hW58vstt1Zl8\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/2aRmoBES02hW58vstt1Zl8",
+                    "id": 1
+                }
+            ],
+            "ts": "1450197738.002442"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "\/giphy that's racist",
+            "attachments": [
+                {
+                    "fallback": "giphy: <http:\/\/giphy.com\/gifs\/bill-cosby-chris-rock-antiblackness-3AvA3MRr1h6ak>",
+                    "image_url": "http:\/\/media1.giphy.com\/media\/3AvA3MRr1h6ak\/giphy.gif",
+                    "image_width": 268,
+                    "image_height": 322,
+                    "image_bytes": 1193723,
+                    "title": "that's racist",
+                    "id": 1,
+                    "title_link": "http:\/\/giphy.com\/gifs\/bill-cosby-chris-rock-antiblackness-3AvA3MRr1h6ak"
+                }
+            ],
+            "ts": "1450197726.002441"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they have a cover of blackened thats pretty badass",
+            "ts": "1450197700.002440"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but yeah their cover album is kinda sick",
+            "ts": "1450197683.002439"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but i like this new sound",
+            "ts": "1450197676.002438"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "their old stuff is better, way better",
+            "ts": "1450197670.002437"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "not super inlove",
+            "ts": "1450197645.002436"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "they are okay i guess",
+            "ts": "1450197640.002435"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "oh ive heard some of these songs",
+            "ts": "1450197631.002434"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yeah im listening to the above album now",
+            "ts": "1450197432.002433"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<@U06HEA4DP>",
+            "ts": "1450197395.002432"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/54ak6mM6bFDUqawh1JTa8W> such a good cover",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Between The Buried And Me - Bicycle Race",
+                    "title_link": "https:\/\/open.spotify.com\/track\/54ak6mM6bFDUqawh1JTa8W",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/b115dcb28066a4e8a1e52b3193c6023cf942fe11",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Between The Buried And Me - Bicycle Race",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/54ak6mM6bFDUqawh1JTa8W\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/54ak6mM6bFDUqawh1JTa8W",
+                    "id": 1
+                }
+            ],
+            "ts": "1450197390.002430"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "pawg",
+            "ts": "1450196112.002429"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "will switch when done",
+            "ts": "1450195378.002428"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "that im digging into rn",
+            "ts": "1450195375.002427"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i just found some random other prog metal band on discover",
+            "ts": "1450195372.002426"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "their best albums by far, also their heaviest",
+            "ts": "1450195326.002425"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "the one two punch of Color and The Great Misdirect are not for the faint of heart",
+            "ts": "1450195307.002424"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they\u2019re a really good band",
+            "ts": "1450195281.002423"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "you should",
+            "ts": "1450195277.002422"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1450195054.002421"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yeah i am constantly told i shouldlike this band",
+            "ts": "1450195054.002420"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "prog af",
+            "ts": "1450194927.002419"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<@U06HEA4DP>",
+            "ts": "1450194918.002418"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/album\/565p3zaZbgQ0VkdIg8Xbxn>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Between The Buried And Me - Coma Ecliptic",
+                    "title_link": "https:\/\/open.spotify.com\/album\/565p3zaZbgQ0VkdIg8Xbxn",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/c08a3c6597f70e7fb7c229ef9faa55e2fbc13b54",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Between The Buried And Me - Coma Ecliptic",
+                    "audio_html": "<iframe src=\"https:\/\/embed.spotify.com\/?uri=spotify:album:565p3zaZbgQ0VkdIg8Xbxn\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/album\/565p3zaZbgQ0VkdIg8Xbxn",
+                    "id": 1
+                }
+            ],
+            "ts": "1450194916.002416"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "his new album is so good",
+            "ts": "1450127041.002415"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/www.youtube.com\/watch?v=hvZJI8rerWA> forever amused by this kid",
+            "attachments": [
+                {
+                    "service_name": "YouTube",
+                    "service_url": "https:\/\/www.youtube.com\/",
+                    "title": "King Krule \u2014 Rock Bottom [Official Video]",
+                    "title_link": "https:\/\/www.youtube.com\/watch?v=hvZJI8rerWA",
+                    "author_name": "Rinse FM",
+                    "author_link": "https:\/\/www.youtube.com\/user\/rinsefm",
+                    "thumb_url": "https:\/\/i.ytimg.com\/vi\/hvZJI8rerWA\/hqdefault.jpg",
+                    "thumb_width": 480,
+                    "thumb_height": 360,
+                    "fallback": "YouTube Video: King Krule \u2014 Rock Bottom [Official Video]",
+                    "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/hvZJI8rerWA?feature=oembed&autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                    "video_html_width": 400,
+                    "video_html_height": 225,
+                    "from_url": "https:\/\/www.youtube.com\/watch?v=hvZJI8rerWA",
+                    "id": 1
+                }
+            ],
+            "ts": "1450127037.002413"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "yeah",
+            "ts": "1450120585.002412"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but yeah i agree with this list, all those artists made a lot of buzz",
+            "ts": "1450120475.002411"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "so good",
+            "ts": "1450120434.002410"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "fucking stellar",
+            "ts": "1450120406.002409"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "jamie xx def has one of the best electronic albums of 2015",
+            "ts": "1450120404.002408"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "a lot of kendrick, drake, grimes, a$ap rocky, vince staples, jamie xx,  and tame impala",
+            "ts": "1450120338.002407"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<http:\/\/www.complex.com\/music\/2015\/12\/complex-staff-best-albums-songs-2015\/>",
+            "attachments": [
+                {
+                    "service_name": "Complex",
+                    "title": "The Complex Staff Lists Their Favorite Songs and Albums of 2015",
+                    "title_link": "http:\/\/www.complex.com\/music\/2015\/12\/complex-staff-best-albums-songs-2015\/",
+                    "text": "A look at what songs and albums our music staff loved this year.",
+                    "fallback": "Complex: The Complex Staff Lists Their Favorite Songs and Albums of 2015",
+                    "thumb_url": "http:\/\/images.complex.com\/complex\/image\/upload\/t_article_image\/staff_picks_lmrbnn.gif",
+                    "from_url": "http:\/\/www.complex.com\/music\/2015\/12\/complex-staff-best-albums-songs-2015\/",
+                    "thumb_width": 680,
+                    "thumb_height": 440,
+                    "id": 1
+                }
+            ],
+            "ts": "1450120304.002405"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "you\u2019re fucking up today",
+            "ts": "1450119401.002404"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wrong channel",
+            "ts": "1450119315.002403"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wait",
+            "ts": "1450119313.002402"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<http:\/\/jazz.computer\/>",
+            "attachments": [
+                {
+                    "title": "Jazz.Computer",
+                    "title_link": "http:\/\/jazz.computer\/",
+                    "text": "Interactive Music. Scroll to play.",
+                    "fallback": "Jazz.Computer",
+                    "thumb_url": "http:\/\/jazz.computer\/screenshots\/thumbs.jpg",
+                    "from_url": "http:\/\/jazz.computer\/",
+                    "thumb_width": 2493,
+                    "thumb_height": 1278,
+                    "id": 1
+                }
+            ],
+            "ts": "1450119310.002400"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "yeah",
+            "ts": "1450118797.002399"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "nailed it, glad to see skepta and jamie xx on the list, they killed it this year",
+            "ts": "1450118767.002398"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "with jack u",
+            "ts": "1450118715.002397"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "wait, important question, did bieber make it to that list? mixmag mentioned him, but i didnt scroll all the way down\u2026haha",
+            "ts": "1450118653.002396"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "ok",
+            "ts": "1450118463.002395"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they\u2019re all types of edm no? electronic dance music is an umbrella term, it doesnt matter, mixmag\u2019s list is about dance music, says it so in the excerpt!",
+            "ts": "1450118432.002394"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "but we can agree to disagree",
+            "ts": "1450118394.002393"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "not really dance music, imo",
+            "ts": "1450118391.002392"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "UK garage",
+            "ts": "1450118387.002391"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "UK hip hop",
+            "ts": "1450118386.002390"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "drum n bass",
+            "ts": "1450118380.002389"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "it's the one time im gonna argue against your definition of edm",
+            "ts": "1450118371.002388"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "w\/e",
+            "ts": "1450118359.002387"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "electronic*",
+            "ts": "1450118356.002386"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "mixmag is mostly just dance",
+            "ts": "1450118352.002385"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "vs rolling stones",
+            "ts": "1450118346.002384"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but they\u2019re all super different in their preferences, which is why these lists are stupid worthless",
+            "ts": "1450118343.002383"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "complex still has some credibility, in  my eyes",
+            "ts": "1450118340.002382"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i like complex and spin magazine, the fader and pidgeons and planes are dope, so is brooklyn vegan for local stuff",
+            "ts": "1450118318.002381"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1450118270.002380"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i wouldnt go that far, mtv is the buzzfeed of music",
+            "ts": "1450118269.002379"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "you're like the buzzfeed of music",
+            "ts": "1450118253.002378"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "no, you're not",
+            "ts": "1450118248.002377"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they have preferences, but so do other music mags, they\u2019re all kinda shitty tbh",
+            "ts": "1450118247.002376"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "i hate it when pitchfork markets itself as THE music site",
+            "ts": "1450118246.002375"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "pitchfork can suck dick",
+            "ts": "1450118225.002374"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1450118218.002373"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "ever",
+            "ts": "1450118217.002372"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "pretty sure i havent heard most of these songs",
+            "ts": "1450118216.002371"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "they're focused on branding so hard",
+            "ts": "1450118215.002370"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "pitchfork is a joke, though",
+            "ts": "1450118209.002369"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "yeah i was about to say",
+            "ts": "1450118209.002368"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "yeah",
+            "ts": "1450118203.002367"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "popular electronic songs*",
+            "ts": "1450118198.002366"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1450118179.002365"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "very different lists",
+            "ts": "1450118177.002364"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but thats just for dance music",
+            "ts": "1450118156.002363"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "mixmag's is focused on actual popular songs",
+            "ts": "1450118123.002362"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "which is why hotline bling is #2",
+            "ts": "1450118110.002361"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "just staying relelvant",
+            "ts": "1450118103.002360"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "pitchfork's is not about content but rather about context",
+            "ts": "1450118101.002359"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "and this top 100 list is one i can actually agree with",
+            "ts": "1450118093.002358"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "i love mixmag",
+            "ts": "1450118087.002356"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "fucking finally",
+            "ts": "1450118085.002355"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/www.mixmag.net\/feature\/top-100-tunes>",
+            "attachments": [
+                {
+                    "service_name": "Mixmag",
+                    "title": "The top 100 tunes of 2015",
+                    "title_link": "http:\/\/www.mixmag.net\/feature\/top-100-tunes",
+                    "text": "The time has come",
+                    "fallback": "Mixmag: The top 100 tunes of 2015",
+                    "image_url": "http:\/\/www.mixmag.net\/assets\/uploads\/images\/_facebook\/100_tunes.jpg",
+                    "image_width": 476,
+                    "image_height": 250,
+                    "from_url": "http:\/\/www.mixmag.net\/feature\/top-100-tunes",
+                    "image_bytes": 37043,
+                    "id": 1
+                }
+            ],
+            "ts": "1450118083.002354"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/2UdzhFtJ2NMDFFUv4ydJpd>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Honduras - Spiders",
+                    "title_link": "https:\/\/open.spotify.com\/track\/2UdzhFtJ2NMDFFUv4ydJpd",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/b44183c6fd2f246f3dc12e885ffe01200a2d2394",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Honduras - Spiders",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/2UdzhFtJ2NMDFFUv4ydJpd\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/2UdzhFtJ2NMDFFUv4ydJpd",
+                    "id": 1
+                }
+            ],
+            "ts": "1450116635.002352"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "its the best",
+            "ts": "1450114306.002351"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "always",
+            "ts": "1450114304.002350"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "so good",
+            "ts": "1450114303.002349"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "on fucking point",
+            "ts": "1450114126.002348"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "spotify's discover this week",
+            "ts": "1450114124.002347"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "man",
+            "ts": "1450114121.002346"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<#C06HEA4GZ>",
+            "ts": "1450112761.002345"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "also this is in the wrong channel",
+            "ts": "1450112760.002344"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "cuz the api doesnt have what i need and i just got granted access\/ was able to find that out",
+            "ts": "1450112753.002343"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "if it wasnt, dont",
+            "ts": "1450112736.002342"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but",
+            "ts": "1450112731.002341"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "so nbd",
+            "ts": "1450112730.002340"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "ill still use it if it was already ordered",
+            "ts": "1450112727.002339"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "you don't want anymore",
+            "ts": "1450112448.002338"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "that button that somebody MAY have gotten you",
+            "ts": "1450112441.002337"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "so the button you were yapping about for 2 weeks",
+            "ts": "1450112435.002336"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "wait",
+            "ts": "1450112429.002335"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "most likely ill find a diff one or something else to put on thr",
+            "ts": "1450112428.002334"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but",
+            "ts": "1450112414.002333"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "ill take it if u ordered it already",
+            "ts": "1450112413.002332"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "turns out does not have the api iw as hoping for",
+            "ts": "1450112405.002331"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "nm, dont really want that button anymore",
+            "ts": "1450112398.002330"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "THIS IS SO SICK",
+            "ts": "1450111914.002329"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<http:\/\/www.brooklynvegan.com\/archives\/2015\/12\/flying_lotus_pl_4.html#more> DUUUUDEEE",
+            "attachments": [
+                {
+                    "title": "Flying Lotus playing shows, including David Lynch Foundation benefit at MHOW w\/ Jon Hopkins (dates)",
+                    "title_link": "http:\/\/www.brooklynvegan.com\/archives\/2015\/12\/flying_lotus_pl_4.html#more",
+                    "text": "photo: Flying Lotus at Lollapalooza 2015 (more by James Richards IV) Flying Lotus didn't release an album in 2015, but he was still a wildly prevalent figure in music all year. He formed the supergroup WOKE with Thundercat and Shabazz...",
+                    "fallback": "Flying Lotus playing shows, including David Lynch Foundation benefit at MHOW w\/ Jon Hopkins (dates)",
+                    "image_url": "http:\/\/www.brooklynvegan.com\/img\/ah\/lollapalooza-2015\/day-1\/lollapalooza-2015-184.jpg",
+                    "from_url": "http:\/\/www.brooklynvegan.com\/archives\/2015\/12\/flying_lotus_pl_4.html#more",
+                    "image_width": 375,
+                    "image_height": 250,
+                    "image_bytes": 112946,
+                    "id": 1
+                }
+            ],
+            "ts": "1450111902.002327"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "2015 was so good for music",
+            "ts": "1450110116.002326"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "burgos will actually agree with this list",
+            "ts": "1450110043.002325"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/pitchfork.com\/features\/staff-lists\/9765-the-100-best-tracks-of-2015\/10\/>",
+            "attachments": [
+                {
+                    "service_name": "Pitchfork",
+                    "title": "Staff Lists: The 100 Best Tracks of 2015",
+                    "title_link": "http:\/\/pitchfork.com\/features\/staff-lists\/9765-the-100-best-tracks-of-2015\/10\/",
+                    "text": "From Drake's dominance to Adele's return, Tame Impala's blissful psych to Kendrick Lamar's politically charged hip-hop, 2015 marked another diverse ...",
+                    "fallback": "Pitchfork: Staff Lists: The 100 Best Tracks of 2015",
+                    "thumb_url": "http:\/\/cdn.pitchfork.com\/features\/9765\/homepage_large.e71691f7.jpg",
+                    "from_url": "http:\/\/pitchfork.com\/features\/staff-lists\/9765-the-100-best-tracks-of-2015\/10\/",
+                    "thumb_width": 315,
+                    "thumb_height": 158,
+                    "id": 1
+                }
+            ],
+            "ts": "1450110039.002323"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "King Krule\u2019s new album, so good, so chill",
+            "ts": "1450107012.002322"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/6lqECrP4Jp1wrbyKkjcn9o>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Archy Marshall - Swell",
+                    "title_link": "https:\/\/open.spotify.com\/track\/6lqECrP4Jp1wrbyKkjcn9o",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/614b78f788ed3c70604d76217a57ba241e27a520",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Archy Marshall - Swell",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/6lqECrP4Jp1wrbyKkjcn9o\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/6lqECrP4Jp1wrbyKkjcn9o",
+                    "id": 1
+                }
+            ],
+            "ts": "1450107002.002320"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "that's house for ya",
+            "ts": "1449866380.002319"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "so uninspired",
+            "ts": "1449866215.002318"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1449866212.002317"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "that dude looks so bored",
+            "ts": "1449866209.002316"
+        },
+        {
+            "type": "message",
+            "user": "U06J76HFC",
+            "text": "love the accent",
+            "ts": "1449864837.002315"
+        },
+        {
+            "type": "message",
+            "user": "U06J76HFC",
+            "text": "sup ma",
+            "ts": "1449864832.002314"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": ":choe:",
+            "ts": "1449864741.002313"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "the girl",
+            "ts": "1449864738.002312"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "not hte dude",
+            "ts": "1449864737.002311"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "she's hot",
+            "ts": "1449864735.002310"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/www.youtube.com\/watch?v=4yuifH8W-lg>",
+            "attachments": [
+                {
+                    "service_name": "YouTube",
+                    "service_url": "https:\/\/www.youtube.com\/",
+                    "title": "NIC FANCIULLI &amp; LAUREN LANE in The Lab LDN",
+                    "title_link": "https:\/\/www.youtube.com\/watch?v=4yuifH8W-lg",
+                    "author_name": "Mixmag",
+                    "author_link": "https:\/\/www.youtube.com\/user\/mixmagtv",
+                    "thumb_url": "https:\/\/i.ytimg.com\/vi\/4yuifH8W-lg\/hqdefault.jpg",
+                    "thumb_width": 480,
+                    "thumb_height": 360,
+                    "fallback": "YouTube Video: NIC FANCIULLI & LAUREN LANE in The Lab LDN",
+                    "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/4yuifH8W-lg?feature=oembed&autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                    "video_html_width": 400,
+                    "video_html_height": 225,
+                    "from_url": "https:\/\/www.youtube.com\/watch?v=4yuifH8W-lg",
+                    "id": 1
+                }
+            ],
+            "ts": "1449864734.002308"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<http:\/\/hypem.com\/track\/2ed0z\/Lara+Maxen+X+Mickey+Valen+-+Your+Anything>",
+            "ts": "1449863506.002307"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "it\u2019s pretty rad",
+            "ts": "1449849887.002306"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "holy shit willow smith dropped a surprise debut album <https:\/\/open.spotify.com\/track\/6gxrNepquIl6iZZa37eeBg>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Willow - Cycles",
+                    "title_link": "https:\/\/open.spotify.com\/track\/6gxrNepquIl6iZZa37eeBg",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/1f8615baaf3deed2ec16b54f61d6b420ec35520a",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Willow - Cycles",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/6gxrNepquIl6iZZa37eeBg\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/6gxrNepquIl6iZZa37eeBg",
+                    "id": 1
+                }
+            ],
+            "ts": "1449849882.002304"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "yessss",
+            "ts": "1449847478.002303"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/open.spotify.com\/track\/7qmc9aGD1WuX9tnGJX5dC4>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Various Artists - True Survivor",
+                    "title_link": "https:\/\/open.spotify.com\/track\/7qmc9aGD1WuX9tnGJX5dC4",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/81843096e567c1ae979ac38100b0079ef4be68da",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Various Artists - True Survivor",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/7qmc9aGD1WuX9tnGJX5dC4\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/7qmc9aGD1WuX9tnGJX5dC4",
+                    "id": 1
+                }
+            ],
+            "ts": "1449847468.002301"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/56w2kmui9asTf0UtaS1ab6>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Retro Culture - Cold",
+                    "title_link": "https:\/\/open.spotify.com\/track\/56w2kmui9asTf0UtaS1ab6",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/0e8364067a7cc2a921697cb2daba268594cba3ea",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Retro Culture - Cold",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/56w2kmui9asTf0UtaS1ab6\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/56w2kmui9asTf0UtaS1ab6",
+                    "id": 1
+                }
+            ],
+            "ts": "1449847196.002299"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "nicee",
+            "ts": "1449847152.002298"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "burgos",
+            "ts": "1449847070.002297"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/soundcloud.com\/rinsefm\/katyb-x-four-tet-x-floating-points-calm-down>",
+            "attachments": [
+                {
+                    "service_name": "SoundCloud",
+                    "service_url": "http:\/\/soundcloud.com",
+                    "title": "Katy B x Four Tet x Floating Points \u2014 Calm Down by Rinse FM",
+                    "title_link": "https:\/\/soundcloud.com\/rinsefm\/katyb-x-four-tet-x-floating-points-calm-down",
+                    "author_name": "Rinse FM",
+                    "author_link": "https:\/\/soundcloud.com\/rinsefm",
+                    "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000139174473-f6agv3-t500x500.jpg",
+                    "text": "In collaboration with Four Tet and Floating Points, Katy B reveals Calm Down, the first piece of music taken from her new project entitled \u2018Honey\u2019 that will see Katy teaming up with a number of producers and artists, further exemplifying Katy\u2019s ability to push boundaries and create exciting new music. Expect more details of Honey to follow in the new year.\n\nGet Calm Down on iTunes - <http:\/\/po.st\/CalmDowniT>\nListen on Spotify: <http:\/\/po.st\/CalmDownSp> \nListen on Apple Music: <http:\/\/po.st\/CalmDownAm>\n\nAlongside Honey, Katy announces her biggest London show to date, taking place at  the O2 Brixton Academy on May 14th. Tickets are available for pre-sale on Monday December 14th, on general sale 9:00am on Wednesday December 16th.\n\nPre-sale tickets are available from Monday 9AM here - <http:\/\/po.st\/KBPreSale>",
+                    "fallback": "SoundCloud Audio: Link: Katy B x Four Tet x Floating Points \u2014 Calm Down by Rinse FM",
+                    "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F237062449&show_artwork=true&maxheight=150\"><\/iframe>",
+                    "audio_html_width": 100,
+                    "audio_html_height": 150,
+                    "from_url": "https:\/\/soundcloud.com\/rinsefm\/katyb-x-four-tet-x-floating-points-calm-down",
+                    "thumb_width": 500,
+                    "thumb_height": 500,
+                    "id": 1
+                }
+            ],
+            "ts": "1449847004.002295"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/open.spotify.com\/track\/46AGuB3RXz6UaIFERcJOq4>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Anderson Paak - Room In Here",
+                    "title_link": "https:\/\/open.spotify.com\/track\/46AGuB3RXz6UaIFERcJOq4",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/2b54b39b326e561eba08ea3d1d3724e35af77ddb",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Anderson Paak - Room In Here",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/46AGuB3RXz6UaIFERcJOq4\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/46AGuB3RXz6UaIFERcJOq4",
+                    "id": 1
+                }
+            ],
+            "ts": "1449846061.002293"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "flerm's old myspace account",
+            "ts": "1449845907.002292"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/myspace.com\/flume123\/music\/songs>",
+            "ts": "1449845903.002291"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha i like all of these",
+            "ts": "1449771568.002290"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/6mgAP4iuEFWJ4deBJJusnY>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Chromatics - Girls Just Wanna Have Drums",
+                    "title_link": "https:\/\/open.spotify.com\/track\/6mgAP4iuEFWJ4deBJJusnY",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/3fe963be33a9bd95c0fc01b7aae2c3fe7737b459",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Chromatics - Girls Just Wanna Have Drums",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/6mgAP4iuEFWJ4deBJJusnY\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/6mgAP4iuEFWJ4deBJJusnY",
+                    "id": 1
+                }
+            ],
+            "ts": "1449771562.002288"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/7gIX4AVVtYfSPzu76nfSWt>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Chromatics - Girls Just Wanna Have Some",
+                    "title_link": "https:\/\/open.spotify.com\/track\/7gIX4AVVtYfSPzu76nfSWt",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/3fe963be33a9bd95c0fc01b7aae2c3fe7737b459",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Chromatics - Girls Just Wanna Have Some",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/7gIX4AVVtYfSPzu76nfSWt\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/7gIX4AVVtYfSPzu76nfSWt",
+                    "id": 1
+                }
+            ],
+            "ts": "1449771552.002286"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "there are like two other versions holy shit",
+            "ts": "1449771547.002285"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "WHERE\u2019S THAT NEW ALBUM CHROMATICS!?",
+            "ts": "1449766682.002284"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "so fucking great",
+            "ts": "1449766669.002283"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "wow this cover <https:\/\/open.spotify.com\/track\/1JjltXxroBdXpcLt49UhYV>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Chromatics - Girls Just Want To Have Fun",
+                    "title_link": "https:\/\/open.spotify.com\/track\/1JjltXxroBdXpcLt49UhYV",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/3fe963be33a9bd95c0fc01b7aae2c3fe7737b459",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Chromatics - Girls Just Want To Have Fun",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/1JjltXxroBdXpcLt49UhYV\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/1JjltXxroBdXpcLt49UhYV",
+                    "id": 1
+                }
+            ],
+            "ts": "1449766661.002281"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "it'd be great",
+            "ts": "1449764564.002280"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "if htey kept it more chill",
+            "ts": "1449764564.002279"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "but i agree with you",
+            "ts": "1449764562.002278"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1449764530.002277"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "e",
+            "ts": "1449764528.002276"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "doesn't give me a headach",
+            "ts": "1449764528.002275"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "it's honestly not bad",
+            "ts": "1449764522.002274"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but i like the verses",
+            "ts": "1449764470.002273"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "imo",
+            "ts": "1449764466.002272"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "the drops a little overdone",
+            "ts": "1449764466.002271"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i could see it making it into a lot of mixes",
+            "ts": "1449764460.002270"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "this is a very viable song",
+            "ts": "1449764454.002269"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "thats awesome",
+            "ts": "1449764447.002268"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wo",
+            "ts": "1449764444.002267"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "hotel garuda",
+            "ts": "1449764430.002266"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "howd this come to u",
+            "ts": "1449764357.002265"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wow",
+            "ts": "1449764352.002264"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "joe",
+            "ts": "1449764242.002262"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "<https:\/\/soundcloud.com\/tastytreatmusic\/for-a-minute-feat-moonzz>",
+            "attachments": [
+                {
+                    "service_name": "SoundCloud",
+                    "service_url": "http:\/\/soundcloud.com",
+                    "title": "For a Minute (feat. MOONZz) by TastyTreat",
+                    "title_link": "https:\/\/soundcloud.com\/tastytreatmusic\/for-a-minute-feat-moonzz",
+                    "author_name": "TastyTreat",
+                    "author_link": "https:\/\/soundcloud.com\/tastytreatmusic",
+                    "thumb_url": "http:\/\/i1.sndcdn.com\/artworks-000138891103-d70t7x-t500x500.jpg",
+                    "text": "We love you @iMOONZz\n\n\"it ain't hard for me to justify, I noticed that I caught your eye. now in this moment, I've lost all control. No need to force it\ncause you know me like an open book, I'm all yours, I'm all yours\n\nfor a minute, just admit it. you can't get enough\noh, I promise, I ain't fakin'\nI can't get enough oh\n\n2\/\/ yeah, it's not so much a question, well rather a statement. I'm curious if we could dance all night. are you in to make it up to me? alright. lovin' all the mystery but why can't you make up your mind?\n\nfor a minute, just admit it. you can't get enough\noh, I promise, I ain't fakin'\nI can't get enough oh\n\noh, I've lost all control\"",
+                    "fallback": "SoundCloud Audio: Link: For a Minute (feat. MOONZz) by TastyTreat",
+                    "audio_html": "<iframe width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F236699104&show_artwork=true&maxheight=150\"><\/iframe>",
+                    "audio_html_width": 100,
+                    "audio_html_height": 150,
+                    "from_url": "https:\/\/soundcloud.com\/tastytreatmusic\/for-a-minute-feat-moonzz",
+                    "thumb_width": 500,
+                    "thumb_height": 500,
+                    "id": 1
+                }
+            ],
+            "ts": "1449764241.002261"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/2CG6feguaKMR3C4zCMjDNR>",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Devendra Banhart - F\u00fcr Hildegard von Bingen",
+                    "title_link": "https:\/\/open.spotify.com\/track\/2CG6feguaKMR3C4zCMjDNR",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/871aa209cbe347cf860b62cb2914097a3de1f540",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Devendra Banhart - F\u00fcr Hildegard von Bingen",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/2CG6feguaKMR3C4zCMjDNR\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/2CG6feguaKMR3C4zCMjDNR",
+                    "id": 1
+                }
+            ],
+            "ts": "1449762060.002259"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "you gonna take that",
+            "ts": "1449715571.002258"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "he just called you a hipster",
+            "ts": "1449715565.002257"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "ohhhh shit, joe",
+            "ts": "1449715562.002256"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "hipster",
+            "ts": "1449703329.002255"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "wish iwas here for this",
+            "ts": "1449701484.002254"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "<http:\/\/donyc.com\/jukelynye?utm_source=doNYC&amp;utm_campaign=7e8459b616-NYE_2015_Dedicated_Email_1&amp;utm_medium=email&amp;utm_term=0_701e8cf127-7e8459b616-19143001&amp;ct=t(NYE_2015_Dedicated_Email_1)&amp;goal=0_701e8cf127-7e8459b616-19143001>",
+            "attachments": [
+                {
+                    "service_name": "doNYC",
+                    "title": "NYE 2016 with Justice (DJ set), Gesaffelstein (DJ set), Bob Moses and More at Classified Warehouse",
+                    "title_link": "http:\/\/donyc.com\/jukelynye?utm_source=doNYC&utm_campaign=7e8459b616-NYE_2015_Dedicated_Email_1&utm_medium=email&utm_term=0_701e8cf127-7e8459b616-19143001&ct=t(NYE_2015_Dedicated_Email_1)&goal=0_701e8cf127-7e8459b616-19143001",
+                    "text": "Win Tickets to NYE 2016 with Justice (DJ set), Gesaffelstein (DJ set), Bob Moses and More at Classified Warehouse, December 31, 2015 on doNYC",
+                    "fallback": "doNYC: NYE 2016 with Justice (DJ set), Gesaffelstein (DJ set), Bob Moses and More at Classified Warehouse",
+                    "image_url": "http:\/\/res.cloudinary.com\/dostuff-media\/image\/upload\/\/c_fill,g_faces,h_630,w_1200\/v1449185925\/event-share_image-4894532.jpg",
+                    "from_url": "http:\/\/donyc.com\/jukelynye?utm_source=doNYC&utm_campaign=7e8459b616-NYE_2015_Dedicated_Email_1&utm_medium=email&utm_term=0_701e8cf127-7e8459b616-19143001&ct=t(NYE_2015_Dedicated_Email_1)&goal=0_701e8cf127-7e8459b616-19143001",
+                    "image_width": 476,
+                    "image_height": 250,
+                    "image_bytes": 79795,
+                    "id": 1
+                }
+            ],
+            "ts": "1449701480.002252"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "damn",
+            "ts": "1449701479.002251"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "so good",
+            "ts": "1449696479.002250"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "prob best on the album",
+            "ts": "1449696396.002249"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "+1 metal",
+            "ts": "1449696388.002248"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "this song is incredible",
+            "ts": "1449696384.002247"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "<https:\/\/open.spotify.com\/track\/46PDxEshU0SPeKY36Pu3FY> &gt;",
+            "attachments": [
+                {
+                    "service_name": "Spotify",
+                    "service_url": "https:\/\/www.spotify.com",
+                    "title": "Mastodon - Tread Lightly",
+                    "title_link": "https:\/\/open.spotify.com\/track\/46PDxEshU0SPeKY36Pu3FY",
+                    "thumb_url": "https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/b51beed2fed81258af58ffe9ada80aa6c90dea57",
+                    "thumb_width": 300,
+                    "thumb_height": 300,
+                    "fallback": "Spotify Audio: Link: Mastodon - Tread Lightly",
+                    "audio_html": "<iframe src=\"https:\/\/open.spotify.com\/embed\/track\/46PDxEshU0SPeKY36Pu3FY\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>",
+                    "audio_html_width": 300,
+                    "audio_html_height": 380,
+                    "from_url": "https:\/\/open.spotify.com\/track\/46PDxEshU0SPeKY36Pu3FY",
+                    "id": 1
+                }
+            ],
+            "ts": "1449696348.002245"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "you\u2019re only as strong as your weakest link - ancient alex proverb",
+            "ts": "1449696334.002244"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i get it",
+            "ts": "1449696227.002243"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but",
+            "ts": "1449696225.002242"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "so i think hes perfect for the band",
+            "ts": "1449696224.002241"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "again, i have a high :cheese_wedge: tolerance",
+            "ts": "1449696218.002240"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "for most",
+            "ts": "1449696208.002239"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yeah hes tough to stomach",
+            "ts": "1449696207.002238"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "especially that dude\u2019s voice, such an awful singer",
+            "ts": "1449696197.002237"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "then tune out the rest",
+            "ts": "1449696181.002236"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha fuck dream theater i can\u2019t, i think I\u2019ll listen to petrucci or w\/e play guitar for 2 mins and be like this sounds awesome",
+            "ts": "1449696178.002235"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "reference accepted",
+            "ts": "1449696157.002234"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol they have done that exact thing",
+            "ts": "1449696147.002233"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i\u2019m awesome",
+            "ts": "1449696135.002232"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "and it\u2019s 5 mins long!",
+            "ts": "1449696131.002231"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but\u2026a stupid reason! but hey look at me i can have a piano solo that sounds like looney tunes",
+            "ts": "1449696127.002230"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "well for a reason",
+            "ts": "1449696112.002229"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "this song is 20 mins long for no reason!",
+            "ts": "1449696106.002228"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "hahah",
+            "ts": "1449696093.002227"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "lol",
+            "ts": "1449696090.002226"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "trash",
+            "ts": "1449696089.002225"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they\u2019re basically a heavier version of a jam band",
+            "ts": "1449696088.002224"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1449696079.002223"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "thats what makes them so good",
+            "ts": "1449696079.002222"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "period",
+            "ts": "1449696074.002221"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "they are some of the best musicians on the planet",
+            "ts": "1449696072.002220"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "just, some dudes that can shred for hours",
+            "ts": "1449696070.002219"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1449696060.002218"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "nothing really",
+            "ts": "1449696059.002217"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1449696055.002216"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "#stillloveem",
+            "ts": "1449696055.002215"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "and i really dont find what made them so good",
+            "ts": "1449696053.002214"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "#nevergrewup",
+            "ts": "1449696051.002213"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "then i grew up",
+            "ts": "1449696046.002212"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "i used to really really like dream theater growing up",
+            "ts": "1449696043.002211"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "its a valid POV",
+            "ts": "1449696022.002210"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "lol",
+            "ts": "1449696019.002209"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but yes i do understand lol",
+            "ts": "1449696016.002208"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "oh fuck off santa",
+            "ts": "1449696012.002207"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "it goes everywhere! its the journey not the destination",
+            "ts": "1449696005.002206"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "stop it",
+            "ts": "1449696002.002205"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "but it all sounds the same after 2 mins",
+            "ts": "1449696001.002204"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "dude i get it you shred",
+            "ts": "1449695996.002203"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "so annoying",
+            "ts": "1449695991.002202"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "that goes nowhere",
+            "ts": "1449695989.002201"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "through a 5 min guitar solo",
+            "ts": "1449695986.002200"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1449695986.002199"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "fucking fall asleep",
+            "ts": "1449695982.002198"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1449695980.002197"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i just love that shit",
+            "ts": "1449695980.002196"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "and sometimes too much and boring aka 75% of dream theaters song",
+            "ts": "1449695979.002195"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "+1 overdone music",
+            "ts": "1449695975.002194"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they\u2019re supposed to be complex and kinda over the top",
+            "ts": "1449695967.002193"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "well, tech musicianship is what makes it prog in the first place",
+            "ts": "1449695954.002192"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "regarding prog",
+            "edited": {
+                "user": "U06HEA4DP",
+                "ts": "1449695950.000000"
+            },
+            "ts": "1449695949.002190"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "for me",
+            "ts": "1449695941.002189"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "1) technical musicianship 2) lyrics",
+            "ts": "1449695940.002188"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "hence prog",
+            "ts": "1449695937.002187"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "alrite",
+            "ts": "1449695928.002186"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "yeah",
+            "ts": "1449695926.002185"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "instrumentals",
+            "ts": "1449695921.002184"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "no",
+            "ts": "1449695918.002183"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "technically they\u2019re pretty complex",
+            "ts": "1449695917.002182"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lyrics arguably the best part of prog music",
+            "ts": "1449695914.002181"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "love the lyrics",
+            "ts": "1449695907.002180"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "lyrics",
+            "ts": "1449695903.002179"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "#rhyme",
+            "ts": "1449695900.002178"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "its also the songwriting",
+            "ts": "1449695898.002177"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "not everyones cup of tea",
+            "ts": "1449695896.002176"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "\u00af\\_(\u30c4)_\/\u00af",
+            "ts": "1449695893.002175"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "ppl like labrie",
+            "ts": "1449695892.002174"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "still cheesy af \/shrug",
+            "ts": "1449695889.002173"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but i undersatnd ppl that hate prog singers",
+            "ts": "1449695887.002172"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "ok",
+            "ts": "1449695880.002171"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i love hogarths voice",
+            "ts": "1449695874.002170"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "they\u2019re the arguably the worst in the band",
+            "ts": "1449695863.002169"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": ":cheese_wedge:",
+            "ts": "1449695859.002168"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "cheese +1",
+            "ts": "1449695857.002167"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "singers",
+            "ts": "1449695853.002166"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "haha",
+            "ts": "1449695852.002165"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "i like prog",
+            "ts": "1449695851.002164"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "not so much",
+            "ts": "1449695850.002163"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "your band",
+            "ts": "1449695849.002162"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "fair",
+            "ts": "1449695846.002161"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "example",
+            "ts": "1449695846.002160"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "good singer",
+            "ts": "1449695843.002159"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "lol",
+            "ts": "1449695841.002158"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "also he was like #1 this year",
+            "ts": "1449695841.002157"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "well",
+            "ts": "1449695841.002156"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "uninspired",
+            "ts": "1449695841.002155"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "ah",
+            "ts": "1449695836.002154"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "obvious",
+            "ts": "1449695836.002153"
+        },
+        {
+            "type": "message",
+            "user": "U06J9BRL0",
+            "text": "man the weeknd came out and performed at wework summer camp",
+            "ts": "1449695834.002152"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "low hanging",
+            "ts": "1449695833.002151"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "but",
+            "ts": "1449695830.002150"
+        },
+        {
+            "type": "message",
+            "user": "U06HEA4DP",
+            "text": "of course i do",
+            "ts": "1449695830.002149"
+        },
+        {
+            "type": "message",
+            "user": "U06J2UTA6",
+            "text": "who are you!?",
+            "ts": "1449695829.002148"
+        }
+    ],
+    "has_more": false
+}

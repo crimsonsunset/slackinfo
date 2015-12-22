@@ -1,4 +1,4 @@
-module.exports = function(app,Backbone,_,request,promise,lastFMKey){
+module.exports = function (app, Backbone, _, request, promise, lastFMKey) {
     return Backbone.Model.extend({
         defaults: {
             title: '',
@@ -13,35 +13,35 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
             date: '',
             isValid: true
         },
-        MUSIC_API_STR : 'http://ws.audioscrobbler.com/2.0/',
-        ARTIST_QUERY_STR : '?method=artist.getinfo&artist=',
-        KEY_STR : lastFMKey,
-        FMT_STR : '&format=json',
-        promise : {},
-        nonIntegratedServiceArr : ['hypem'],
-        talliedAttrs : ['contributor','service', 'tags'],
-        initialize: function(inMsg,fromBackup) {
+        MUSIC_API_STR: 'http://ws.audioscrobbler.com/2.0/',
+        ARTIST_QUERY_STR: '?method=artist.getinfo&artist=',
+        KEY_STR: lastFMKey,
+        FMT_STR: '&format=json',
+        promise: {},
+        nonIntegratedServiceArr: ['hypem'],
+        talliedAttrs: ['contributor', 'service', 'tags'],
+        initialize: function (inMsg, fromBackup) {
             var that = this;
             if (fromBackup) {
                 _.each(inMsg, function (e, i, l) {
-                    that.set(i,e)
-                    if (that.talliedAttrs.indexOf(i) != -1 ) {
+                    that.set(i, e)
+                    if (that.talliedAttrs.indexOf(i) != -1) {
                         if (i == 'tags') {
                             _.each(that.get(i), function (tag) {
                                 app.songList.addToTally('tags', tag)
                             });
                         } else {
-                            app.songList.addToTally(i+'s',that.get(i))
+                            app.songList.addToTally(i + 's', that.get(i))
                         }
                     }
                 })
                 return;
             }
 
-            this.set('contributor',app.users[inMsg.user])
+            this.set('contributor', app.users[inMsg.user])
             //todo: is this actually really the time? nobody really knows. fuck you timestamps
-            this.set('date',String(inMsg.ts).replace(".", "").slice(0,13))
-            app.songList.addToTally('contributors',this.get('contributor'))
+            this.set('date', String(inMsg.ts).replace(".", "").slice(0, 13))
+            app.songList.addToTally('contributors', this.get('contributor'))
 
             if (inMsg.attachments) {
 
@@ -54,27 +54,45 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
                 //artists come in differently per service
                 var currService = this.get('service').toLowerCase();
 
-                app.songList.addToTally('services',currService)
+                app.songList.addToTally('services', currService)
 
-                switch(currService){
+                switch (currService) {
                     case 'soundcloud':
-                        this.set({artist:inMsg.attachments[0].author_name.split('(')[0].trim() || ''})
-                        var splitInd = inMsg.attachments[0].title.search(/\bby /g);
-                        this.set({title:inMsg.attachments[0].title.slice(0,splitInd).trim() || ''})
+                        try {
+                            this.set({artist: inMsg.attachments[0].author_name.split('(')[0].trim() || ''})
+                            var splitInd = inMsg.attachments[0].title.search(/\bby /g);
+                            this.set({title: inMsg.attachments[0].title.slice(0, splitInd).trim() || ''})
+                        }
+                        catch (err) {
+                            this.set('isValid', false)
+                            console.log('ERRONEOUS SOUNDCLOUD SONG')
+                        }
                         break;
                     case 'spotify':
-                        var songAttrArr = inMsg.attachments[0].title.split('-');
-                        this.set({artist: songAttrArr[0].trim() || ''});
-                        this.set({title: songAttrArr[1].trim() || ''});
+                        try {
+                            var songAttrArr = inMsg.attachments[0].title.split('-');
+                            this.set({artist: songAttrArr[0].trim() || ''});
+                            this.set({title: songAttrArr[1].trim() || ''});
+                        }
+                        catch (err) {
+                            this.set('isValid', false)
+                            console.log('ERRONEOUS SPOTIFY SONG')
+                        }
                         break;
                     case 'youtube':
-                        //todo: this isnt right, but not getting any better info rite now
-                        this.set({title: inMsg.attachments[0].title || ''})
-                        this.set({artist: inMsg.attachments[0].author_name || ''})
+                        try {
+                            //todo: this isnt right, but not getting any better info rite now
+                            this.set({title: inMsg.attachments[0].title || ''})
+                            this.set({artist: inMsg.attachments[0].author_name || ''})
+                        }
+                        catch (err) {
+                            this.set('isValid', false)
+                            console.log('ERRONEOUS YOUTUBE SONG')
+                        }
                         break;
                     default:
-                        console.log('wtf is this', inMsg)
-                        this.set('isValid',false)
+                        console.log('wtf is this-- unsupported msg type', inMsg)
+                        this.set('isValid', false)
                         break;
                 }
 
@@ -91,42 +109,41 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
 
                 //error handling for wierd messages / non supported
                 if (serviceName == false) {
-                    this.set('isValid',false)
-                    return new promise(function(resolve,reject){
+                    this.set('isValid', false)
+                    return new promise(function (resolve, reject) {
                         resolve(false)
                     });
-                }
-
-
-                //todo: services that dont have integration blocks (added hypem here)
-                //todo: add more fuckin integrations [hypem] https://api.hypem.com/api-docs/#!/tracks/item_get
-                try {
-                    this.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
-                    this.set({service: serviceName || ''})
-                    var decodedStr = decodeURI(this.get('url')).replace(/\+/g,'');
-                    var songAttrArr = decodedStr.split('-');
-                    var title = songAttrArr[0].slice(songAttrArr[0].lastIndexOf("/")+1)
-                    this.set({artist: title.trim() || ''});
-                    this.set({title: songAttrArr[1].trim() || ''});
-                }
-                catch (err) {
-                    this.set('isValid',false)
-                    console.log('ERRONEOUS HYPEM SONG')
+                } else {
+                    //todo: services that dont have integration blocks (added hypem here)
+                    //todo: add more fuckin integrations [hypem] https://api.hypem.com/api-docs/#!/tracks/item_get
+                    try {
+                        this.set({url: inMsg.text.split('<')[1].split('>')[0] || ''})
+                        this.set({service: serviceName || ''})
+                        var decodedStr = decodeURI(this.get('url')).replace(/\+/g, '');
+                        var songAttrArr = decodedStr.split('-');
+                        var title = songAttrArr[0].slice(songAttrArr[0].lastIndexOf("/") + 1)
+                        this.set({artist: title.trim() || ''});
+                        this.set({title: songAttrArr[1].trim() || ''});
+                    }
+                    catch (err) {
+                        this.set('isValid', false)
+                        console.log('ERRONEOUS HYPEM SONG')
+                    }
                 }
             }
             //must remove slashes from all artist name since they will break the get call
-            this.set({artist:this.get('artist').replace('/','')})
+            this.set({artist: this.get('artist').replace('/', '')})
 
             //final check, if no artist its invalid
             if (this.get('artist').length == 0) {
-                this.set('isValid',false)
+                this.set('isValid', false)
             }
             this.promise = this.fetchSongData();
         },
         fetchSongData: function () {
             var artistStr = encodeURIComponent(this.get('artist'))
             var that = this;
-            return request(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR,function (error, response, body) {
+            return request(this.MUSIC_API_STR + this.ARTIST_QUERY_STR + artistStr + this.KEY_STR + this.FMT_STR, function (error, response, body) {
 
                 if (!error && response.statusCode == 200) {
 
@@ -148,7 +165,7 @@ module.exports = function(app,Backbone,_,request,promise,lastFMKey){
             }).promise()
         },
         //todo: clean this up or leave it impossible to read on purpose??
-        _removeDupeTags: function(inArr){
+        _removeDupeTags: function (inArr) {
             var origArr = inArr
             var suspectWords = []
             var foundMatch = false;

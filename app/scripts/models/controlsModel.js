@@ -3,12 +3,6 @@ app.ControlsModel = Backbone.Model.extend({
         currSongList : [],
         filterList : ['tags','contributors', 'services'],
         users : [],
-        serverRoutes : {
-            users: 'users',
-            count: 'count',
-            tallies: 'tallies',
-            collection: 'collection'
-        },
         switchRefObj : {}
     },
     initialize: function () {
@@ -17,7 +11,7 @@ app.ControlsModel = Backbone.Model.extend({
     },
     getFromServer: function(route){
         var that = this;
-        return $.getJSON(app.config.serverURL+this.get('serverRoutes')[route])
+        return $.getJSON(app.config.serverURL+route)
             .done(function (data) {
                 console.log('GOT stuff', data)
                 that.set(route, data)
