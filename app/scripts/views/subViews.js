@@ -37,8 +37,8 @@ app.SongListView = Backbone.View.extend({
         //watch the currSongList for changes, which will happen when search or filter occurs
         var that = this
         this.listenTo(app.controlsModel, 'change:currSongList', function (data) {
-            console.log('triggering herez')
             that.numRendered=0
+            app.songList.sort()
             that.renderList(data.get('currSongList'))
         });
         this.infiniteScroll();
@@ -63,7 +63,7 @@ app.SongListView = Backbone.View.extend({
         return this; // enable chained calls
     },
     renderList: function (songs) {
-        console.log('renderList');
+        app.controlsModel.get('currSongList').sort();
         this.$el.empty();
         var that = this;
         this.renderChunk();
@@ -93,7 +93,8 @@ app.SongListView = Backbone.View.extend({
     },
     //doesnt work?? wtf
     events: {
-        'scroll .song-list': 'infiniteScroll'
+        'scroll .song-list': 'infiniteScroll',
+        //'refresh .song-list': 'test'
     }
 
 });
@@ -253,9 +254,9 @@ app.BtnRowView = Backbone.View.extend({
     },
     filterBtnClick: function (e) {
         e.stopPropagation();
-        var btnName = $(e.target).attr('data')
         var target = (e.target.localName == 'span') ? e.target.parentNode : e.target
-        //console.log('Clicked FILTER BTN',btnName);
+        var btnName = e.currentTarget.id
+        console.log('Clicked FILTER BTN',btnName);
         //console.log(e.target.localName);
         //todo: add support for multi filters
         $('.btn-toggledOn').removeClass('btn-toggledOn')

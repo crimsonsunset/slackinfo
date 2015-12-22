@@ -4,7 +4,9 @@ app.SongList = Backbone.Collection.extend({
     SONG_URL: 'app/exports/1.json',
     COUNT_URL: '/count',
     localStorage: new Backbone.LocalStorage("local-songs"),
-    comparator: 'title',
+    comparator: function(song) {
+        return -song.get("date"); // Note the minus!
+    },
     searchService: {},
     initialize: function () {
         return this;
